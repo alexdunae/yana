@@ -1,0 +1,126 @@
+$orange: #F0693D;
+$yellow: #FEB62D;
+$green: #AEC348;
+$lightteal: #51BDB5;
+$darkteal: #2494A2;
+$bluegrey: #BBCAD2;
+$grey: #979797;
+
+$max-content-width: 978px;
+$outer-gutter-width: 84px;
+$tablet-gutter-width: 30px;
+$mobile-gutter-width: 30px;
+$nav-height: 54px;
+
+// used for calculating ems
+$base-font-size: 16px;
+
+@mixin sans-roman($size: 100%, $line-height: 1) {
+  font: normal $size/#{$line-height} 'HelveticaNeueW01-55Roma', sans-serif;
+}
+
+@mixin sans-bold($size: 100%, $line-height: 1) {
+  font: normal $size/#{$line-height} 'HelveticaNeueW01-75Bold', sans-serif;
+}
+
+@mixin sans-condensed($size: 100%, $line-height: 1) {
+  font: normal $size/#{$line-height} 'HelveticaNeueW01-57Cn', sans-serif;
+}
+
+@mixin sans-light-condensed($size: 100%, $line-height: 1) {
+  font: normal $size/#{$line-height} 'HelveticaNeueW01-47LtCn 692686', sans-serif;
+}
+
+@mixin mono-bold($size: 100%, $line-height: 1) {
+  font: normal $size/#{$line-height} 'AmericanTypwrterITCW01- 731010', monospace;
+}
+
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media all and (max-width: 900px) { @content; }
+  }
+  @else if $point == mobile {
+    @media all and (max-width: 600px) { @content; }
+  }
+  @else if $point == mobile-portrait {
+    @media all and (max-width: 400px) { @content; }
+  }
+}
+
+@function em($px, $base: $base-font-size) {
+  @return ($px / $base) * 1em;
+}
+
+%inner-content-frame {
+  max-width: $max-content-width;
+  margin: 0 auto;
+  padding: 0 $outer-gutter-width;
+  //transition: padding 500ms ease-out;
+
+  @include breakpoint(tablet) {
+    max-width: none;
+    padding-left: $tablet-gutter-width;
+    padding-right: $tablet-gutter-width;
+  }
+
+  @include breakpoint(mobile) {
+    padding-left: $mobile-gutter-width;
+    padding-right: $mobile-gutter-width;
+  }
+}
+
+%clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after { clear: both; }
+
+  *zoom: 1;
+}
+
+%visuallyhidden {
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+%visuallyhidden-focusable {
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  position: absolute;
+
+  &:active,
+  &:focus {
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+  }
+}
+
+%image-replacement {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+  }
+}

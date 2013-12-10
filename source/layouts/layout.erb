@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7" id="ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js lt-ie9 lt-ie8" id="ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js lt-ie9" id="ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+  <head>
+    <title><%= current_page.data.title || site_title %> – <%= h(site_title) %></title>
+    <%= javascript_include_tag 'vendor/modernizr.js' %>
+    <%= javascript_include_tag 'https://fast.fonts.net/jsapi/014930c9-fd65-4ba8-a0d8-c9968ba08138.js' %>
+    <%= stylesheet_link_tag 'site' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="<%= absolute_url(current_page) %>">
+  </head>
+  <body class="<%= page_classes %>">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="page" id="page">
+      <header class='site-header' role='banner'>
+        <div class='content'>
+          <div class='logo'><a href="/">Y.A.N.A. Comox Valley</a></div>
+          <!-- TODO: nested roles allowed? -->
+          <nav class='site-nav' role='navigation'>
+            <div class="primary">
+              <ul>
+                <li><%= link_to 'Get Support', '#todo' %></li>
+                <li><%= link_to 'Fundraise', '#todo' %></li>
+                <li><%= link_to 'Volunteer', '#todo' %></li>
+                <li><%= link_to 'Donate', '#todo' %></li>
+              </ul>
+            </div>
+
+            <div class="secondary">
+              <div class="inner">
+                <ul>
+                  <li><%= link_to 'Events', '#todo' %></li>
+                  <li><%= link_to 'News', '#todo' %></li>
+                  <li class="current"><%= link_to 'About', '#todo' %></li>
+                  <li><%= link_to 'Stories', '#todo' %></li>
+                  <li><%= link_to 'Contact', '#todo' %></li>
+                  <li class="facebook"><%= link_to 'Facebook', 'https://www.facebook.com/pages/YANA-Comox-Valley/9846076614' %></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <article class="site-body" role="main" id="main">
+        <div class="content">
+          <%= yield %>
+        </div>
+      </article>
+      <a href="#page" class="skip-link">Back to the top</a>
+    </div>
+    <%= javascript_include_tag 'site' %>
+  </body>
+</html>

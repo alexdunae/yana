@@ -1,0 +1,123 @@
+$logo-width: 138px;
+$logo-height: 84px;
+$logo-gutter: 30px;
+
+.site-header {
+  .content {
+    @extend %inner-content-frame;
+    position: relative;
+    height: 84px;
+    padding-top: em(24px);
+    padding-bottom: em(36px);
+  }
+
+  .logo {
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 2;
+    width: $logo-width;
+    height: $logo-height;
+    margin: 0 $logo-gutter 0 0;
+
+    a {
+      display: block;
+      width: $logo-width;
+      height: $logo-height;
+      @extend %image-replacement;
+      background: transparent image_url("header-logo.svg") 50% 0 no-repeat;
+      background-size: $logo-width $logo-height;
+
+      .no-svg & {
+        // TODO: this looks terrible
+        background-image: image_url("header-logo.png");
+      }
+    }
+  }
+}
+
+.site-nav {
+  ul, li {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: (24/16);
+    list-style: none;
+  }
+
+  ul {
+    margin-left: ($logo-width + $logo-gutter);
+  }
+
+  .primary {
+    $nav-colors: $lightteal, $yellow, $green, $orange;
+    position: relative;
+    z-index: 2;
+    margin-top: em(48px);
+    text-align: right;
+
+    li {
+      display: inline-block;
+      margin-left: em(60px);
+    }
+
+    a {
+      display: block;
+      text-transform: uppercase;
+      // nudge down
+      margin-bottom: em(8px,24px);
+      padding-top: em(4px,24px);
+      @include sans-condensed(em(24px), 1);
+    }
+
+    @for $i from 1 through length($nav-colors) {
+      $c: nth($nav-colors, $i);
+      li:nth-child(4n+#{$i}) {
+        a { color: $c; }
+        a:hover, a:focus { color: darken($c, 15%); }
+      }
+
+    }
+
+  }
+
+  .secondary {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: em(24px);
+    top: em(12px);
+    left: 0;
+    text-align: right;
+
+    .inner {
+      @extend %inner-content-frame;
+    }
+    ul {
+      word-spacing: 0;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      display: block;
+      padding: 0 em(18px,11px);
+      font-size: em(11px);
+      line-height: (24/11);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $bluegrey;
+
+      &:hover, &:focus {
+        color: $darkteal;
+      }
+    }
+
+    .current a {
+      color: $darkteal;
+    }
+  }
+}
