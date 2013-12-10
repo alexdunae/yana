@@ -29,6 +29,8 @@
 
 .icon-badge {
   margin: em(18px) em(18px) em(18px) 0;
+
+  .label { @extend %visuallyhidden; }
 }
 
 .facebook-badge {
