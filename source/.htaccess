@@ -2,12 +2,7 @@
 # # REWRITES FROM THE OLD SITE                                                 #
 # ##############################################################################
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteRule   ^([0-9]+)/                                       /explore/  [R=301,L]
-  RewriteRule   ^(news|category|tag)/  /explore/  [R=301,L]
-  RewriteRule   ^products-and-services/                          /about/ [R=301,L]
-  RewriteRule   ^training-and-workshops/                         /training/ [R=301,L]
-  RewriteRule   ^abcs-of-screenprinting/                         /explore/screenprinting-basics/ [R=301,L]
+  # TODO
 </IfModule>
 
 
@@ -140,6 +135,7 @@ AddDefaultCharset utf-8
    RewriteCond %{HTTPS} !=on
    RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
    RewriteCond %{HTTP_HOST} !=localhost [NC]
+   RewriteCond %{HTTP_HOST} !=yana\.dialect\.ca [NC]
    RewriteCond %{HTTP_HOST} !=127.0.0.1
    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 </IfModule>
