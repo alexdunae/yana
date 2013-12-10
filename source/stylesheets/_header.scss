@@ -48,76 +48,86 @@ $logo-gutter: 30px;
   ul {
     margin-left: ($logo-width + $logo-gutter);
   }
+}
 
-  .primary {
-    $nav-colors: $lightteal, $yellow, $green, $orange;
-    position: relative;
-    z-index: 2;
-    margin-top: em(48px);
-    text-align: right;
+.primary-nav {
+  $nav-colors: $lightteal, $yellow, $green, $orange;
+  position: relative;
+  z-index: 2;
+  margin-top: em(48px);
+  text-align: right;
 
-    li {
-      display: inline-block;
-      margin-left: em(60px);
-    }
-
-    a {
-      display: block;
-      text-transform: uppercase;
-      // nudge down
-      margin-bottom: em(8px,24px);
-      padding-top: em(4px,24px);
-      @include sans-condensed(em(24px), 1);
-    }
-
-    @for $i from 1 through length($nav-colors) {
-      $c: nth($nav-colors, $i);
-      li:nth-child(4n+#{$i}) {
-        a { color: $c; }
-        a:hover, a:focus { color: darken($c, 15%); }
-      }
-
-    }
-
+  li {
+    display: inline-block;
+    margin-left: em(60px);
   }
 
-  .secondary {
+  a {
     display: block;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: em(24px);
-    top: em(12px);
-    left: 0;
-    text-align: right;
+    text-transform: uppercase;
+    // nudge down
+    margin-bottom: em(8px,24px);
+    padding-top: em(4px,24px);
+    @include sans-condensed(em(24px), 1);
+  }
 
-    .inner {
-      @extend %inner-content-frame;
-    }
-    ul {
-      word-spacing: 0;
-    }
-
-    li {
-      display: inline-block;
-    }
-
-    a {
-      display: block;
-      padding: 0 em(18px,11px);
-      font-size: em(11px);
-      line-height: (24/11);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: $bluegrey;
-
-      &:hover, &:focus {
-        color: $darkteal;
-      }
-    }
-
-    .current a {
-      color: $darkteal;
+  @for $i from 1 through length($nav-colors) {
+    $c: nth($nav-colors, $i);
+    li:nth-child(4n+#{$i}) {
+      a { color: $c; }
+      a:hover, a:focus { color: darken($c, 15%); }
     }
   }
 }
+
+
+.secondary-nav {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: em(48px);
+  top: 0;
+  left: 0;
+  text-align: right;
+
+  .inner {
+    @extend %inner-content-frame;
+  }
+
+  ul, li { line-height: 1; }
+
+  ul {
+    word-spacing: 0;
+  }
+
+  li {
+    display: inline-block;
+    padding: em(12px) 0;
+    vertical-align: top;
+  }
+
+  .badge {
+    padding: 0;
+    a { margin: 0; color: #fff; }
+  }
+
+  a {
+    display: block;
+    padding: 0 em(18px,11px);
+    font-size: em(11px);
+    line-height: (24/11);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $bluegrey;
+
+    &:hover, &:focus {
+      color: $darkteal;
+    }
+  }
+
+  .current a {
+    color: $darkteal;
+  }
+}
+
