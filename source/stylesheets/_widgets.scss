@@ -46,6 +46,8 @@
     background-color: #325B99;
     background-color: rgba(#325B99, 1);
   }
+
+  .high-contrast & { background-color: #325B99 !important; }
 }
 
 .twitter-badge {
@@ -63,6 +65,8 @@
     background-color: #4099FF;
     background-color: rgba(#4099FF, 1);
   }
+
+  .high-contrast & { background-color: #4099FF !important; }
 }
 
 .instagram-badge {
@@ -80,6 +84,8 @@
     background-color: #517fa4;
     background-color: rgba(#517fa4, 1);
   }
+
+  .high-contrast & { background-color: #517fa4 !important; }
 }
 
 

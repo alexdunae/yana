@@ -1,9 +1,30 @@
 YANA =
+  htmlElement: $('html')
+
   initDebug: ->
-    $(document).on 'keypress', (e) ->
+    @htmlElement.on 'keypress', (e) =>
       if e.which == 96
-        $('html').toggleClass('debug');
-        $(window).trigger('resize');
+        @htmlElement.toggleClass('debug')
+        $(window).trigger('resize')
+
+  initHighContrast: ->
+    contrastClass = 'high-contrast'
+    @htmlElement.addClass(allCookies.getItem('yana-contrast'))
+
+    $('a.toggle-contrast').on 'click', (e) =>
+      e.preventDefault()
+      currentClass = ''
+      if @htmlElement.hasClass(contrastClass)
+        @htmlElement.removeClass(contrastClass)
+        allCookies.removeItem('yana-contrast', '/')
+      else
+        @htmlElement.addClass(contrastClass)
+        currentClass = contrastClass
+        allCookies.setItem('yana-contrast', currentClass, Infinity, '/')
+
+
+      @trackEvent('accessibility', 'toggle-contrast')
+      $(window).trigger('resize')
 
   trackPageView: (href) ->
     try
@@ -15,6 +36,9 @@ YANA =
       _gaq.push(['_trackEvent', category, action, opt_label, opt_value, opt_noninteraction]);
     catch e
 
-YANA.initDebug()
+$(document).on 'ready', (e) ->
+  YANA.initDebug()
+  YANA.initHighContrast()
 
 window.YANA = YANA
+

@@ -76,6 +76,8 @@ $logo-gutter: 30px;
     li:nth-child(4n+#{$i}) {
       a { color: $c; }
       a:hover, a:focus { color: darken($c, 15%); }
+
+      .high-contrast & a { color: darken($c, 20%) !important; }
     }
   }
 }
