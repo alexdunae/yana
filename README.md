@@ -14,12 +14,11 @@ First time:
 In terminal:
 
     cd ~/Sites/yana
-    bundle
-    bundle exec middleman server
+    grunt watch
 
-Preview the site at [localhost:4567](http://localhost:4567/).
+Preview the site at [localhost/yana/www](http://localhost/yana/www/).
 
-Everything relating to the site in progress is in the `source` directory.  The `build` directory is created before uploading the live site and shouldn't ever be edited directly.
+Everything relating to the site in progress is in the `www/wp-content/themes/yana` directory.
 
 
 ## WordPress and version control
