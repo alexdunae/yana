@@ -1,0 +1,75 @@
+.site-footer {
+  // TODO: contrast
+  &, & a { color: #7CBFC7; }
+
+  background: #1B6F7A;
+
+  .content {
+    @extend %inner-content-frame;
+    position: relative;
+    padding-top: em(24px);
+    padding-bottom: em(36px);
+  }
+
+  .footer-about {
+    width: percentage(390/978);
+    p, label {
+      margin: 0 0 em(24px);
+      @include sans-roman(em(16px), (30/16));
+    }
+
+    a {
+      @include mono-bold(1em, 100%);
+    }
+  }
+
+  .footer-enews {
+    label {
+      display: block;
+    }
+
+    .controls {
+      width: 100%;
+      max-width: $sidebar-width;
+      font-size: 0;
+    }
+
+    input, button {
+      display: inline-block;
+        vertical-align: top;
+      -webkit-appearance: none;
+      box-sizing: border-box;
+    }
+
+    input {
+      width: 216px;
+      height: em(48px,14px);
+      padding: em(12px,14px);
+      border: 0;
+      @include sans-roman(14px, (24/14));
+      color: $lightgrey;
+
+      &::-webkit-input-placeholder { text-transform: lowercase; color: $lightgrey; }
+      &::-moz-placeholder { text-transform: lowercase; color: $lightgrey; }
+
+
+    }
+
+    button {
+      width: 90px;
+      height: em(48px,14px);
+      padding: em(12px,14px);
+      border: 0;
+      @include sans-bold(14px, (24/14));
+      color: #fff;
+      background-color: #8BC540;
+      box-shadow: inset 0 0 3px rgba(#000, 0.3);
+      cursor: pointer;
+      transition: background 200ms ease-out;
+
+      &:hover, &:focus {
+        background-color: darken(#8BC540, 5%);
+      }
+    }
+  }
+}

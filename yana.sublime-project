@@ -8,15 +8,18 @@
   "folders":
   [
     {
-      "path": "source",
-      "folder_exclude_patterns": [".sass-cache", "build"],
-      "file_exclude_patterns": [".keep"]
-    },
-    {
       "path": ".",
       "name": "base",
       "folder_exclude_patterns": ["*"],
       "file_exclude_patterns": ["*.sublime-workspace", "*.sublime-project"]
+    },
+    {
+      "path": "www/wp-content/themes/yana",
+      "name": "theme"
+    },
+    {
+      "path": "www/wp-content/plugins",
+      "name": "plugins"
     }
   ]
 }

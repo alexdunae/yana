@@ -1,11 +1,8 @@
 /*
-Theme Name: YANA
-Theme URI: http://underscores.me/
+Theme Name: YANA Comox Valley
+Theme URI: http://www.yanacomoxvalley.com/
 Author: Dialect
 Author URI: http://dialect.ca/
-Description: YANA's public website
-Version: 1.0
-Tags:
 */
 
 @import "reset";
@@ -16,6 +13,8 @@ Tags:
 
 @import "header";
 @import "body";
+@import "sidebar";
+@import "footer";
 
 @import "high-contrast";
 @import "debug";

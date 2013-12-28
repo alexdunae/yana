@@ -1,0 +1,44 @@
+.debug {
+  .site-header, .site-body, .site-footer, .masthead {
+    .content {
+      background: transparent url("img/grid.png") 54px 0 repeat;
+    }
+  }
+
+  .site-header {
+    background: rgba(255, 255, 0, 0.1);
+    outline: 1px solid rgba(black, 0.5);
+
+    ul {
+      outline: 1px solid rgba(red, 0.5);
+    }
+
+    a {
+      outline: 1px solid rgba(blue, 0.25);
+    }
+  }
+
+  .masthead {
+    outline: 1px solid rgba(blue, 0.25);
+
+    .content {
+      outline: 1px solid rgba(yellow, 0.25);
+    }
+
+    .text-wrap {
+      outline: 1px solid rgba(red, 0.35);
+      background: rgba(red, 0.1);
+    }
+  }
+
+  .page-sidebar {
+    background: rgba(255, 0, 255, 0.1);
+    outline: 1px solid rgba(blue, 0.25);
+  }
+
+  blockquote {
+    outline: 1px solid rgba(black, 0.5);
+  }
+
+  img { opacity: 0.5; }
+}

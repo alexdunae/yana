@@ -2,3 +2,5 @@
 /build
 /.sass-cache
 *.sublime-workspace
+node_modules
+www/wp-content/uploads/*

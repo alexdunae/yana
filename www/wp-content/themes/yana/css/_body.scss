@@ -1,0 +1,36 @@
+.site-body {
+  .content {
+    @extend %inner-content-frame;
+    padding-top: em(36px);
+    padding-bottom: em(36px);
+    @extend %clearfix;
+  }
+
+
+  &.has-sidebar {
+    .content {
+      max-width: $max-content-width - $sidebar-width - $sidebar-gutter;
+      padding-left: $sidebar-width + $sidebar-gutter + $outer-gutter-width;
+    }
+
+    .page-sidebar {
+      float: left;
+      width: $sidebar-width;
+      margin-left: ($sidebar-width + $sidebar-gutter) * -1;
+    }
+
+    @include breakpoint(tablet) {
+      .content {
+        max-width: none;
+        padding-left: $sidebar-width + $sidebar-gutter + $tablet-gutter-width;
+      }
+    }
+
+    @include breakpoint(mobile) {
+      .content {
+        max-width: none;
+        padding-left: $sidebar-width + $sidebar-gutter + $mobile-gutter-width;
+      }
+    }
+  }
+}

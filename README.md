@@ -2,6 +2,15 @@
 
 ## Development
 
+First time:
+
+    cd ~/Sites/yana
+    brew update
+    brew install node
+
+    npm install -g grunt-cli
+    npm install
+
 In terminal:
 
     cd ~/Sites/yana
@@ -11,6 +20,24 @@ In terminal:
 Preview the site at [localhost:4567](http://localhost:4567/).
 
 Everything relating to the site in progress is in the `source` directory.  The `build` directory is created before uploading the live site and shouldn't ever be edited directly.
+
+
+## WordPress and version control
+
+WordPress is a git submodule.  We don't deploy any of the core WP files, just the theme (TODO: and plugins?).
+
+To upgrade the local version of WordPress to whatever is the latest, run:
+
+    cd wordpress
+    git checkout master
+    git pull
+
+To upgrade the local version of WordPress to a tagged release, run:
+
+    cd wordpress
+    git fetch --tags
+    git checkout 3.7
+
 
 ## Deployment
 

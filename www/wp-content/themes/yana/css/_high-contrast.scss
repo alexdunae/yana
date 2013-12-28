@@ -1,0 +1,32 @@
+.high-contrast {
+  body {
+    color: #3d515a;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    &, & a {
+      color: #31807b;
+    }
+  }
+
+  a {
+    color: #31807b;
+  }
+
+  .site-body a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  blockquote {
+    color: #56717f;
+  }
+
+  .secondary-nav a {
+    color: #1f7e8b;
+  }
+
+  .btn {
+    background-color: #2e7974;
+  }
+}
