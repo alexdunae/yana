@@ -32,7 +32,7 @@
                 <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               <?php endif; ?>
 
-              <?php the_excerpt(); ?>
+              <?php echo apply_filters('the_content', $post->post_excerpt); ?>
 
               <?php if($level == 0): ?>
                 <p><a class="btn" href="<?php the_permalink(); ?>">More details</a></p>

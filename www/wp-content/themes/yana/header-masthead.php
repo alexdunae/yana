@@ -1,8 +1,5 @@
 <?php
   if ( $post ) {
-
-    //$image = MultiPostThumbnails::get_the_post_thumbnail(get_post_type(), 'masthead-image', NULL,  'post-masthead-image-thumbnail');
-
     $image_id = MultiPostThumbnails::get_post_thumbnail_id(get_post_type(), 'masthead-image', $post->ID);
     if ( $image_id ) {
       $image = wp_get_attachment_image_src($image_id, 'post-secondary-image-thumbnail');
@@ -10,7 +7,6 @@
       echo '<span class="mask"></span>';
       echo '<span class="bar bar-top"></span>';
       echo '<span class="bar bar-bottom"></span>';
-
 
 
       $attachment = get_post($image_id);

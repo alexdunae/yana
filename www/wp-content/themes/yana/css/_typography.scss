@@ -149,10 +149,12 @@ blockquote + p {
   transition: 100ms background ease-out;
 
   &:hover, &:focus {
+    color: #fff;
     background-color: $lightteal;
   }
 
   &:active {
+    color: #fff;
     background-color: lighten($lightteal, 10%);
   }
 }

@@ -1,32 +1,14 @@
-<?php
-/**
- * The Template for displaying all single posts.
- *
- * @package YANA
- */
 
-get_header(); ?>
+<?php get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<article class="site-body has-sidebar" role="main" id="main">
+   <div class="content">
+      <?php get_sidebar(); ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+      <?php while ( have_posts() ) : the_post(); ?>
+        <?php get_template_part( 'content', get_post_type() ); ?>
+      <?php endwhile; ?>
+  </div>
+</article>
 
-			<?php get_template_part( 'content', 'single' ); ?>
-
-			<?php yana_post_nav(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // end of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_footer();

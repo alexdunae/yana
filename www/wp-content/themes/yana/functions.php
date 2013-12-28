@@ -53,11 +53,9 @@ function yana_linked_thumbnail($post_id, $size = 'post-thumbnail') {
 
 function yana_get_archive_page_object() {
   $archive_page = null;
-  if ( is_post_type_archive() ) {
-    if ( $post_type = get_post_type_object( get_query_var( 'post_type' ) ) ) {
-      if ( isset( $post_type->rewrite['slug'] ) ) {
-        $archive_page = get_page_by_path( $post_type->rewrite['slug'] );
-      }
+  if ( $post_type = get_post_type_object( get_query_var( 'post_type' ) ) ) {
+    if ( isset( $post_type->rewrite['slug'] ) ) {
+      $archive_page = get_page_by_path( $post_type->rewrite['slug'] );
     }
   } elseif ( is_home() || is_archive() ) {
     $archive_page = get_page( get_option( 'page_for_posts' ) );
