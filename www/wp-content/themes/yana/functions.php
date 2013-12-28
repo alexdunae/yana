@@ -5,6 +5,8 @@
  * @package YANA
  */
 
+require_once( dirname(__FILE__) . '/lib/yana.events.php' );
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -35,6 +37,23 @@ function yana_setup() {
 }
 endif; // yana_setup
 add_action( 'after_setup_theme', 'yana_setup' );
+
+
+function yana_get_archive_page_object() {
+  $archive_page = null;
+  if ( is_post_type_archive() ) {
+    if ( $post_type = get_post_type_object( get_query_var( 'post_type' ) ) ) {
+      if ( isset( $post_type->rewrite['slug'] ) ) {
+        $archive_page = get_page_by_path( $post_type->rewrite['slug'] );
+      }
+    }
+  } elseif ( is_home() || is_archive() ) {
+    $archive_page = get_page( get_option( 'page_for_posts' ) );
+  }
+
+  return $archive_page;
+}
+
 
 /**
  * Register widgetized area and update sidebar with default widgets.

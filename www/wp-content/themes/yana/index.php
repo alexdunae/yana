@@ -3,6 +3,7 @@
 <article class="site-body has-sidebar" role="main" id="main">
    <div class="content">
    		<?php get_sidebar(); ?>
+      <?php get_template_part( 'archives-content-header' ); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
