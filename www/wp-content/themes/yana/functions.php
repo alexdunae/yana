@@ -34,9 +34,21 @@ function yana_setup() {
 
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+  add_image_size('event-wide-thumbnail', 624, 0);
+  set_post_thumbnail_size((288 * 2), 0, 0);
 }
 endif; // yana_setup
 add_action( 'after_setup_theme', 'yana_setup' );
+
+function yana_linked_thumbnail($post_id, $size = 'post-thumbnail') {
+  $img = get_the_post_thumbnail($post_id, $size);
+  if ( empty($img) ) {
+    return false;
+  } else {
+    return sprintf("<a href='%s' class='image'>%s</a>", get_permalink($post_id), $img);
+  }
+}
 
 
 function yana_get_archive_page_object() {

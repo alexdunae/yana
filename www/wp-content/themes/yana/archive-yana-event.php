@@ -21,10 +21,22 @@
           foreach( $posts as $post ):
               setup_postdata($post);
           ?>
-            <div id="post-<?php the_ID(); ?>" <?php post_class( "priority-$level" ); ?>>
-              <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <div id="post-<?php the_ID(); ?>" <?php post_class( "entry priority-$level" ); ?>>
+              <?php if($level == 0): ?>
+                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <?php echo yana_linked_thumbnail($post->ID, 'event-wide-thumbnail'); ?>
+              <?php elseif($level == 1): ?>
+                <?php echo yana_linked_thumbnail($post->ID, 'post-thumbnail'); ?>
+                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+              <?php else: ?>
+                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+              <?php endif; ?>
+
               <?php the_excerpt(); ?>
-              <p><a class="btn" href="<?php the_permalink(); ?>">More details</a></p>
+
+              <?php if($level == 0): ?>
+                <p><a class="btn" href="<?php the_permalink(); ?>">More details</a></p>
+              <?php endif; ?>
             </div>
 
           <?php

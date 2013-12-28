@@ -52,9 +52,9 @@ img { vertical-align: middle; }
 @media all and (max-width: 900px) { .site-header .content, .secondary-nav .inner, .masthead .content, .site-body .content, .site-footer .content { max-width: none; padding-left: 30px; padding-right: 30px; } }
 @media all and (max-width: 600px) { .site-header .content, .secondary-nav .inner, .masthead .content, .site-body .content, .site-footer .content { padding-left: 30px; padding-right: 30px; } }
 
-.site-body .content { *zoom: 1; }
-.site-body .content:before, .site-body .content:after { display: table; content: ""; }
-.site-body .content:after { clear: both; }
+.site-body .content, .event-toc-1 { *zoom: 1; }
+.site-body .content:before, .event-toc-1:before, .site-body .content:after, .event-toc-1:after { display: table; content: ""; }
+.site-body .content:after, .event-toc-1:after { clear: both; }
 
 .skip-link, .icon-badge .label { clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; position: absolute; }
 
@@ -235,6 +235,23 @@ blockquote + p { margin-top: 2.8em; }
 .sidebar-image-ad .link { display: table; z-index: 3; text-transform: uppercase; text-align: center; color: #fff; }
 .sidebar-image-ad .link .text { display: table-cell; padding: 0 1.875em; font: normal 1.5em/1.25 "HelveticaNeueW01-75Bold", sans-serif; vertical-align: middle; }
 
+.event-toc .entry { margin: 0 0 2.25em; }
+.event-toc .image { display: block; margin: 0 0 1.5em; }
+.event-toc .image img { display: block; width: 100%; height: auto; }
+
+.event-toc-0 .entry { margin: 0 0 1.5em; }
+.event-toc-0 .entry-title { margin: 0 0 0.4em; font: normal 3.75em/1.2 "HelveticaNeueW01-57Cn", sans-serif; }
+.event-toc-0 p { margin: 0.75em 0; font-size: 1em; line-height: 2; }
+
+.event-toc-1 .entry { float: left; width: 46.15385%; }
+.event-toc-1 .entry:nth-child(odd) { margin-right: 7.69231%; }
+.event-toc-1 .entry-title { margin: 0 0 0.85714em; font: normal 1.75em/1.28571 "HelveticaNeueW01-55Roma", sans-serif; }
+.event-toc-1 p { margin: 1.28571em 0 1.71429em; font-size: 0.875em; line-height: 1.42857; }
+
+.event-toc-2 .entry { margin: 0 0 1.5em; }
+.event-toc-2 .entry-title { margin: 0 0 0.5em; font: normal 1.5em/1 "HelveticaNeueW01-55Roma", sans-serif; }
+.event-toc-2 p { margin: 0.85714em 0 1.71429em; font-size: 0.875em; line-height: 1.42857; }
+
 .site-footer { background: #1B6F7A; }
 .site-footer, .site-footer a { color: #7CBFC7; }
 .site-footer .content { position: relative; padding-top: 1.5em; padding-bottom: 2.25em; }
@@ -265,6 +282,7 @@ blockquote + p { margin-top: 2.8em; }
 .debug .masthead { outline: 1px solid rgba(0, 0, 255, 0.25); }
 .debug .masthead .content { outline: 1px solid rgba(255, 255, 0, 0.25); }
 .debug .masthead .text-wrap { outline: 1px solid rgba(255, 0, 0, 0.35); background: rgba(255, 0, 0, 0.1); }
+.debug .event-toc .entry { outline: 1px solid rgba(255, 0, 0, 0.35); background: rgba(255, 0, 0, 0.1); }
 .debug .page-sidebar { background: rgba(255, 0, 255, 0.1); outline: 1px solid rgba(0, 0, 255, 0.25); }
 .debug blockquote { outline: 1px solid rgba(0, 0, 0, 0.5); }
 .debug img { opacity: 0.5; }

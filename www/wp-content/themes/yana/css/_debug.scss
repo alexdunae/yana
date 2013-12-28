@@ -31,6 +31,13 @@
     }
   }
 
+  .event-toc {
+    .entry {
+      outline: 1px solid rgba(red, 0.35);
+      background: rgba(red, 0.1);
+    }
+  }
+
   .page-sidebar {
     background: rgba(255, 0, 255, 0.1);
     outline: 1px solid rgba(blue, 0.25);
