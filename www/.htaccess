@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /yana/www/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /yana/www/index.php [L]
+</IfModule>
+
+# END WordPress
