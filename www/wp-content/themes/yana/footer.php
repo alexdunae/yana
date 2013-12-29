@@ -1,6 +1,4 @@
 
-          <p><a href="#" class="toggle-contrast">Toggle high colour contrast mode</a></p>
-
       <a href="#page" class="skip-link">Back to the top</a>
 
       <footer class="site-footer" role="supplemental">
@@ -18,6 +16,7 @@
             </section>
           </section>
           <section class="footer-nav">
+            <p><a href="#" class="toggle-contrast">Toggle high colour contrast mode</a></p>
             Footer nav
           </section>
         </div>
