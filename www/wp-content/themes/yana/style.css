@@ -260,15 +260,25 @@ blockquote + p { margin-top: 2.8em; }
 .home .masthead .masthead-title { font: normal 5.25em/1 "AmericanTypwrterITCW01- 731010", monospace; }
 
 .home-circles { position: relative; z-index: 6; margin-top: -7.5em; }
-.home-circles .content { padding-top: 0.375em; padding-bottom: 0.375em; }
-.home-circles .entry { float: left; display: table; width: 25%; height: 248px; vertical-align: middle; text-align: center; background: transparent url("img/circle-teal.svg") 50% 50% no-repeat; background-size: contain; }
+.home-circles .content { padding-left: 0; padding-right: 0; padding-top: 0.375em; padding-bottom: 0.375em; }
+.home-circles .entry { float: left; display: table; width: 25%; height: 248px; margin: 0; vertical-align: middle; text-align: center; background: transparent url("img/circle-teal.svg") 50% 50% no-repeat; background-size: contain; }
 .home-circles .entry, .home-circles .entry a { color: #fff; }
 .home-circles .entry-1 { background-image: url("img/circle-yellow.svg"); }
 .home-circles .entry-2 { background-image: url("img/circle-red.svg"); }
 .home-circles .entry-3 { background-image: url("img/circle-green.svg"); }
-.home-circles .inner { display: table-cell; padding: 0 36px; vertical-align: middle; }
+.home-circles .inner { display: table-cell; padding: 36px 36px; vertical-align: middle; }
 .home-circles .title { margin: 0 0 0.25em; font: normal 1.5em/1.25 "HelveticaNeueW01-57Cn", sans-serif; color: #fff; }
 .home-circles p { margin: 0.5em 0 0; font: normal 0.75em/1.5 "HelveticaNeueW01-55Roma", sans-serif; color: #fff; }
+@media all and (max-width: 1000px) { .home-circles .title { font-size: 1.25em; } }
+@media all and (max-width: 900px) { .home-circles .entry { height: 12.25em; background: none #2494a2; }
+  .home-circles .entry-1 { background-color: #feb62d; }
+  .home-circles .entry-2 { background-color: #f0693d; }
+  .home-circles .entry-3 { background-color: #aec348; }
+  .home-circles .inner { padding: 1.125em; }
+  .home-circles .title { font-size: 1.5em; } }
+@media all and (max-width: 700px) { .home-circles .entry { height: 13.5em; }
+  .home-circles .inner { padding: 1.125em; }
+  .home-circles .title { font-size: 1.25em; } }
 
 .home-intro .content { max-width: 50.625em; padding-top: 1.5em; padding-bottom: 1.5em; text-align: center; }
 .home-intro .title, .home-intro p { color: #bbcad2; }

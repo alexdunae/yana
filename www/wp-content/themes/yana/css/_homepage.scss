@@ -13,6 +13,8 @@
   margin-top: em(-120px);
   .content {
     @extend %inner-content-frame;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: em(6px);
     padding-bottom: em(6px);
     @extend %clearfix;
@@ -24,6 +26,7 @@
     display: table;
     width: 25%;
     height: 248px;
+    margin: 0;
     vertical-align: middle;
     text-align: center;
     background: transparent url("img/circle-teal.svg") 50% 50% no-repeat;
@@ -37,7 +40,7 @@
 
   .inner {
     display: table-cell;
-    padding: 0 36px;
+    padding: 36px 36px;
     vertical-align: middle;
   }
 
@@ -55,7 +58,32 @@
   }
 
 
+  @media all and (max-width: 1000px) {
+    .title {
+      font-size: em(20px);
+    }
+  }
 
+  @include breakpoint(tablet) {
+    .entry {
+      height: em(196px);
+      background: none $darkteal;
+    }
+
+    .entry-1 { background-color: $yellow; }
+    .entry-2 { background-color: $orange; }
+    .entry-3 { background-color: $green; }
+
+    .inner { padding: em(18px); }
+
+    .title { font-size: em(24px) }
+  }
+
+  @media all and (max-width: 700px) {
+    .entry { height: em(216px); }
+    .inner { padding: em(18px); }
+    .title { font-size: em(20px) }
+  }
 }
 
 .home-intro {
