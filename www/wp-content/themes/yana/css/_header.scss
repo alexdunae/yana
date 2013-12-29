@@ -11,14 +11,41 @@ $logo-gutter: 30px;
     padding-bottom: em(36px);
   }
 
+  .content {
+    max-width: $max-content-width - $sidebar-width - $sidebar-gutter;
+    padding-left: $sidebar-width + $sidebar-gutter + $outer-gutter-width;
+  }
+
+  .logo {
+    float: left;
+    width: $sidebar-width;
+    margin-left: ($sidebar-width + $sidebar-gutter) * -1;
+  }
+
+  @include breakpoint(tablet) {
+    .content {
+      max-width: none;
+      padding-left: $sidebar-width + $sidebar-gutter + $tablet-gutter-width;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    .content {
+      max-width: none;
+      padding-left: $sidebar-width + $sidebar-gutter + $mobile-gutter-width;
+    }
+  }
+
+
+
   .logo {
     display: block;
     float: left;
     position: relative;
     z-index: 2;
-    width: $logo-width;
+    //width: $logo-width;
     height: $logo-height;
-    margin: 0 $logo-gutter 0 0;
+    //margin: 0 $logo-gutter 0 0;
 
     a {
       display: block;
@@ -44,10 +71,6 @@ $logo-gutter: 30px;
     line-height: (24/16);
     list-style: none;
   }
-
-  ul {
-    margin-left: ($logo-width + $logo-gutter);
-  }
 }
 
 .primary-nav {
@@ -55,11 +78,14 @@ $logo-gutter: 30px;
   position: relative;
   z-index: 2;
   margin-top: em(48px);
-  text-align: right;
 
   li {
     display: inline-block;
-    margin-left: em(60px);
+    margin-right: em(60px);
+    &:nth-child(4n+4) {
+      // TODO: IE compat
+      margin-right: 0;
+    }
   }
 
   a {

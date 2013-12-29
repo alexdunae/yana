@@ -163,15 +163,19 @@ blockquote + p { margin-top: 2.8em; }
 .high-contrast .instagram-badge { background-color: #517fa4 !important; }
 
 .site-header .content { position: relative; height: 84px; padding-top: 1.5em; padding-bottom: 2.25em; }
-.site-header .logo { display: block; float: left; position: relative; z-index: 2; width: 138px; height: 84px; margin: 0 30px 0 0; }
+.site-header .content { max-width: 618px; padding-left: 444px; }
+.site-header .logo { float: left; width: 306px; margin-left: -360px; }
+@media all and (max-width: 900px) { .site-header .content { max-width: none; padding-left: 390px; } }
+@media all and (max-width: 600px) { .site-header .content { max-width: none; padding-left: 390px; } }
+.site-header .logo { display: block; float: left; position: relative; z-index: 2; height: 84px; }
 .site-header .logo a { display: block; width: 138px; height: 84px; background: transparent url("img/header-logo.svg") 50% 0 no-repeat; background-size: 138px 84px; }
 .no-svg .site-header .logo a { background-image: url("img/header-logo.png"); }
 
 .site-nav ul, .site-nav li { margin: 0; padding: 0; font-size: 1em; line-height: 1.5; list-style: none; }
-.site-nav ul { margin-left: 168px; }
 
-.primary-nav { position: relative; z-index: 2; margin-top: 3em; text-align: right; }
-.primary-nav li { display: inline-block; margin-left: 3.75em; }
+.primary-nav { position: relative; z-index: 2; margin-top: 3em; }
+.primary-nav li { display: inline-block; margin-right: 3.75em; }
+.primary-nav li:nth-child(4n+4) { margin-right: 0; }
 .primary-nav a { display: block; text-transform: uppercase; margin-bottom: 0.33333em; padding-top: 0.16667em; font: normal 1.5em/1 "HelveticaNeueW01-57Cn", sans-serif; }
 .primary-nav li:nth-child(4n+1) a { color: #51bdb5; }
 .primary-nav li:nth-child(4n+1) a:hover, .primary-nav li:nth-child(4n+1) a:focus { color: #358c86; }
