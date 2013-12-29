@@ -10131,6 +10131,18 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
         }
       });
     },
+    initHomeCircles: function() {
+      return $('.home-circles .entry a[href]').each(function(idx, el) {
+        var link;
+        link = $(el);
+        return link.closest('.entry').css({
+          cursor: 'pointer'
+        }).on('click', function(e) {
+          document.location = link.attr('href');
+          return false;
+        });
+      });
+    },
     initHighContrast: function() {
       var contrastClass,
         _this = this;
@@ -10172,7 +10184,8 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
 
   $(document).on('ready', function(e) {
     YANA.initDebug();
-    return YANA.initHighContrast();
+    YANA.initHighContrast();
+    return YANA.initHomeCircles();
   });
 
   window.YANA = YANA;

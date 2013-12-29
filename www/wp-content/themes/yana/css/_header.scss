@@ -151,11 +151,11 @@ $logo-gutter: 30px;
     padding-bottom: 0;
   }
 
-  h1, p {
+  .masthead-title, p {
     color: #fff;
   }
 
-  h1 {
+  .masthead-title {
     margin: em(12px,60px);
     @include sans-bold(em(60px), (72/60));
     text-shadow: 1px 1px 1px rgba(#000, 0.2);

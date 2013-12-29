@@ -6,7 +6,6 @@
     @extend %clearfix;
   }
 
-
   &.has-sidebar {
     .content {
       max-width: $max-content-width - $sidebar-width - $sidebar-gutter;

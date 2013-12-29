@@ -27,6 +27,17 @@
 		}
 	?>
 
+	<?php if (is_front_page() ): ?>
+	<aside class="sidebar-facebook-ad">
+		<a class="frame" href='#todo'>
+			<span class="inner">
+				Connect with us on Facebook
+			</span>
+		</a>
+	</aside>
+
+	<?php endif; ?>
+
 	<aside class="sidebar-community-quote">
 		<blockquote>
 			<p>“Y.A.N.A. gave  my parents an apartment to live in near the hospital. Mom and Dad told me that Y.A.N.A. was able to help us because we lived in the Comox Valley, where people cared alot.”</p>

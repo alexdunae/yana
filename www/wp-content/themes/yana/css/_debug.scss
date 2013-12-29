@@ -1,5 +1,5 @@
 .debug {
-  .site-header, .site-body, .site-footer, .masthead {
+  .site-header, .site-body, .site-footer, .masthead, .home-circles, .home-intro {
     .content {
       background: transparent url("img/grid.png") 54px 0 repeat;
     }
@@ -31,7 +31,7 @@
     }
   }
 
-  .event-toc {
+  .event-toc, .news-toc {
     .entry {
       outline: 1px solid rgba(red, 0.35);
       background: rgba(red, 0.1);

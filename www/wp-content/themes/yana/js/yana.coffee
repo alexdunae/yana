@@ -7,6 +7,13 @@ YANA =
         @htmlElement.toggleClass('debug')
         $(window).trigger('resize')
 
+  initHomeCircles: ->
+    $('.home-circles .entry a[href]').each (idx, el) ->
+      link = $(el)
+      link.closest('.entry').css({cursor: 'pointer'}).on 'click', (e) ->
+        document.location = link.attr('href')
+        false
+
   initHighContrast: ->
     contrastClass = 'high-contrast'
     @htmlElement.addClass(allCookies.getItem('yana-contrast'))
@@ -39,6 +46,7 @@ YANA =
 $(document).on 'ready', (e) ->
   YANA.initDebug()
   YANA.initHighContrast()
+  YANA.initHomeCircles()
 
 window.YANA = YANA
 

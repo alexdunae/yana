@@ -13,7 +13,7 @@
       $title = apply_filters( 'the_title', $attachment->post_title );
       $summary = apply_filters( 'the_content', $attachment->post_excerpt );
       echo "<div class='content'>";
-      printf("<div class='text-wrap'><div class='text'><h1>%s</h1>%s</div></div>", $title, $summary);
+      printf("<div class='text-wrap'><div class='text'><h1 class='masthead-title'>%s</h1>%s</div></div>", $title, $summary);
       echo '</div>';
 
       echo '</section>';

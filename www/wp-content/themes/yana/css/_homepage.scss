@@ -1,0 +1,115 @@
+.home {
+  .masthead {
+    .mask { display: none; }
+    .masthead-title {
+      @include mono-bold(em(84px), 1);
+    }
+  }
+}
+
+.home-circles {
+  position: relative;
+  z-index: 6;
+  margin-top: em(-120px);
+  .content {
+    @extend %inner-content-frame;
+    padding-top: em(6px);
+    padding-bottom: em(6px);
+    @extend %clearfix;
+  }
+
+  // TODO: no-svg
+  .entry {
+    float: left;
+    display: table;
+    width: 25%;
+    height: 248px;
+    vertical-align: middle;
+    text-align: center;
+    background: transparent url("img/circle-teal.svg") 50% 50% no-repeat;
+    background-size: contain; // 248px 248px;
+    &, & a { color: #fff; }
+  }
+
+  .entry-1 { background-image: url("img/circle-yellow.svg"); }
+  .entry-2 { background-image: url("img/circle-red.svg"); }
+  .entry-3 { background-image: url("img/circle-green.svg"); }
+
+  .inner {
+    display: table-cell;
+    padding: 0 36px;
+    vertical-align: middle;
+  }
+
+  .title {
+    margin: 0 0 em(6px,24px);
+    // TODO: 77 sans cond bold
+    @include sans-condensed(em(24px), (30/24));
+    color: #fff;
+  }
+
+  p {
+    margin: em(6px,12px) 0 0;
+    @include sans-roman(em(12px), (18/12));
+    color: #fff;
+  }
+
+
+
+}
+
+.home-intro {
+  .content {
+    @extend %inner-content-frame;
+    max-width: em(810px);
+    padding-top: em(24px);
+    padding-bottom: em(24px);
+    text-align: center;
+  }
+
+  .title, p { color: $bluegrey; }
+
+  .title {
+    // TODO: 77 bold cond
+    margin: em(18px,20px) 0;
+    @include sans-condensed(em(20px), (48/20));
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: em(18px,32px) 0;
+    @include sans-condensed(em(32px), (48/32));
+
+  }
+}
+
+.news-toc-home {
+  .entry {
+    margin: 0 0 em(48px);
+  }
+
+
+  .image {
+    display: block;
+    margin: 0 0 em(24px);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .entry-title {
+    margin: 0 0 em(12px,36px);
+    @include sans-roman(em(36px), (48/36));
+  }
+
+  p {
+    margin: em(12px) 0;
+    font-size: em(16px);
+    line-height: (24/16);
+  }
+
+}

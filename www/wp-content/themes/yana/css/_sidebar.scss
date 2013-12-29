@@ -40,6 +40,40 @@
   }
 }
 
+.sidebar-facebook-ad {
+  position: relative;
+  margin: 0 0 em(36px);
+
+  .frame {
+    @include sans-bold(em(16px), (24/17));
+    padding: em(4px,16px);
+    text-align: center;
+    color: #fff;
+    background: #325B99 none;
+    transition: background 100ms ease-out;
+
+    &:hover, &:focus {
+      background-color: darken(#325B99, 5%);
+
+    }
+  }
+
+  .inner {
+    padding: em(30px,16px) em(24px,16px);
+    font-size: 1em;
+    border: 2px solid #849DC2;
+  }
+
+  .frame, .inner {
+    display: block;
+    border-radius: em(6px,16px);
+
+  }
+
+
+}
+
+
 .sidebar-image-ad {
   position: relative;
   margin: 0 em(24px) em(36px);
