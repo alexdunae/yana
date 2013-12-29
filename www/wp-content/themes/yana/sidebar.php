@@ -36,11 +36,15 @@
 		</a>
 	</aside>
 
+	<?php
+		include('widget-thank-yous.php');
+	?>
+
 	<?php endif; ?>
 
 	<aside class="sidebar-community-quote">
 		<blockquote>
-			<p>“Y.A.N.A. gave  my parents an apartment to live in near the hospital. Mom and Dad told me that Y.A.N.A. was able to help us because we lived in the Comox Valley, where people cared alot.”</p>
+			<p>“Y.A.N.A. gave my parents an apartment to live in near the hospital. Mom and Dad told me that Y.A.N.A. was able to help us because we lived in the Comox Valley, where people cared alot.”</p>
 		</blockquote>
 	</aside>
 
