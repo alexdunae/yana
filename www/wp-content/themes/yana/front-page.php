@@ -48,7 +48,8 @@
 
       <div class="news-toc news-toc-home">
         <?php
-          $posts = get_posts( array( 'numberposts' => 5 ) );
+          $cat = get_category_by_slug('thanks');
+          $posts = get_posts( array( 'numberposts' => 5, 'category' => ('-' . $cat->term_id) ) );
           foreach( $posts as $post ):
             setup_postdata($post);
         ?>
