@@ -14,6 +14,8 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
+define('YANA_FACEBOOK_URL', 'https://www.facebook.com/pages/YANA-Comox-Valley/9846076614');
+
 if ( ! function_exists( 'yana_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

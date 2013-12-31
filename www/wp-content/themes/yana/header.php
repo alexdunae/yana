@@ -28,9 +28,9 @@
             </div>
 
             <div class="secondary-nav">
-              <div class="inner">
+              <div class="inner secondary-content">
               	<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
-                <!--<li class="badge"><a class="icon-badge facebook-badge" href="https://www.facebook.com/pages/YANA-Comox-Valley/9846076614"><span aria-hidden="true" class="icon icon-facebook"></span><span class="label">Facebook</span></a></li>-->
+                <span class="badge"><a class="icon-badge facebook-badge" href="<?php echo YANA_FACEBOOK_URL; ?>"><span aria-hidden="true" class="icon icon-facebook"></span><span class="label">Facebook</span></a></span>
               </div>
             </div>
           </nav>

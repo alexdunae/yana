@@ -3,17 +3,19 @@ $logo-height: 84px;
 $logo-gutter: 30px;
 
 .site-header {
-  .content {
+  .content, .secondary-content {
     @extend %inner-content-frame;
     position: relative;
-    height: 84px;
-    padding-top: em(24px);
-    padding-bottom: em(36px);
+    max-width: $max-content-width - $sidebar-width - $sidebar-gutter;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: $sidebar-width + $sidebar-gutter + $outer-gutter-width;
   }
 
   .content {
-    max-width: $max-content-width - $sidebar-width - $sidebar-gutter;
-    padding-left: $sidebar-width + $sidebar-gutter + $outer-gutter-width;
+    height: 84px;
+    padding-top: em(24px);
+    padding-bottom: em(36px);
   }
 
   .logo {
@@ -23,14 +25,14 @@ $logo-gutter: 30px;
   }
 
   @include breakpoint(tablet) {
-    .content {
+    .content, .secondary-content {
       max-width: none;
       padding-left: $sidebar-width + $sidebar-gutter + $tablet-gutter-width;
     }
   }
 
   @include breakpoint(mobile) {
-    .content {
+    .content, .secondary-content {
       max-width: none;
       padding-left: $sidebar-width + $sidebar-gutter + $mobile-gutter-width;
     }
@@ -43,9 +45,7 @@ $logo-gutter: 30px;
     float: left;
     position: relative;
     z-index: 2;
-    //width: $logo-width;
     height: $logo-height;
-    //margin: 0 $logo-gutter 0 0;
 
     a {
       display: block;
@@ -82,7 +82,7 @@ $logo-gutter: 30px;
   li {
     display: inline-block;
     margin-right: em(60px);
-    &:nth-child(4n+4) {
+    &:last-child(4n+4) {
       // TODO: IE compat
       margin-right: 0;
     }
@@ -119,9 +119,7 @@ $logo-gutter: 30px;
   left: 0;
   text-align: right;
 
-  .inner {
-    @extend %inner-content-frame;
-  }
+  div { display: inline-block; vertical-align: middle; }
 
   ul, li { line-height: 1; }
 
@@ -136,7 +134,7 @@ $logo-gutter: 30px;
   }
 
   .badge {
-    padding: 0;
+    padding: 0 0 0 em(24px);
     a { margin: 0; color: #fff; }
   }
 
@@ -153,6 +151,9 @@ $logo-gutter: 30px;
       color: $darkteal;
     }
   }
+
+  li:first-child a { padding-left: 0; }
+  li:last-child a { padding-right: 0; }
 
   .current a {
     color: $darkteal;
