@@ -81,8 +81,10 @@ $logo-gutter: 30px;
 
   li {
     display: inline-block;
+    position: relative;
     margin-right: em(60px);
-    &:last-child(4n+4) {
+    padding: 0 0 em(24px);
+    &:last-child {
       // TODO: IE compat
       margin-right: 0;
     }
@@ -104,6 +106,75 @@ $logo-gutter: 30px;
       a:hover, a:focus { color: darken($c, 15%); }
 
       .high-contrast & a { color: darken($c, 20%) !important; }
+    }
+  }
+
+  .sub-menu {
+    display: block;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: em(192px);
+    top: em(48px);
+    left: 50%;
+    margin-left: em(-96px);
+    padding: em(12px) 0;
+    border: 1px solid #E4E4E4;
+    border-radius: 12px;
+    background: #fff;
+    //transition: 200ms opacity ease-out 0;
+
+    li {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      display: block;
+      margin: 0;
+      padding: em(12px,15px) em(24px,15px);
+      @include sans-condensed(em(15px), (20/15));
+      text-transform: lowercase;
+
+    }
+
+    li a, li:nth-child(1n+1) a {
+      color: #B1B1B1;
+
+      &:hover, &:focus {
+        background: #e4e4e4;
+      }
+    }
+  }
+
+  .sub-menu:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: em(96px - 12px);
+    top: em(-24px);
+    border: em(12px) solid;
+    border-color: transparent transparent #E4E4E4;
+  }
+
+  .sub-menu:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: em(96px - 11px);
+    top: em(-21px);
+    border: em(11px) solid;
+    border-color: transparent transparent #fff;
+  }
+
+  li:hover, li:focus {
+    .sub-menu {
+      display: block;
+      height: auto;
+      opacity: 1;
     }
   }
 }
