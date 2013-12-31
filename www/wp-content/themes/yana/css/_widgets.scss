@@ -12,6 +12,54 @@
   }
 }
 
+.enews {
+  label {
+    display: block;
+  }
+
+  .controls {
+    width: 100%;
+    @extend %clearfix;
+  }
+
+  input, button {
+    display: block;
+    float: left;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+  }
+
+  input {
+    width: percentage(216/306);
+    height: em(48px,14px);
+    padding: em(12px,14px);
+    border: 0;
+    @include sans-roman(14px, (24/14));
+    color: $lightgrey;
+    box-shadow: inset 0 0 3px rgba(#000, 0.25);
+
+    &::-webkit-input-placeholder { text-transform: lowercase; color: $lightgrey; }
+    &::-moz-placeholder { text-transform: lowercase; color: $lightgrey; }
+  }
+
+  button {
+    width: percentage(90/306);
+    height: em(48px,14px);
+    padding: em(12px,14px);
+    border: 0;
+    @include sans-bold(14px, (24/14));
+    color: #fff;
+    background-color: #8BC540;
+    box-shadow: inset 0 0 3px rgba(#000, 0.3);
+    cursor: pointer;
+    transition: background 200ms ease-out;
+
+    &:hover, &:focus {
+      background-color: darken(#8BC540, 5%);
+    }
+  }
+}
+
 .icon-badge, .secondary-nav .icon-badge {
   &, .icon {
     display: inline-block;

@@ -64,6 +64,58 @@
   }
 }
 
+.sidebar-enews {
+  position: relative;
+  margin: 0 0 em(36px);
+
+  .frame {
+    @include sans-bold(em(16px), (24/17));
+    padding: em(18px,16px) em(24px,16px);
+    border: 1px solid #E4E4E4;
+    border-radius: em(6px,16px);
+    text-align: center;
+
+    background: #F6F6F6 none;
+    transition: background 100ms ease-out;
+
+    &:hover, &:focus {
+      background-color: darken(#F6F6F6, 5%);
+
+    }
+  }
+
+  .title {
+    display: block;
+    margin: 0 0 em(12px,12px);
+    @include sans-bold(em(12px), (24/12));
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #1B6F7A;
+  }
+
+  .controls {
+    @extend %clearfix;
+
+    input, button {
+      height: em(48px,14px);
+
+    }
+
+    input {
+      width: percentage(170/258);
+      padding: em(12px,14px);
+      @include sans-roman(14px, (24/14));
+    }
+
+    button {
+      width: percentage(88/258);
+      padding: em(12px,14px);
+      @include sans-roman(14px, (24/14));
+    }
+  }
+}
+
+
 .sidebar-thank-yous {
 
   .title-wrap {

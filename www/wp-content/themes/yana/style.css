@@ -52,9 +52,9 @@ img { vertical-align: middle; }
 @media all and (max-width: 900px) { .site-header .content, .site-header .secondary-content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { max-width: none; padding-left: 30px; padding-right: 30px; } }
 @media all and (max-width: 600px) { .site-header .content, .site-header .secondary-content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { padding-left: 30px; padding-right: 30px; } }
 
-.site-body .content, .home-circles .content, .event-toc-1 { *zoom: 1; }
-.site-body .content:before, .home-circles .content:before, .event-toc-1:before, .site-body .content:after, .home-circles .content:after, .event-toc-1:after { display: table; content: ""; }
-.site-body .content:after, .home-circles .content:after, .event-toc-1:after { clear: both; }
+.enews .controls, .site-body .content, .sidebar-enews .controls, .home-circles .content, .event-toc-1 { *zoom: 1; }
+.enews .controls:before, .site-body .content:before, .sidebar-enews .controls:before, .home-circles .content:before, .event-toc-1:before, .enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after { display: table; content: ""; }
+.enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after { clear: both; }
 
 .skip-link, .icon-badge .label { clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; position: absolute; }
 
@@ -139,6 +139,15 @@ blockquote + p { margin-top: 2.8em; }
   h1 { font-size: 2.76923em; } }
 .video { position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0; }
 .video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.enews label { display: block; }
+.enews .controls { width: 100%; }
+.enews input, .enews button { display: block; float: left; -webkit-appearance: none; box-sizing: border-box; }
+.enews input { width: 70.58824%; height: 3.42857em; padding: 0.85714em; border: 0; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 400; color: #b1b1b1; box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.25); }
+.enews input::-webkit-input-placeholder { text-transform: lowercase; color: #b1b1b1; }
+.enews input::-moz-placeholder { text-transform: lowercase; color: #b1b1b1; }
+.enews button { width: 29.41176%; height: 3.42857em; padding: 0.85714em; border: 0; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 600; color: #fff; background-color: #8BC540; box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); cursor: pointer; transition: background 200ms ease-out; }
+.enews button:hover, .enews button:focus { background-color: #7eb537; }
 
 .icon-badge, .icon-badge .icon, .secondary-nav .icon-badge, .secondary-nav .icon-badge .icon { display: inline-block; width: 3.375em; height: 3em; padding: 0; font-size: 1em; line-height: 3; letter-spacing: 0; text-transform: none; text-align: center; vertical-align: middle; }
 
@@ -246,6 +255,14 @@ blockquote + p { margin-top: 2.8em; }
 .sidebar-facebook-ad .inner { padding: 1.875em 1.5em; font-size: 1em; border: 2px solid #849DC2; }
 .sidebar-facebook-ad .frame, .sidebar-facebook-ad .inner { display: block; border-radius: 0.375em; }
 
+.sidebar-enews { position: relative; margin: 0 0 2.25em; }
+.sidebar-enews .frame { font: normal 1em/1.41176 "Neue Helvetica W01", sans-serif; font-weight: 600; padding: 1.125em 1.5em; border: 1px solid #E4E4E4; border-radius: 0.375em; text-align: center; background: #F6F6F6 none; transition: background 100ms ease-out; }
+.sidebar-enews .frame:hover, .sidebar-enews .frame:focus { background-color: #e9e9e9; }
+.sidebar-enews .title { display: block; margin: 0 0 1em; font: normal 0.75em/2 "Neue Helvetica W01", sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #1B6F7A; }
+.sidebar-enews .controls input, .sidebar-enews .controls button { height: 3.42857em; }
+.sidebar-enews .controls input { width: 65.89147%; padding: 0.85714em; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 400; }
+.sidebar-enews .controls button { width: 34.10853%; padding: 0.85714em; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 400; }
+
 .sidebar-thank-yous .title-wrap { position: relative; margin-top: 24px; margin-left: -24px; margin-right: -24px; background: transparent url("img/sidebar-thank-you-banner.svg") 50% 0 no-repeat; background-size: contain; z-index: 3; }
 .sidebar-thank-yous .title { margin: 0; padding: 2em 1.5em 3em; font: normal 0.75em/2 "Neue Helvetica W01", sans-serif; font-weight: 600; text-align: center; color: #fff; }
 .sidebar-thank-yous .frame { margin: 0 24px; border: 2px solid #E4E4E4; border-radius: 0.5em; padding: 0.25em; }
@@ -328,14 +345,7 @@ blockquote + p { margin-top: 2.8em; }
 .site-footer .footer-about { width: 39.8773%; }
 .site-footer .footer-about p, .site-footer .footer-about label { margin: 0 0 1.5em; font: normal 1em/1.875 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 .site-footer .footer-about a { font: 700 1em/100% "ITC American Typewriter W01", monospace; }
-.site-footer .footer-enews label { display: block; }
-.site-footer .footer-enews .controls { width: 100%; max-width: 306px; font-size: 0; }
-.site-footer .footer-enews input, .site-footer .footer-enews button { display: inline-block; vertical-align: top; -webkit-appearance: none; box-sizing: border-box; }
-.site-footer .footer-enews input { width: 216px; height: 3.42857em; padding: 0.85714em; border: 0; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 400; color: #b1b1b1; }
-.site-footer .footer-enews input::-webkit-input-placeholder { text-transform: lowercase; color: #b1b1b1; }
-.site-footer .footer-enews input::-moz-placeholder { text-transform: lowercase; color: #b1b1b1; }
-.site-footer .footer-enews button { width: 90px; height: 3.42857em; padding: 0.85714em; border: 0; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 600; color: #fff; background-color: #8BC540; box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); cursor: pointer; transition: background 200ms ease-out; }
-.site-footer .footer-enews button:hover, .site-footer .footer-enews button:focus { background-color: #7eb537; }
+.site-footer .footer-enews .controls { max-width: 306px; }
 
 .high-contrast body { color: #3d515a; }
 .high-contrast h1, .high-contrast h1 a, .high-contrast h2, .high-contrast h2 a, .high-contrast h3, .high-contrast h3 a, .high-contrast h4, .high-contrast h4 a, .high-contrast h5, .high-contrast h5 a, .high-contrast h6, .high-contrast h6 a { color: #31807b; }
