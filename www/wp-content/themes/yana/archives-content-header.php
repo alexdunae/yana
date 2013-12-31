@@ -1,6 +1,6 @@
 <?php
 
-  $archive_page = yana_get_archive_page_object();
+  $archive_page = YANA\get_archive_page_object();
   $title = '';
 
   if ( $archive_page ) {

@@ -1,7 +1,7 @@
 <div class="page-sidebar" role="complementary">
 	<?php
 		if (get_post_type() == YANA\Events\POST_TYPE) {
-			$archive = yana_get_archive_page_object();
+			$archive = YANA\get_archive_page_object();
 			echo '<nav class="sidebar-nav"><ul>';
 			printf("<li><a href='%s'>%s</a></li>", get_permalink($archive), apply_filters('the_title', $archive->post_title));
 			echo '</ul></nav>';
@@ -29,7 +29,7 @@
 
 	<?php if (is_front_page() ): ?>
 	<aside class="sidebar-facebook-ad">
-		<a class="frame" href='<?php echo YANA_FACEBOOK_URL; ?>'>
+		<a class="frame" href='<?php echo YANA\FACEBOOK_URL; ?>'>
 			<span class="inner">
 				Connect with us on Facebook
 			</span>

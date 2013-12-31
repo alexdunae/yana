@@ -54,7 +54,7 @@
             setup_postdata($post);
         ?>
           <div id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
-            <?php echo yana_linked_thumbnail($post->ID, 'large'); ?>
+            <?php echo YANA\linked_thumbnail($post->ID, 'large'); ?>
             <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <?php echo apply_filters('the_content', $post->post_excerpt); ?>
             <p><a href="<?php the_permalink(); ?>">Read more</a></p>
