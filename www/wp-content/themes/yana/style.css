@@ -88,19 +88,19 @@ you can use the generic selector below, but it's slower:
 
 .icon-twitter:before { content: "\e003"; }
 
-h1 { margin: 0.06667em 0 0.53333em; font: normal 3.75em/1.2 "HelveticaNeueW01-57Cn", sans-serif; }
+h1 { margin: 0.06667em 0 0.53333em; font: normal 3.75em/1.2 "Neue Helvetica W01", sans-serif; font-weight: 500; }
 h1, h1 a { color: #51bdb5; }
 
-h2 { margin: 1em 0; font: normal 1.5em/1 "HelveticaNeueW01-75Bold", sans-serif; }
+h2 { margin: 1em 0; font: normal 1.5em/1 "Neue Helvetica W01", sans-serif; font-weight: 600; }
 h2, h2 a { color: #51bdb5; }
 
-h3 { margin: 1.2em 0; font: normal 1.25em/1.2 "HelveticaNeueW01-75Bold", sans-serif; }
+h3 { margin: 1.2em 0; font: normal 1.25em/1.2 "Neue Helvetica W01", sans-serif; font-weight: 600; }
 h3, h3 a { color: #51bdb5; }
 
-h4, .faux-heading { margin: 1.71429em 0; font: normal 0.875em/1.71429 "HelveticaNeueW01-75Bold", sans-serif; text-transform: uppercase; letter-spacing: 2px; }
+h4, .faux-heading { margin: 1.71429em 0; font: normal 0.875em/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
 h4, .faux-heading, h4 a, .faux-heading a { color: #51bdb5; }
 
-body { margin: 0; font: normal 16px/2 "HelveticaNeueW01-55Roma", sans-serif; color: #979797; }
+body { margin: 0; font: normal 16px/2 "Neue Helvetica W01", sans-serif; font-weight: 400; color: #979797; }
 
 a { color: #2494a2; text-decoration: none; transition: 100ms color ease-out; }
 a:hover, a:focus { color: #51bdb5; }
@@ -108,7 +108,7 @@ a:hover, a:focus { color: #51bdb5; }
 img { display: block; width: auto; height: auto; max-width: 100%; line-height: 1; }
 
 p { margin: 1.6em 0; font-size: 0.9375em; line-height: 1.6; }
-p strong, p b { font: normal 100%/1 "HelveticaNeueW01-75Bold", sans-serif; }
+p strong, p b { font: normal 100%/1 "Neue Helvetica W01", sans-serif; font-weight: 600; }
 p small { font-size: 0.8em; line-height: 1.5; }
 
 ul, ol { margin: 1.5em 0; }
@@ -118,8 +118,8 @@ li ul, li ol { margin: 0.42857em; }
 li li { font-size: 1em; }
 
 blockquote { margin: 2em 0; padding: 0; font-size: 1em; color: #bbcad2; }
-blockquote p { margin: 0.375em 0; font: normal 2em/1.5 "HelveticaNeueW01-47LtCn 692686", sans-serif; }
-blockquote cite { display: block; margin: 0; font: normal 1em/2.25 "HelveticaNeueW01-55Roma", sans-serif; font-style: italic; }
+blockquote p { margin: 0.375em 0; font: normal 2em/1.5 "Neue Helvetica W01", sans-serif; font-weight: 300; }
+blockquote cite { display: block; margin: 0; font: normal 1em/2.25 "Neue Helvetica W01", sans-serif; font-weight: 400; font-style: italic; }
 
 .lede + p { margin-top: -0.4em; }
 
@@ -127,7 +127,7 @@ blockquote + p { margin-top: 2.8em; }
 
 .lede p { margin: 1.09091em 0; font-size: 1.375em; line-height: 1.63636; }
 
-.btn { display: inline-block; box-sizing: border-box; -webkit-appearance: none; margin: 1.125em 0; padding: 0.375em 1.125em; border: 0; border-radius: 0.375em; font: normal 1em/2.25 "HelveticaNeueW01-75Bold", sans-serif; color: #fff; background-color: #2494a2; cursor: pointer; transition: 100ms background ease-out; }
+.btn { display: inline-block; box-sizing: border-box; -webkit-appearance: none; margin: 1.125em 0; padding: 0.375em 1.125em; border: 0; border-radius: 0.375em; font: normal 1em/2.25 "Neue Helvetica W01", sans-serif; font-weight: 600; color: #fff; background-color: #2494a2; cursor: pointer; transition: 100ms background ease-out; }
 .btn:hover, .btn:focus { color: #fff; background-color: #51bdb5; }
 .btn:active { color: #fff; background-color: #76cbc5; }
 
@@ -176,7 +176,7 @@ blockquote + p { margin-top: 2.8em; }
 .primary-nav { position: relative; z-index: 2; margin-top: 3em; }
 .primary-nav li { display: inline-block; position: relative; margin-right: 3.75em; padding: 0 0 1.5em; }
 .primary-nav li:last-child { margin-right: 0; }
-.primary-nav a { display: block; text-transform: uppercase; margin-bottom: 0.33333em; padding-top: 0.16667em; font: normal 1.5em/1 "HelveticaNeueW01-57Cn", sans-serif; }
+.primary-nav a { display: block; text-transform: uppercase; margin-bottom: 0.33333em; padding-top: 0.16667em; font: normal 1.5em/1 "Neue Helvetica W01", sans-serif; font-weight: 500; }
 .primary-nav li:nth-child(4n+1) a { color: #51bdb5; }
 .primary-nav li:nth-child(4n+1) a:hover, .primary-nav li:nth-child(4n+1) a:focus { color: #358c86; }
 .high-contrast .primary-nav li:nth-child(4n+1) a { color: #2e7a74 !important; }
@@ -191,7 +191,7 @@ blockquote + p { margin-top: 2.8em; }
 .high-contrast .primary-nav li:nth-child(4n+4) a { color: #b9380e !important; }
 .primary-nav .sub-menu { display: block; height: 0; opacity: 0; position: absolute; width: 12em; top: 3em; left: 50%; margin-left: -6em; padding: 0.75em 0; border: 1px solid #E4E4E4; border-radius: 12px; background: #fff; }
 .primary-nav .sub-menu li { display: block; margin: 0; padding: 0; }
-.primary-nav .sub-menu a { display: block; margin: 0; padding: 0.8em 1.6em; font: normal 0.9375em/1.33333 "HelveticaNeueW01-57Cn", sans-serif; text-transform: lowercase; }
+.primary-nav .sub-menu a { display: block; margin: 0; padding: 0.8em 1.6em; font: normal 0.9375em/1.33333 "Neue Helvetica W01", sans-serif; font-weight: 500; text-transform: lowercase; }
 .primary-nav .sub-menu li a, .primary-nav .sub-menu li:nth-child(1n+1) a { color: #B1B1B1; }
 .primary-nav .sub-menu li a:hover, .primary-nav .sub-menu li a:focus, .primary-nav .sub-menu li:nth-child(1n+1) a:hover, .primary-nav .sub-menu li:nth-child(1n+1) a:focus { background: #e4e4e4; }
 .primary-nav .sub-menu:before { content: ' '; position: absolute; width: 0; height: 0; left: 5.25em; top: -1.5em; border: 0.75em solid; border-color: transparent transparent #E4E4E4; }
@@ -214,8 +214,8 @@ blockquote + p { margin-top: 2.8em; }
 .masthead { position: relative; height: 26.875em; padding-top: 1.5em; padding-bottom: 1.5em; background-position: 50% 0; background-repeat: no-repeat; background-size: cover; }
 .masthead .content { position: relative; padding-top: 0; padding-bottom: 0; }
 .masthead .masthead-title, .masthead p { color: #fff; }
-.masthead .masthead-title { margin: 0.2em; font: normal 3.75em/1.2 "HelveticaNeueW01-75Bold", sans-serif; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
-.masthead p { margin: 0.66667em; font: normal 1.125em/1.77778 "HelveticaNeueW01-55Roma", sans-serif; color: rgba(255, 255, 255, 0.75); }
+.masthead .masthead-title { margin: 0.2em; font: normal 3.75em/1.2 "Neue Helvetica W01", sans-serif; font-weight: 600; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+.masthead p { margin: 0.66667em; font: normal 1.125em/1.77778 "Neue Helvetica W01", sans-serif; font-weight: 400; color: rgba(255, 255, 255, 0.75); }
 .masthead .text-wrap { display: table; position: relative; z-index: 3; max-width: 31.5em; height: 23.875em; }
 .masthead .text { display: table-cell; vertical-align: middle; }
 .masthead .mask, .masthead .bar { display: block; position: absolute; width: 100%; height: 100%; left: 0; top: 0; }
@@ -234,20 +234,20 @@ blockquote + p { margin-top: 2.8em; }
 .sidebar-nav { margin: 0 0 2.25em; }
 .sidebar-nav ul, .sidebar-nav li { margin: 0; padding: 0; font-size: 1em; list-style: none; }
 .sidebar-nav li { border-bottom: 1px solid #f0f0f0; }
-.sidebar-nav a { display: block; padding: 0.9375em 1.5em; font: normal 1em/1.5 "HelveticaNeueW01-55Roma", sans-serif; text-align: center; color: #b1b1b1; }
+.sidebar-nav a { display: block; padding: 0.9375em 1.5em; font: normal 1em/1.5 "Neue Helvetica W01", sans-serif; font-weight: 400; text-align: center; color: #b1b1b1; }
 
 .sidebar-community-quote { margin: 0 0 2.25em; padding: 0 1.5em; }
 .sidebar-community-quote blockquote { color: #2494a2; }
-.sidebar-community-quote blockquote p { font: normal 1em/1.875 "AmericanTypwrterITCW01- 731010", monospace; }
+.sidebar-community-quote blockquote p { font: 700 1em/1.875 "ITC American Typewriter W01", monospace; }
 
 .sidebar-facebook-ad { position: relative; margin: 0 0 2.25em; }
-.sidebar-facebook-ad .frame { font: normal 1em/1.41176 "HelveticaNeueW01-75Bold", sans-serif; padding: 0.25em; text-align: center; color: #fff; background: #325B99 none; transition: background 100ms ease-out; }
+.sidebar-facebook-ad .frame { font: normal 1em/1.41176 "Neue Helvetica W01", sans-serif; font-weight: 600; padding: 0.25em; text-align: center; color: #fff; background: #325B99 none; transition: background 100ms ease-out; }
 .sidebar-facebook-ad .frame:hover, .sidebar-facebook-ad .frame:focus { background-color: #2c5086; }
 .sidebar-facebook-ad .inner { padding: 1.875em 1.5em; font-size: 1em; border: 2px solid #849DC2; }
 .sidebar-facebook-ad .frame, .sidebar-facebook-ad .inner { display: block; border-radius: 0.375em; }
 
 .sidebar-thank-yous .title-wrap { position: relative; margin-top: 24px; margin-left: -24px; margin-right: -24px; background: transparent url("img/sidebar-thank-you-banner.svg") 50% 0 no-repeat; background-size: contain; z-index: 3; }
-.sidebar-thank-yous .title { margin: 0; padding: 2em 1.5em 3em; font: normal 0.75em/2 "HelveticaNeueW01-75Bold", sans-serif; text-align: center; color: #fff; }
+.sidebar-thank-yous .title { margin: 0; padding: 2em 1.5em 3em; font: normal 0.75em/2 "Neue Helvetica W01", sans-serif; font-weight: 600; text-align: center; color: #fff; }
 .sidebar-thank-yous .frame { margin: 0 24px; border: 2px solid #E4E4E4; border-radius: 0.5em; padding: 0.25em; }
 .sidebar-thank-yous .inner { border: 1px solid #F0F0F0; border-radius: 0.5em; }
 .sidebar-thank-yous ul, .sidebar-thank-yous li { margin: 0; padding: 0; list-style: none; }
@@ -265,10 +265,10 @@ blockquote + p { margin-top: 2.8em; }
 .sidebar-image-ad .image { z-index: 1; }
 .sidebar-image-ad .image img { width: 100%; height: 100%; }
 .sidebar-image-ad .link { display: table; z-index: 3; text-transform: uppercase; text-align: center; color: #fff; }
-.sidebar-image-ad .link .text { display: table-cell; padding: 0 1.875em; font: normal 1.5em/1.25 "HelveticaNeueW01-75Bold", sans-serif; vertical-align: middle; }
+.sidebar-image-ad .link .text { display: table-cell; padding: 0 1.875em; font: normal 1.5em/1.25 "Neue Helvetica W01", sans-serif; font-weight: 600; vertical-align: middle; }
 
 .home .masthead .mask { display: none; }
-.home .masthead .masthead-title { font: normal 5.25em/1 "AmericanTypwrterITCW01- 731010", monospace; }
+.home .masthead .masthead-title { font: 700 5.25em/1 "ITC American Typewriter W01", monospace; }
 
 .home-circles { position: relative; z-index: 6; margin-top: -7.5em; }
 .home-circles .content { padding-left: 0; padding-right: 0; padding-top: 0.375em; padding-bottom: 0.375em; }
@@ -278,8 +278,8 @@ blockquote + p { margin-top: 2.8em; }
 .home-circles .entry-2 { background-image: url("img/circle-red.svg"); }
 .home-circles .entry-3 { background-image: url("img/circle-green.svg"); }
 .home-circles .inner { display: table-cell; padding: 36px 36px; vertical-align: middle; }
-.home-circles .title { margin: 0 0 0.25em; font: normal 1.5em/1.25 "HelveticaNeueW01-57Cn", sans-serif; color: #fff; }
-.home-circles p { margin: 0.5em 0 0; font: normal 0.75em/1.5 "HelveticaNeueW01-55Roma", sans-serif; color: #fff; }
+.home-circles .title { margin: 0 0 0.25em; font: normal 1.5em/1.25 "Neue Helvetica W01", sans-serif; font-weight: 700; color: #fff; }
+.home-circles p { margin: 0.5em 0 0; font: normal 0.75em/1.5 "Neue Helvetica W01", sans-serif; font-weight: 400; color: #fff; }
 @media all and (max-width: 1000px) { .home-circles .title { font-size: 1.25em; } }
 @media all and (max-width: 900px) { .home-circles .entry { height: 12.25em; background: none #2494a2; }
   .home-circles .entry-1 { background-color: #feb62d; }
@@ -293,16 +293,16 @@ blockquote + p { margin-top: 2.8em; }
 
 .home-intro .content { max-width: 50.625em; padding-top: 1.5em; padding-bottom: 1.5em; text-align: center; }
 .home-intro .title, .home-intro p { color: #bbcad2; }
-.home-intro .title { margin: 0.9em 0; font: normal 1.25em/2.4 "HelveticaNeueW01-57Cn", sans-serif; letter-spacing: 2px; text-transform: uppercase; }
-.home-intro p { margin: 0.5625em 0; font: normal 2em/1.5 "HelveticaNeueW01-57Cn", sans-serif; }
+.home-intro .title { margin: 0.9em 0; font: normal 1.25em/2.4 "Neue Helvetica W01", sans-serif; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.home-intro p { margin: 0.5625em 0; font: normal 2em/1.5 "Neue Helvetica W01", sans-serif; font-weight: 500; }
 
 .news-toc-home .entry { margin: 0 0 3em; }
 .news-toc-home .image { display: block; margin: 0 0 1.5em; }
 .news-toc-home img { display: block; width: 100%; height: auto; }
-.news-toc-home .entry-title { margin: 0 0 0.33333em; font: normal 2.25em/1.33333 "HelveticaNeueW01-55Roma", sans-serif; }
+.news-toc-home .entry-title { margin: 0 0 0.33333em; font: normal 2.25em/1.33333 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 .news-toc-home p { margin: 0.75em 0; font-size: 1em; line-height: 1.5; }
 
-.event-info p { font: normal 1.25em/1.2 "HelveticaNeueW01-57Cn", sans-serif; }
+.event-info p { font: normal 1.25em/1.2 "Neue Helvetica W01", sans-serif; font-weight: 500; }
 
 .event-toc .entry { margin: 0 0 2.25em; }
 .event-toc .image { display: block; margin: 0 0 1.5em; }
@@ -310,31 +310,31 @@ blockquote + p { margin-top: 2.8em; }
 
 .event-toc-0 { margin: 0 0 3.375em; }
 .event-toc-0 .entry { margin: 0 0 1.5em; }
-.event-toc-0 .entry-title { margin: 0 0 0.4em; font: normal 3.75em/1.2 "HelveticaNeueW01-57Cn", sans-serif; }
+.event-toc-0 .entry-title { margin: 0 0 0.4em; font: normal 3.75em/1.2 "Neue Helvetica W01", sans-serif; font-weight: 500; }
 .event-toc-0 p { margin: 0.75em 0; font-size: 1em; line-height: 2; }
 
 .event-toc-1 .entry { float: left; width: 46.15385%; }
 .event-toc-1 .entry:nth-child(odd) { margin-right: 7.69231%; }
-.event-toc-1 .entry-title { margin: 0 0 0.85714em; font: normal 1.75em/1.28571 "HelveticaNeueW01-55Roma", sans-serif; }
+.event-toc-1 .entry-title { margin: 0 0 0.85714em; font: normal 1.75em/1.28571 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 .event-toc-1 p { margin: 1.28571em 0 1.71429em; font-size: 0.875em; line-height: 1.42857; }
 
 .event-toc-2 .entry { margin: 0 0 1.5em; }
-.event-toc-2 .entry-title { margin: 0 0 0.5em; font: normal 1.5em/1 "HelveticaNeueW01-55Roma", sans-serif; }
+.event-toc-2 .entry-title { margin: 0 0 0.5em; font: normal 1.5em/1 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 .event-toc-2 p { margin: 0.85714em 0 1.71429em; font-size: 0.875em; line-height: 1.42857; }
 
 .site-footer { background: #1B6F7A; }
 .site-footer, .site-footer a { color: #7CBFC7; }
 .site-footer .content { position: relative; padding-top: 1.5em; padding-bottom: 2.25em; }
 .site-footer .footer-about { width: 39.8773%; }
-.site-footer .footer-about p, .site-footer .footer-about label { margin: 0 0 1.5em; font: normal 1em/1.875 "HelveticaNeueW01-55Roma", sans-serif; }
-.site-footer .footer-about a { font: normal 1em/100% "AmericanTypwrterITCW01- 731010", monospace; }
+.site-footer .footer-about p, .site-footer .footer-about label { margin: 0 0 1.5em; font: normal 1em/1.875 "Neue Helvetica W01", sans-serif; font-weight: 400; }
+.site-footer .footer-about a { font: 700 1em/100% "ITC American Typewriter W01", monospace; }
 .site-footer .footer-enews label { display: block; }
 .site-footer .footer-enews .controls { width: 100%; max-width: 306px; font-size: 0; }
 .site-footer .footer-enews input, .site-footer .footer-enews button { display: inline-block; vertical-align: top; -webkit-appearance: none; box-sizing: border-box; }
-.site-footer .footer-enews input { width: 216px; height: 3.42857em; padding: 0.85714em; border: 0; font: normal 14px/1.71429 "HelveticaNeueW01-55Roma", sans-serif; color: #b1b1b1; }
+.site-footer .footer-enews input { width: 216px; height: 3.42857em; padding: 0.85714em; border: 0; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 400; color: #b1b1b1; }
 .site-footer .footer-enews input::-webkit-input-placeholder { text-transform: lowercase; color: #b1b1b1; }
 .site-footer .footer-enews input::-moz-placeholder { text-transform: lowercase; color: #b1b1b1; }
-.site-footer .footer-enews button { width: 90px; height: 3.42857em; padding: 0.85714em; border: 0; font: normal 14px/1.71429 "HelveticaNeueW01-75Bold", sans-serif; color: #fff; background-color: #8BC540; box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); cursor: pointer; transition: background 200ms ease-out; }
+.site-footer .footer-enews button { width: 90px; height: 3.42857em; padding: 0.85714em; border: 0; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 600; color: #fff; background-color: #8BC540; box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); cursor: pointer; transition: background 200ms ease-out; }
 .site-footer .footer-enews button:hover, .site-footer .footer-enews button:focus { background-color: #7eb537; }
 
 .high-contrast body { color: #3d515a; }

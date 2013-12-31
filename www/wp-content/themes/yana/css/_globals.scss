@@ -20,24 +20,50 @@ $sidebar-gutter: 54px;
 // used for calculating ems
 $base-font-size: 16px;
 
+//  "Neue Helvetica W01"                  weight      style
+//  Neue Helvetica® 47 Condensed Light    300         normal
+//  Neue Helvetica® 55 Roman              400         normal
+//  Neue Helvetica® 75 Bold               600         normal
+//  Neue Helvetica® 57 Condensed          500         normal
+//  Neue Helvetica® 77 Condensed Bold     700         normal
+
+//  "ITC American Typewriter W01"
+//  ITC American Typewriter™ Bold         700         normal
+
+
+
+@mixin sans($size: 100%, $line-height: 1) {
+  font: normal $size/#{$line-height} 'Neue Helvetica W01', sans-serif;
+}
+
 @mixin sans-roman($size: 100%, $line-height: 1) {
-  font: normal $size/#{$line-height} 'HelveticaNeueW01-55Roma', sans-serif;
+  @include sans($size, $line-height);
+  font-weight: 400;
 }
 
 @mixin sans-bold($size: 100%, $line-height: 1) {
-  font: normal $size/#{$line-height} 'HelveticaNeueW01-75Bold', sans-serif;
+  @include sans($size, $line-height);
+  font-weight: 600;
 }
 
 @mixin sans-condensed($size: 100%, $line-height: 1) {
-  font: normal $size/#{$line-height} 'HelveticaNeueW01-57Cn', sans-serif;
+  @include sans($size, $line-height);
+  font-weight: 500;
 }
 
 @mixin sans-light-condensed($size: 100%, $line-height: 1) {
-  font: normal $size/#{$line-height} 'HelveticaNeueW01-47LtCn 692686', sans-serif;
+  @include sans($size, $line-height);
+  font-weight: 300;
 }
 
+@mixin sans-bold-condensed($size: 100%, $line-height: 1) {
+  @include sans($size, $line-height);
+  font-weight: 700;
+}
+
+
 @mixin mono-bold($size: 100%, $line-height: 1) {
-  font: normal $size/#{$line-height} 'AmericanTypwrterITCW01- 731010', monospace;
+  font: 700 $size/#{$line-height} 'ITC American Typewriter W01', monospace;
 }
 
 @mixin breakpoint($point) {
