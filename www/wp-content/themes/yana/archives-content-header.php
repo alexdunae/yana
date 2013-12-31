@@ -31,6 +31,6 @@
     ?>
 </header>
 <?php
-  if ( $archive_page && trim( $archive_page->post_content ) ) {
+  if ( $archive_page && trim( $archive_page->post_content ) && $paged < 2 ) {
     echo apply_filters( 'the_content', $archive_page->post_content );
   }

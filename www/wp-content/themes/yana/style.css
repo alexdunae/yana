@@ -171,6 +171,8 @@ blockquote + p { margin-top: 2.8em; }
 .instagram-badge:active { background-color: #517fa4; background-color: #517fa4; }
 .high-contrast .instagram-badge { background-color: #517fa4 !important; }
 
+.post-toc .category-thanks p { padding: 0.85714em 0; font-size: 0.875em; line-height: 1.42857; color: #7CBFC7; }
+
 .site-header .content, .site-header .secondary-content { position: relative; max-width: 618px; padding-top: 0; padding-bottom: 0; padding-left: 444px; }
 .site-header .content { height: 84px; padding-top: 1.5em; padding-bottom: 2.25em; }
 .site-header .logo { float: left; width: 306px; margin-left: -360px; }

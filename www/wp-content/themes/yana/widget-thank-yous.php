@@ -1,8 +1,8 @@
 <?php
 	$cat = get_category_by_slug('thanks');
+	$link = get_category_link($cat->cat_ID);
 
 	if ( $cat ) {
-
 		$thankyous = get_posts( array(
 		                       'category' => $cat->term_id,
 		                       'numberposts' => 8 ) );
@@ -14,7 +14,7 @@
 
 			foreach( $thankyous as $thanks ) {
 				$count++;
-				printf("<li class='entry-%d'><a href='%s'>%s</a></li>", $count, get_permalink($thanks->ID), esc_html($thanks->post_excerpt));
+				printf("<li class='entry-%d'><a href='%s'>%s</a></li>", $count, $link, esc_html($thanks->post_excerpt));
 			}
 
 			echo '</ul></div></div></section>';
