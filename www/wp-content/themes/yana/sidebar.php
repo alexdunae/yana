@@ -29,7 +29,7 @@
 
 	<?php if (is_front_page() ): ?>
 	<aside class="sidebar-facebook-ad">
-		<a class="frame" href='#todo'>
+		<a class="frame" href='<?php echo YANA_FACEBOOK_URL; ?>'>
 			<span class="inner">
 				Connect with us on Facebook
 			</span>
