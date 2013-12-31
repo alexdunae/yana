@@ -64,18 +64,9 @@
   }
 
   @include breakpoint(tablet) {
-    .entry {
-      height: em(196px);
-      background: none $darkteal;
-    }
+    .title { font-size: em(24px); }
+    p { display: none; }
 
-    .entry-1 { background-color: $yellow; }
-    .entry-2 { background-color: $orange; }
-    .entry-3 { background-color: $green; }
-
-    .inner { padding: em(18px); }
-
-    .title { font-size: em(24px) }
   }
 
   @media all and (max-width: 700px) {
