@@ -19,9 +19,13 @@
     }
 
     @include breakpoint(tablet) {
+      .page-sidebar {
+        width: $tablet-sidebar-width;
+        margin-left: ($tablet-sidebar-width + $sidebar-gutter) * -1;
+      }
       .content {
         max-width: none;
-        padding-left: $sidebar-width + $sidebar-gutter + $tablet-gutter-width;
+        padding-left: $tablet-sidebar-width + $sidebar-gutter + $tablet-gutter-width;
       }
     }
 
