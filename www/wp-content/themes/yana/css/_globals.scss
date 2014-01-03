@@ -148,6 +148,7 @@ $base-font-size: 16px;
 }
 
 %image-replacement {
+  display: block;
   background-color: transparent;
   border: 0;
   overflow: hidden;

@@ -47,5 +47,9 @@
     outline: 1px solid rgba(black, 0.5);
   }
 
+  .footer-about, .footer-nav, .site-footer .logo {
+    outline: 1px solid rgba(red, 0.5);
+  }
+
   img { opacity: 0.5; }
 }

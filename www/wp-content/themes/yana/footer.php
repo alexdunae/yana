@@ -4,6 +4,7 @@
       <footer class="site-footer" role="supplemental">
         <div class="content">
           <section class="footer-about">
+            <div class="logo">You Are Not Alone</div>
             <p>YANA provides accommodation and funding to Comox Valley families who need to travel outside the community for medical treatment for a child under 19 or for an expecting mother.</p>
             <p><a href="<?php echo YANA\FACEBOOK_URL; ?>">Connect with us on Facebook</a></p>
 

@@ -2,19 +2,41 @@
   // TODO: contrast
   &, & a { color: #7CBFC7; }
 
+  border-bottom: em(84px) solid #14535C;
   background: #1B6F7A;
 
   .content {
     @extend %inner-content-frame;
+    @extend %clearfix;
     position: relative;
-    padding-top: em(24px);
-    padding-bottom: em(36px);
+    padding-top: em(36px);
+    padding-bottom: em(60px);
   }
 
   .footer-about {
+    float: left;
     width: percentage(390/978);
+    margin: 0 percentage(114/978) 0 0;
+
+    .logo {
+      width: 100%;
+      height: em(84px);
+      margin: em(6px) 0 em(18px);
+      min-height: 84px;
+
+
+      @extend %image-replacement;
+      background: transparent url("img/footer-logo.svg") 0 0 no-repeat;
+      background-size: 144px 84px;
+
+      .no-svg & {
+        background-image: url("img/footer-logo.png");
+      }
+    }
+
+
     p, label {
-      margin: 0 0 em(24px);
+      margin: 0 0 em(18px);
       @include sans-roman(em(16px), (30/16));
     }
 
@@ -27,5 +49,11 @@
     .controls {
       max-width: $sidebar-width;
     }
+  }
+
+  .footer-nav {
+    float: left;
+    width: percentage(474/978);
+
   }
 }
