@@ -3,7 +3,7 @@ $logo-height: 84px;
 $logo-gutter: 30px;
 
 .site-header {
-  .content, .secondary-content {
+  .content {
     @extend %inner-content-frame;
     position: relative;
     max-width: $max-content-width - $sidebar-width - $sidebar-gutter;
@@ -86,17 +86,18 @@ $logo-gutter: 30px;
   margin-top: em(48px);
 
   ul {
+    display: block;
     text-align: justify;
   }
 
   ul:after{
-    content: "";
+    @extend %inline-block;
     width: 100%;
-    display: inline-block;
+    content: "";
   }
 
   li {
-    display: inline-block;
+    @extend %inline-block;
     position: relative;
     padding: 0 0 em(24px);
   }
@@ -201,6 +202,14 @@ $logo-gutter: 30px;
   top: 0;
   left: 0;
   text-align: right;
+
+  .secondary-content {
+    position: relative;
+    max-width: $max-content-width - $sidebar-width - $sidebar-gutter;
+    margin: 0 auto;
+    padding-left: $sidebar-width + $sidebar-gutter + $outer-gutter-width;
+  }
+
 
   div { display: inline-block; vertical-align: middle; }
 

@@ -48,13 +48,16 @@ body { font-size: 1em; line-height: 1.4; }
 
 img { vertical-align: middle; }
 
-.site-header .content, .site-header .secondary-content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { max-width: 978px; margin: 0 auto; padding: 0 84px; }
-@media all and (max-width: 900px) { .site-header .content, .site-header .secondary-content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { max-width: none; padding-left: 30px; padding-right: 30px; } }
-@media all and (max-width: 600px) { .site-header .content, .site-header .secondary-content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { padding-left: 30px; padding-right: 30px; } }
+.site-header .content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { max-width: 978px; margin: 0 auto; padding: 0 84px; }
+@media all and (max-width: 900px) { .site-header .content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { max-width: none; padding-left: 30px; padding-right: 30px; } }
+@media all and (max-width: 600px) { .site-header .content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { padding-left: 30px; padding-right: 30px; } }
 
 .enews .controls, .site-body .content, .sidebar-enews .controls, .home-circles .content, .event-toc-1, .site-footer .content { *zoom: 1; }
 .enews .controls:before, .site-body .content:before, .sidebar-enews .controls:before, .home-circles .content:before, .event-toc-1:before, .site-footer .content:before, .enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after, .site-footer .content:after { display: table; content: ""; }
 .enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after, .site-footer .content:after { clear: both; }
+
+.primary-nav ul:after, .primary-nav li { display: inline-block; }
+.lt-ie8 .primary-nav ul:after, .primary-nav .lt-ie8 ul:after, .lt-ie8 .primary-nav li, .primary-nav .lt-ie8 li { zoom: 1; display: inline; }
 
 .skip-link, .icon-badge .label { clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; position: absolute; }
 
@@ -173,7 +176,7 @@ blockquote + p { margin-top: 2.8em; }
 
 .post-toc .category-thanks p { padding: 0.85714em 0; font-size: 0.875em; line-height: 1.42857; color: #7CBFC7; }
 
-.site-header .content, .site-header .secondary-content { position: relative; max-width: 618px; padding-top: 0; padding-bottom: 0; padding-left: 444px; }
+.site-header .content { position: relative; max-width: 618px; padding-top: 0; padding-bottom: 0; padding-left: 444px; }
 .site-header .content { height: 84px; padding-top: 1.5em; padding-bottom: 2.25em; }
 .site-header .logo { float: left; width: 306px; margin-left: -360px; }
 @media all and (max-width: 900px) { .site-header { font-size: 13px; }
@@ -187,9 +190,9 @@ blockquote + p { margin-top: 2.8em; }
 .site-nav ul, .site-nav li { margin: 0; padding: 0; font-size: 1em; line-height: 1.5; list-style: none; }
 
 .primary-nav { position: relative; z-index: 20; margin-top: 3em; }
-.primary-nav ul { text-align: justify; }
-.primary-nav ul:after { content: ""; width: 100%; display: inline-block; }
-.primary-nav li { display: inline-block; position: relative; padding: 0 0 1.5em; }
+.primary-nav ul { display: block; text-align: justify; }
+.primary-nav ul:after { width: 100%; content: ""; }
+.primary-nav li { position: relative; padding: 0 0 1.5em; }
 .primary-nav a { display: block; text-transform: uppercase; margin-bottom: 0.33333em; padding-top: 0.16667em; font: normal 1.5em/1 "Neue Helvetica W01", sans-serif; font-weight: 500; }
 .primary-nav li:nth-child(4n+1) a { color: #51bdb5; }
 .primary-nav li:nth-child(4n+1) a:hover, .primary-nav li:nth-child(4n+1) a:focus { color: #358c86; }
@@ -213,6 +216,7 @@ blockquote + p { margin-top: 2.8em; }
 .primary-nav li:hover .sub-menu, .primary-nav li:focus .sub-menu { display: block; height: auto; opacity: 1; }
 
 .secondary-nav { display: block; position: absolute; z-index: 1; width: 100%; height: 3em; top: 0; left: 0; text-align: right; }
+.secondary-nav .secondary-content { position: relative; max-width: 618px; margin: 0 auto; padding-left: 444px; }
 .secondary-nav div { display: inline-block; vertical-align: middle; }
 .secondary-nav ul, .secondary-nav li { line-height: 1; }
 .secondary-nav ul { word-spacing: 0; }
