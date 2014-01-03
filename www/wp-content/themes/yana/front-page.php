@@ -62,7 +62,11 @@
   			<?php
           endforeach;
           wp_reset_postdata();
+
+          $news_page = get_page( get_option( 'page_for_posts' ) )
         ?>
+
+        <a href="<?php echo get_permalink($news_page->ID); ?>" class="btn">View more posts</a>
       </div>
 	</div>
 </article>
