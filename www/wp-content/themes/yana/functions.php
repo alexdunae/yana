@@ -22,26 +22,15 @@ function setup() {
 	add_theme_support( 'post-thumbnails' );
   add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );   // TODO
   add_image_size('event-wide-thumbnail', 624, 0);
+  add_image_size('post-masthead-image', 0, 430);
+  add_image_size('post-masthead-vignette', 0, 430);
+
   set_post_thumbnail_size((288 * 2), 0, 0);
 
 	register_nav_menus( array(
 		'primary' => 'Primary Menu',
 		'secondary' => 'Secondary Menu',
 	) );
-
-  if (class_exists('\MultiPostThumbnails')) {
-    $types = array('page', 'yana-event');
-    foreach($types as $type) {
-      new \MultiPostThumbnails(array(
-          'label' => 'Masthead',
-          'id' => 'masthead-image',
-          'post_type' => $type
-          )
-      );
-
-      add_image_size('post-secondary-image-thumbnail', 0, 430);
-    }
-  }
 }
 
 

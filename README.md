@@ -37,6 +37,18 @@ To upgrade the local version of WordPress to a tagged release, run:
     git fetch --tags
     git checkout 3.7
 
+## WordPress setup
+
+1. Install WordPress on the remote host
+1. Configure Wordpress
+    - Thumbnails: 288x (no cropping)
+    - Medium images: 309x
+    - Large images: 618x
+    - Permalinks
+1. Install and activate the [Advanced Custom Fields](http://wordpress.org/plugins/advanced-custom-fields/) plugin
+    - Import the field definitions from the `advanced-custom-field-export.xml` file in the YANA theme directory
+
+
 
 ## Deployment
 

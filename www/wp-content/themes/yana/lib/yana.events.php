@@ -178,7 +178,7 @@ function modify_admin_bar( $wp_admin_bar ){
   // show edit page link on post type archives pages
   // lifted from wp-includes/admin-bar.php
   if ( !is_admin() && is_post_type_archive( POST_TYPE ) && $wp_query->is_main_query() ) {
-    $current_object = YANA\get_archive_page_object();
+    $current_object = \YANA\get_archive_page_object();
 
     if ( ! empty( $current_object->post_type )
         && ( $post_type_object = get_post_type_object( $current_object->post_type ) )
