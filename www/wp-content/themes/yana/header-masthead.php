@@ -22,9 +22,10 @@
       if ( $image_id ) {
         $image = wp_get_attachment_image_src($image_id, 'post-masthead-image');
         $style = sprintf("background-image: url('%s');", esc_attr($image[0]));
-        if ($bg_color = get_field('masthead_background', $post_for_masthead->ID)) {
-          $style .= sprintf("background-color: %s", esc_attr($bg_color));
-        }
+      }
+
+      if ($bg_color = get_field('masthead_background', $post_for_masthead->ID)) {
+        $style .= sprintf("background-color: %s", esc_attr($bg_color));
       }
 
       if ( $vignette_id ) {
