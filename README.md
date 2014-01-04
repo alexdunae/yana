@@ -47,6 +47,7 @@ To upgrade the local version of WordPress to a tagged release, run:
     - Permalinks
 1. Install and activate the [Advanced Custom Fields](http://wordpress.org/plugins/advanced-custom-fields/) plugin
     - Import the field definitions from the `advanced-custom-field-export.xml` file in the YANA theme directory
+1. Create a post category for "Thank Yous" with the slug `thanks`
 
 
 
