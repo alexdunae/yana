@@ -297,7 +297,7 @@ $logo-gutter: 30px;
 
   .masthead-title {
     margin: em(12px,60px);
-    @include sans-bold(em(60px), (72/60));
+    @include mono-bold(em(60px), (72/60));
     text-shadow: 1px 1px 1px rgba(#000, 0.2);
   }
 

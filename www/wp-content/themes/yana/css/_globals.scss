@@ -32,6 +32,9 @@ $base-font-size: 16px;
 
 //  "ITC American Typewriter W01"
 //  ITC American Typewriter™ Bold         700         normal
+//  ITC American Typewriter™ Medium       500         normal
+//  ITC American Typewriter™ Light        200         normal
+
 
 
 
@@ -64,6 +67,13 @@ $base-font-size: 16px;
   font-weight: 700;
 }
 
+@mixin mono-light($size: 100%, $line-height: 1) {
+  font: 200 $size/#{$line-height} 'ITC American Typewriter W01', monospace;
+}
+
+@mixin mono-medium($size: 100%, $line-height: 1) {
+  font: 500 $size/#{$line-height} 'ITC American Typewriter W01', monospace;
+}
 
 @mixin mono-bold($size: 100%, $line-height: 1) {
   font: 700 $size/#{$line-height} 'ITC American Typewriter W01', monospace;

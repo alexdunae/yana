@@ -235,7 +235,7 @@ blockquote + p { margin-top: 2.8em; }
 .masthead .vignette .content { height: 29.875em; }
 .masthead .vignette img { float: right; display: block; width: auto; height: 29.875em; }
 .masthead .masthead-title, .masthead p { color: #fff; }
-.masthead .masthead-title { margin: 0.2em; font: normal 3.75em/1.2 "Neue Helvetica W01", sans-serif; font-weight: 600; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+.masthead .masthead-title { margin: 0.2em; font: 700 3.75em/1.2 "ITC American Typewriter W01", monospace; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
 .masthead p { margin: 0.66667em; font: normal 1.125em/1.77778 "Neue Helvetica W01", sans-serif; font-weight: 400; color: rgba(255, 255, 255, 0.75); }
 .masthead .text-wrap { display: table; position: relative; z-index: 6; max-width: 31.5em; height: 23.875em; }
 .masthead .text { display: table-cell; vertical-align: middle; }
@@ -255,11 +255,11 @@ blockquote + p { margin-top: 2.8em; }
 .sidebar-nav { margin: 0 0 2.25em; }
 .sidebar-nav ul, .sidebar-nav li { margin: 0; padding: 0; font-size: 1em; list-style: none; }
 .sidebar-nav li { border-bottom: 1px solid #f0f0f0; }
-.sidebar-nav a { display: block; padding: 0.9375em 1.5em; font: normal 1em/1.5 "Neue Helvetica W01", sans-serif; font-weight: 400; text-align: center; color: #b1b1b1; }
+.sidebar-nav a { display: block; padding: 0.9375em 1.5em; font: normal 1em/1.5 "Neue Helvetica W01", sans-serif; font-weight: 400; text-align: left; color: #b1b1b1; }
 
 .sidebar-community-quote { margin: 0 0 2.25em; padding: 0 1.5em; }
-.sidebar-community-quote blockquote { color: #2494a2; }
-.sidebar-community-quote blockquote p { font: 700 1em/1.875 "ITC American Typewriter W01", monospace; }
+.sidebar-community-quote blockquote { color: rgba(36, 148, 162, 0.5); }
+.sidebar-community-quote blockquote p { font: 500 1em/1.875 "ITC American Typewriter W01", monospace; }
 
 .sidebar-facebook-ad { position: relative; margin: 0 0 2.25em; }
 .sidebar-facebook-ad .frame { font: normal 1em/1.41176 "Neue Helvetica W01", sans-serif; font-weight: 600; padding: 0.25em; text-align: center; color: #fff; background: #325B99 none; transition: background 100ms ease-out; }

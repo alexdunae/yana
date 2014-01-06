@@ -16,7 +16,7 @@
     display: block;
     padding: em(15px) em(24px);
     @include sans-roman(em(16px), (24/16));
-    text-align: center;
+    text-align: left;
     color: $lightgrey;
   }
 }
@@ -25,10 +25,10 @@
   margin: 0 0 em(36px);
   padding: 0 em(24px);
   blockquote {
-    color: $darkteal;
+    color: rgba($darkteal, 0.5);
 
     p {
-      @include mono-bold(em(16px), (30/16));
+      @include mono-medium(em(16px), (30/16));
     }
   }
 }
