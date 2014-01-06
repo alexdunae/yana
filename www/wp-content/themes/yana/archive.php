@@ -1,22 +1,11 @@
 <?php
-/**
- * The template for displaying Archive pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package YANA
- */
+  get_header(); ?>
 
-get_header(); ?>
-
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
+<article class="site-body has-sidebar" role="main" id="main">
+   <div class="content">
+   		<?php get_sidebar(); ?>
+      <header>
+        <h1><?php
 						if ( is_category() ) :
 							single_cat_title();
 
@@ -35,71 +24,35 @@ get_header(); ?>
 						elseif ( is_year() ) :
 							printf( __( 'Year: %s', 'yana' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'yana' ) ) . '</span>' );
 
-						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'yana' );
-
-						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'yana');
-
-						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'yana');
-
-						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'yana' );
-
-						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'yana' );
-
-						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'yana' );
-
-						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'yana' );
-
-						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'yana' );
-
-						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'yana' );
-
 						else :
 							_e( 'Archives', 'yana' );
 
 						endif;
 					?>
-				</h1>
-				<?php
-					// Show an optional term description.
-					$term_description = term_description();
+        </h1>
+        <?php
+        $term_description = term_description();
 					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
+						printf( '<div class="lede">%s</div>', apply_filters( 'the_content', $term_description ) );
 					endif;
-				?>
-			</header><!-- .page-header -->
+        ?>
+      </header>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+      <div class="post-toc">
+  			<?php while ( have_posts() ) : the_post(); ?>
+          <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <?php the_excerpt(); ?>
+          </div>
+  			<?php endwhile; ?>
+      </div>
 
-			<?php endwhile; ?>
+      <?php previous_posts_link(); ?>
+      <?php next_posts_link(); ?>
 
-			<?php yana_paging_nav(); ?>
+	</div>
+</article>
 
-		<?php else : ?>
+<?php get_footer();
 
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
