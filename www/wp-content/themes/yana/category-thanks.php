@@ -35,6 +35,10 @@
           </div>
   			<?php endwhile; ?>
       </div>
+
+      <?php previous_posts_link(); ?>
+      <?php next_posts_link(); ?>
+
 	</div>
 </article>
 
