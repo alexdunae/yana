@@ -1,12 +1,19 @@
 
 <div class="page-sidebar" role="complementary">
 	<?php
-		//	TODO: news posts, with categories and dates?
 		if (get_post_type() == YANA\Events\POST_TYPE) {
 			$archive = YANA\get_archive_page_object();
 			echo '<nav class="sidebar-nav"><ul>';
 			printf("<li><a href='%s'>%s</a></li>", get_permalink($archive), apply_filters('the_title', $archive->post_title));
 			echo '</ul></nav>';
+		} elseif ( is_home() || is_archive() ) {
+			echo '<nav class="sidebar-nav"><ul>';
+			wp_list_categories( array (
+			                   'title_li' => false,
+			                   'depth' => 1
+			                   ) );
+			echo '</ul></nav>';
+
 		} elseif ( $post && !is_front_page()) {
 			$post_id = $post->ID;
 			$ancestors = get_post_ancestors($post_id);
