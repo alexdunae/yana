@@ -309,6 +309,10 @@ $vignette-height: 480px;
     margin: em(12px,60px);
     @include mono-bold(em(60px), (72/60));
     text-shadow: 1px 1px 1px rgba(#000, 0.2);
+
+    .home & {
+      @include mono-bold(em(84px), 1);
+    }
   }
 
   p {
@@ -328,6 +332,26 @@ $vignette-height: 480px;
   .text {
     display: table-cell;
     vertical-align: middle;
+  }
+
+  @include breakpoint(mobile) {
+    height: auto;
+    .content {
+      height: auto;
+      font-size: 12px;
+    }
+
+    .masthead-title {
+      font-size: em(48px);
+    }
+
+    .home & .masthead-title {
+      font-size: em(66px);
+    }
+
+    .vignette {
+      display: none;
+    }
   }
 }
 

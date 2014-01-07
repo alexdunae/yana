@@ -252,9 +252,15 @@ blockquote + p { margin-top: 2.8em; }
 .masthead .vignette img { float: right; display: block; width: auto; height: 480px; }
 .masthead .masthead-title, .masthead p { color: #fff; }
 .masthead .masthead-title { margin: 0.2em; font: 700 3.75em/1.2 "ITC American Typewriter W01", monospace; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+.home .masthead .masthead-title { font: 700 5.25em/1 "ITC American Typewriter W01", monospace; }
 .masthead p { margin: 0.66667em; font: normal 1.125em/1.77778 "Neue Helvetica W01", sans-serif; font-weight: 400; color: rgba(255, 255, 255, 0.75); }
 .masthead .text-wrap { display: table; position: relative; z-index: 6; max-width: 31.5em; height: 23.875em; }
 .masthead .text { display: table-cell; vertical-align: middle; }
+@media all and (max-width: 760px) { .masthead { height: auto; }
+  .masthead .content { height: auto; font-size: 12px; }
+  .masthead .masthead-title { font-size: 3em; }
+  .home .masthead .masthead-title { font-size: 4.125em; }
+  .masthead .vignette { display: none; } }
 
 @media all and (max-width: 760px) { .site-header .logo { float: none; width: 92px; height: 56px; }
   .site-header .logo a { background-size: 92px 56px; background-position: 0 0; }
@@ -324,9 +330,6 @@ blockquote + p { margin-top: 2.8em; }
 .sidebar-image-ad .link { display: table; z-index: 3; text-transform: uppercase; text-align: center; color: #fff; }
 .sidebar-image-ad .link .text { display: table-cell; padding: 0 1.875em; font: normal 1.5em/1.25 "Neue Helvetica W01", sans-serif; font-weight: 600; vertical-align: middle; }
 
-.home .masthead .mask { display: none; }
-.home .masthead .masthead-title { font: 700 5.25em/1 "ITC American Typewriter W01", monospace; }
-
 .home-circles { position: relative; z-index: 6; margin-top: -7.5em; }
 .home-circles .content { padding-left: 0; padding-right: 0; padding-top: 0.375em; padding-bottom: 0.375em; }
 .home-circles .entry { float: left; display: table; width: 25%; height: 248px; margin: 0; vertical-align: middle; text-align: center; background: transparent url("img/circle-teal.svg") 50% 50% no-repeat; background-size: contain; }
@@ -340,9 +343,7 @@ blockquote + p { margin-top: 2.8em; }
 @media all and (max-width: 1000px) { .home-circles .title { font-size: 1.25em; } }
 @media all and (max-width: 900px) { .home-circles .title { font-size: 1.5em; }
   .home-circles p { display: none; } }
-@media all and (max-width: 700px) { .home-circles .entry { height: 13.5em; }
-  .home-circles .inner { padding: 1.125em; }
-  .home-circles .title { font-size: 1.25em; } }
+@media all and (max-width: 760px) { .home-circles { display: none; } }
 
 .home-intro .content { max-width: 50.625em; padding-top: 1.5em; padding-bottom: 1.5em; text-align: center; }
 .home-intro .title, .home-intro p { color: #bbcad2; }
