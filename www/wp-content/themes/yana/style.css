@@ -56,8 +56,8 @@ img { vertical-align: middle; }
 .enews .controls:before, .site-body .content:before, .sidebar-enews .controls:before, .home-circles .content:before, .event-toc-1:before, .site-footer .content:before, .enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after, .site-footer .content:after { display: table; content: ""; }
 .enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after, .site-footer .content:after { clear: both; }
 
-.primary-nav ul:after, .primary-nav li { display: inline-block; }
-.lt-ie8 .primary-nav ul:after, .primary-nav .lt-ie8 ul:after, .lt-ie8 .primary-nav li, .primary-nav .lt-ie8 li { zoom: 1; display: inline; }
+.primary-nav ul:after, .primary-nav li, .secondary-nav .links:after { display: inline-block; }
+.lt-ie8 .primary-nav ul:after, .primary-nav .lt-ie8 ul:after, .lt-ie8 .primary-nav li, .primary-nav .lt-ie8 li, .lt-ie8 .secondary-nav .links:after, .secondary-nav .lt-ie8 .links:after { zoom: 1; display: inline; }
 
 .skip-link, .icon-badge .label { clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; position: absolute; }
 
@@ -191,10 +191,12 @@ blockquote + p { margin-top: 2.8em; }
 
 .site-header .content { position: relative; max-width: 618px; padding-top: 0; padding-bottom: 0; padding-left: 444px; }
 .site-header .content { height: 84px; padding-top: 1.5em; padding-bottom: 2.25em; }
+.site-header .secondary-content { max-width: 618px; margin: 0 auto; padding-left: 444px; padding-right: 84px; }
 .site-header .logo { float: left; width: 306px; margin-left: -360px; }
 @media all and (max-width: 900px) { .site-header { font-size: 13px; }
   .site-header .logo { width: 252px; margin-left: -306px; }
-  .site-header .content, .site-header .secondary-content { max-width: none; padding-left: 336px; } }
+  .site-header .content { max-width: none; padding-left: 336px; }
+  .site-header .secondary-content { max-width: none; padding-left: 336px; padding-right: 30px; } }
 @media all and (max-width: 760px) { .site-header { font-size: 12px; }
   .site-header .logo { margin-left: 0; }
   .site-header .content, .site-header .secondary-content { max-width: none; height: auto; padding-left: 30px; }
@@ -232,10 +234,12 @@ blockquote + p { margin-top: 2.8em; }
 .primary-nav li:hover .sub-menu, .primary-nav li:focus .sub-menu { display: block; height: auto; }
 
 .secondary-nav { display: block; position: absolute; z-index: 1; width: 100%; height: 3em; top: 0; left: 0; text-align: right; }
-.secondary-nav .secondary-content { position: relative; max-width: 618px; margin: 0 auto; padding-left: 444px; }
+.secondary-nav .secondary-content { display: block; }
+.secondary-nav .links { width: 100%; position: relative; text-align: justify; }
+.secondary-nav .links:after { width: 100%; content: ""; }
 .secondary-nav div { display: inline-block; vertical-align: middle; }
 .secondary-nav ul, .secondary-nav li { line-height: 1; }
-.secondary-nav ul { word-spacing: 0; }
+.secondary-nav ul { display: inline; word-spacing: 0; }
 .secondary-nav li { display: inline-block; padding: 0.75em 0; vertical-align: top; }
 .secondary-nav .badge { padding: 0 0 0 1.5em; }
 .secondary-nav .badge a { margin: 0; color: #fff; }

@@ -29,8 +29,10 @@
 
             <div class="secondary-nav">
               <div class="inner secondary-content">
-              	<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
-                <span class="badge"><a class="icon-badge facebook-badge" href="<?php echo YANA\FACEBOOK_URL; ?>"><span aria-hidden="true" class="icon icon-facebook"></span><span class="label">Facebook</span></a></span>
+                <div class="links">
+                	<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => false ) ); ?>
+                  <span class="badge"><a class="icon-badge facebook-badge" href="<?php echo YANA\FACEBOOK_URL; ?>"><span aria-hidden="true" class="icon icon-facebook"></span><span class="label">Facebook</span></a></span>
+                </div>
               </div>
             </div>
           </nav>

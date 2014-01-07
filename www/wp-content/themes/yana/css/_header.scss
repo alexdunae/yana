@@ -18,6 +18,13 @@ $logo-gutter: 30px;
     padding-bottom: em(36px);
   }
 
+  .secondary-content {
+    max-width: $max-content-width - $sidebar-width - $sidebar-gutter;
+    margin: 0 auto;
+    padding-left: $sidebar-width + $sidebar-gutter + $outer-gutter-width;
+    padding-right: $outer-gutter-width;
+  }
+
   .logo {
     float: left;
     width: $sidebar-width;
@@ -26,24 +33,29 @@ $logo-gutter: 30px;
 
 
   @include breakpoint(tablet) {
+    font-size: 13px; // TODO: ugly!
+
     .logo {
       width: $tablet-sidebar-width;
       margin-left: ($tablet-sidebar-width + $sidebar-gutter) * -1;
     }
-    .content, .secondary-content {
+    .content {
       max-width: none;
       padding-left: $tablet-sidebar-width + $sidebar-gutter + $tablet-gutter-width;
     }
-    font-size: 13px; // TODO: ugly!
+
+    .secondary-content {
+      max-width: none;
+      padding-left: $tablet-sidebar-width + $sidebar-gutter + $tablet-gutter-width;
+      padding-right: $tablet-gutter-width;
+    }
+
   }
 
   @include breakpoint(mobile) {
     font-size: 12px;
 
-    .logo {
-      margin-left: 0;
-    }
-
+    .logo { margin-left: 0; }
 
     .content, .secondary-content {
       max-width: none;
@@ -212,19 +224,25 @@ $logo-gutter: 30px;
   left: 0;
   text-align: right;
 
-  .secondary-content {
-    position: relative;
-    max-width: $max-content-width - $sidebar-width - $sidebar-gutter;
-    margin: 0 auto;
-    padding-left: $sidebar-width + $sidebar-gutter + $outer-gutter-width;
-  }
+  .secondary-content { display: block; }
 
+  .links {
+    width: 100%;
+    position: relative;
+    text-align: justify;
+    &:after{
+      @extend %inline-block;
+      width: 100%;
+      content: "";
+    }
+  }
 
   div { display: inline-block; vertical-align: middle; }
 
   ul, li { line-height: 1; }
 
   ul {
+    display: inline;
     word-spacing: 0;
   }
 
