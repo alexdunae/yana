@@ -1,3 +1,6 @@
 [submodule "www/wordpress"]
 	path = www/wordpress
 	url = git://github.com/WordPress/WordPress.git
+[submodule "www/wp-content/plugins/advanced-custom-fields"]
+	path = www/wp-content/plugins/advanced-custom-fields
+	url = https://github.com/elliotcondon/acf.git
