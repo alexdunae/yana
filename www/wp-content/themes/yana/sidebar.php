@@ -6,7 +6,7 @@
 			echo '<nav class="sidebar-nav"><ul>';
 			printf("<li><a href='%s'>%s</a></li>", get_permalink($archive), apply_filters('the_title', $archive->post_title));
 			echo '</ul></nav>';
-		} elseif ( is_home() || is_archive() ) {
+		} elseif ( is_home() || is_archive() || get_post_type() == 'post' ) {
 			echo '<nav class="sidebar-nav"><ul>';
 			wp_list_categories( array (
 			                   'title_li' => false,
