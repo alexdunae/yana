@@ -51,6 +51,7 @@ To upgrade the local version of WordPress to a tagged release, run:
 1. Create event types (categories) for "Events" with the slugs `featured`, `standard` and `third-party`
     - Any events tagged in other (or no) categories will be assumed to be `standard`
     - Event type descriptions will be printed above the event TOC
+    - Only events tagged `featured` or `standard` will be included in the sidebar nav
 
 TODO: 50% width image
 TODO: events 3rd party intro text, no 3rd party links

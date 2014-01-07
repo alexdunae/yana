@@ -5,6 +5,13 @@
 			$archive = YANA\get_archive_page_object();
 			echo '<nav class="sidebar-nav"><ul>';
 			printf("<li><a href='%s'>%s</a></li>", get_permalink($archive), apply_filters('the_title', $archive->post_title));
+
+			$events = YANA\Events\get_posts_by_types( array('featured', 'standard') );
+			foreach ( $events as $event ) {
+				printf("<li><a href='%s'>%s</a></li>", get_permalink($event), apply_filters('the_title', $event->post_title));
+			}
+
+
 			echo '</ul></nav>';
 		} elseif ( is_home() || is_archive() || get_post_type() == 'post' ) {
 			echo '<nav class="sidebar-nav"><ul>';

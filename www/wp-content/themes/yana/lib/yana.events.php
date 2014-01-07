@@ -92,6 +92,28 @@ function group_by_type($posts) {
   return $prioritized;
 }
 
+function get_posts_by_types( $slugs );
+  $term_ids = array();
+  foreach ( $slugs as $slug ) {
+    $term = get_term_by('slug', $slug, YANA\Events\TYPE_ID, OBJECT );
+    if ( $term ) {
+      $term_ids[] = $term->term_id;
+    }
+  }
+
+  if ( count($term_ids) < 1 ) {
+    return array();
+  }
+
+  $event_ids = get_objects_in_term( $term_ids, YANA\Events\TYPE_ID, array('order' => 'ASC') );
+
+  if ( count($event_ids) < 1 ) {
+    return array();
+  }
+
+  return get_posts( array('include' => $event_ids, 'post_type' => YANA\Events\POST_TYPE));
+}
+
 function home_url() {
   return get_post_type_archive_link( POST_TYPE );
 }
