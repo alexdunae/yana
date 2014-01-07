@@ -92,10 +92,10 @@ function group_by_type($posts) {
   return $prioritized;
 }
 
-function get_posts_by_types( $slugs );
+function get_posts_by_types( $slugs ) {
   $term_ids = array();
   foreach ( $slugs as $slug ) {
-    $term = get_term_by('slug', $slug, YANA\Events\TYPE_ID, OBJECT );
+    $term = get_term_by('slug', $slug, TYPE_ID, OBJECT );
     if ( $term ) {
       $term_ids[] = $term->term_id;
     }
@@ -105,13 +105,13 @@ function get_posts_by_types( $slugs );
     return array();
   }
 
-  $event_ids = get_objects_in_term( $term_ids, YANA\Events\TYPE_ID, array('order' => 'ASC') );
+  $event_ids = get_objects_in_term( $term_ids, TYPE_ID, array('order' => 'ASC') );
 
   if ( count($event_ids) < 1 ) {
     return array();
   }
 
-  return get_posts( array('include' => $event_ids, 'post_type' => YANA\Events\POST_TYPE));
+  return get_posts( array('include' => $event_ids, 'post_type' => POST_TYPE));
 }
 
 function home_url() {
