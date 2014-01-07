@@ -54,6 +54,18 @@
   .footer-nav {
     float: left;
     width: percentage(474/978);
+  }
+}
 
+@include breakpoint(mobile) {
+  .site-footer {
+    font-size: 13px;
+
+    .footer-about {
+      float: none;
+      width: auto;
+    }
+
+    .footer-nav { display: none; }
   }
 }

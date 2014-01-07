@@ -158,7 +158,7 @@ blockquote + p { margin-top: 2.8em; }
 
 .enews label { display: block; }
 .enews .controls { width: 100%; }
-.enews input, .enews button { display: block; float: left; -webkit-appearance: none; box-sizing: border-box; }
+.enews input, .enews button { display: block; float: left; -webkit-appearance: none; box-sizing: border-box; border-radius: 0; }
 .enews input { width: 70.58824%; height: 3.42857em; padding: 0.85714em; border: 0; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 400; color: #b1b1b1; box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.25); }
 .enews input::-webkit-input-placeholder { text-transform: lowercase; color: #b1b1b1; }
 .enews input::-moz-placeholder { text-transform: lowercase; color: #b1b1b1; }
@@ -387,6 +387,9 @@ blockquote + p { margin-top: 2.8em; }
 .site-footer .footer-enews .controls { max-width: 306px; }
 .site-footer .footer-nav { float: left; width: 48.46626%; }
 
+@media all and (max-width: 760px) { .site-footer { font-size: 13px; }
+  .site-footer .footer-about { float: none; width: auto; }
+  .site-footer .footer-nav { display: none; } }
 .high-contrast body { color: #3d515a; }
 .high-contrast h1, .high-contrast h1 a, .high-contrast h2, .high-contrast h2 a, .high-contrast h3, .high-contrast h3 a, .high-contrast h4, .high-contrast h4 a, .high-contrast h5, .high-contrast h5 a, .high-contrast h6, .high-contrast h6 a { color: #31807b; }
 .high-contrast a { color: #31807b; }
