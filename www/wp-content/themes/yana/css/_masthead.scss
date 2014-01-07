@@ -1,0 +1,94 @@
+$vignette-height: 480px;
+
+.masthead {
+  position: relative;
+  height: em(432px - 12px - 12px);
+  padding-top: em(12px);
+  padding-bottom: em(12px);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .content {
+    @extend %inner-content-frame;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .vignette {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: $vignette-height;
+    left: 0;
+    bottom: 0;
+
+    .content {
+      height: $vignette-height;
+    }
+
+    img {
+      float: right;
+      display: block;
+      width: auto;
+      height: $vignette-height;
+    }
+  }
+
+  .masthead-title, p {
+    color: #fff;
+  }
+
+  .masthead-title {
+    margin: em(12px,60px);
+    @include mono-bold(em(60px), (72/60));
+    text-shadow: 1px 1px 1px rgba(#000, 0.2);
+
+    .home & {
+      @include mono-bold(em(84px), 1);
+    }
+  }
+
+  p {
+    margin: em(12px,18px);
+    @include sans-roman(em(18px), (32/18));
+    color: rgba(#fff, 0.75);
+  }
+
+  .text-wrap {
+    display: table;
+    position: relative;
+    z-index: 6;
+    max-width: em(504px);
+    height: em(430px - 48px);
+  }
+
+  .text {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+@include breakpoint(mobile) {
+  .masthead {
+    height: auto;
+    .content {
+      height: auto;
+      font-size: 12px;
+    }
+
+    .masthead-title {
+      font-size: em(48px);
+    }
+
+    .home & .masthead-title {
+      font-size: em(66px);
+    }
+
+    .vignette {
+      display: none;
+    }
+  }
+}
