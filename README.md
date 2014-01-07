@@ -49,6 +49,9 @@ To upgrade the local version of WordPress to a tagged release, run:
     - Import the field definitions from the `advanced-custom-field-export.xml` file in the YANA theme directory
 1. Create a post category for "Thank Yous" with the slug `thanks`
 
+TODO: 50% width image
+TODO: events 3rd party intro text, no 3rd party links
+
 
 
 ## Deployment

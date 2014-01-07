@@ -6,8 +6,8 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
     <?php
-	    if ($meta['general_info'] && !empty($meta['general_info'])) {
-	      printf("<section class='event-info'>%s</section>", apply_filters('the_content', $meta['general_info']));
+    	if ( $info = get_field('event_information', $post->ID) ) {
+	      printf("<section class='event-info'>%s</section>", apply_filters('the_content', $info));
 	    }
      ?>
 	</header>

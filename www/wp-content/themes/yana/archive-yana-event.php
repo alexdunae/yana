@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php get_header();
+
+var_dump($wp_query);
+die;
+
+?>
 
 <article class="site-body has-sidebar" role="main" id="main">
    <div class="content">
@@ -9,7 +14,8 @@
         $prioritized = array(array(), array(), array());
 
         foreach($wp_query->posts as $post) {
-          $meta = YANA\Events\meta($post->ID);
+          //$meta = YANA\Events\meta($post->ID);
+          $meta['priority'] = 1;
           $prioritized[intval($meta['priority'])][] = $post;
         }
 
