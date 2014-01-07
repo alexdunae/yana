@@ -20,7 +20,7 @@
     	<?php do_action( 'before' ); ?>
       <header class='site-header' role='banner'>
         <div class='content'>
-          <div class='logo'><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Y.A.N.A. Comox Valley</a></div>
+          <div class='logo'><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">YANA Comox Valley</a></div>
           <!-- TODO: nested roles allowed? -->
           <nav class='site-nav' role='navigation'>
             <div class="primary-nav">
