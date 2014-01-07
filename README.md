@@ -48,6 +48,9 @@ To upgrade the local version of WordPress to a tagged release, run:
 1. Install and activate the [Advanced Custom Fields](http://wordpress.org/plugins/advanced-custom-fields/) plugin
     - Import the field definitions from the `advanced-custom-field-export.xml` file in the YANA theme directory
 1. Create a post category for "Thank Yous" with the slug `thanks`
+1. Create event types (categories) for "Events" with the slugs `featured`, `standard` and `third-party`
+    - Any events tagged in other (or no) categories will be assumed to be `standard`
+    - Event type descriptions will be printed above the event TOC
 
 TODO: 50% width image
 TODO: events 3rd party intro text, no 3rd party links

@@ -52,9 +52,9 @@ img { vertical-align: middle; }
 @media all and (max-width: 940px) { .site-header .content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { max-width: none; padding-left: 30px; padding-right: 30px; } }
 @media all and (max-width: 760px) { .site-header .content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { padding-left: 30px; padding-right: 30px; } }
 
-.enews .controls, .site-body .content, .sidebar-enews .controls, .home-circles .content, .event-toc-1, .site-footer .content, .site-footer .footer-nav { *zoom: 1; }
-.enews .controls:before, .site-body .content:before, .sidebar-enews .controls:before, .home-circles .content:before, .event-toc-1:before, .site-footer .content:before, .site-footer .footer-nav:before, .enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after, .site-footer .content:after, .site-footer .footer-nav:after { display: table; content: ""; }
-.enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after, .site-footer .content:after, .site-footer .footer-nav:after { clear: both; }
+.enews .controls, .site-body .content, .sidebar-enews .controls, .home-circles .content, .event-toc-standard, .site-footer .content, .site-footer .footer-nav { *zoom: 1; }
+.enews .controls:before, .site-body .content:before, .sidebar-enews .controls:before, .home-circles .content:before, .event-toc-standard:before, .site-footer .content:before, .site-footer .footer-nav:before, .enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-standard:after, .site-footer .content:after, .site-footer .footer-nav:after { display: table; content: ""; }
+.enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-standard:after, .site-footer .content:after, .site-footer .footer-nav:after { clear: both; }
 
 .primary-nav ul:after, .primary-nav li, .secondary-nav .links:after { display: inline-block; }
 .lt-ie8 .primary-nav ul:after, .primary-nav .lt-ie8 ul:after, .lt-ie8 .primary-nav li, .primary-nav .lt-ie8 li, .lt-ie8 .secondary-nav .links:after, .secondary-nav .lt-ie8 .links:after { zoom: 1; display: inline; }
@@ -372,19 +372,19 @@ blockquote + p { margin-top: 2.8em; }
 .event-toc .image { display: block; margin: 0 0 1.5em; }
 .event-toc .image img { display: block; width: 100%; height: auto; }
 
-.event-toc-0 { margin: 0 0 3.375em; }
-.event-toc-0 .entry { margin: 0 0 1.5em; }
-.event-toc-0 .entry-title { margin: 0 0 0.4em; font: normal 3.75em/1.2 "Neue Helvetica W01", sans-serif; font-weight: 500; }
-.event-toc-0 p { margin: 0.75em 0; font-size: 1em; line-height: 2; }
+.event-toc-featured { margin: 0 0 3.375em; }
+.event-toc-featured .entry { margin: 0 0 1.5em; }
+.event-toc-featured .entry-title { margin: 0 0 0.4em; font: normal 3.75em/1.2 "Neue Helvetica W01", sans-serif; font-weight: 500; }
+.event-toc-featured p { margin: 0.75em 0; font-size: 1em; line-height: 2; }
 
-.event-toc-1 .entry { float: left; width: 46.15385%; }
-.event-toc-1 .entry:nth-child(odd) { margin-right: 7.69231%; }
-.event-toc-1 .entry-title { margin: 0 0 0.85714em; font: normal 1.75em/1.28571 "Neue Helvetica W01", sans-serif; font-weight: 400; }
-.event-toc-1 p { margin: 1.28571em 0 1.71429em; font-size: 0.875em; line-height: 1.42857; }
+.event-toc-standard .entry { float: left; width: 46.15385%; }
+.event-toc-standard .entry:nth-child(odd) { margin-right: 7.69231%; }
+.event-toc-standard .entry-title { margin: 0 0 0.85714em; font: normal 1.75em/1.28571 "Neue Helvetica W01", sans-serif; font-weight: 400; }
+.event-toc-standard p { margin: 1.28571em 0 1.71429em; font-size: 0.875em; line-height: 1.42857; }
 
-.event-toc-2 .entry { margin: 0 0 1.5em; }
-.event-toc-2 .entry-title { margin: 0 0 0.5em; font: normal 1.5em/1 "Neue Helvetica W01", sans-serif; font-weight: 400; }
-.event-toc-2 p { margin: 0.85714em 0 1.71429em; font-size: 0.875em; line-height: 1.42857; }
+.event-toc-third-party .entry { margin: 0 0 1.5em; }
+.event-toc-third-party .entry-title { margin: 0 0 0.5em; font: normal 1.5em/1 "Neue Helvetica W01", sans-serif; font-weight: 400; }
+.event-toc-third-party p { margin: 0.85714em 0 1.71429em; font-size: 0.875em; line-height: 1.42857; }
 
 .site-footer { border-bottom: 5.25em solid #14535c; background: #1B6F7A; }
 .site-footer, .site-footer a { color: #7CBFC7; }

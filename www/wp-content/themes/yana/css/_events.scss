@@ -55,7 +55,7 @@
 ///////////////////////////
 // Top priority
 ///////////////////////////
-.event-toc-0 {
+.event-toc-featured {
   margin: 0 0 em(54px);
   .entry {
     margin: 0 0 em(24px);
@@ -76,7 +76,7 @@
 ///////////////////////////
 // Medium priority
 ///////////////////////////
-.event-toc-1 {
+.event-toc-standard {
   @extend %clearfix;
 
   .entry {
@@ -103,7 +103,7 @@
 ///////////////////////////
 // Low priority
 ///////////////////////////
-.event-toc-2 {
+.event-toc-third-party {
   .entry {
     margin: 0 0 em(24px);
   }

@@ -3,6 +3,7 @@
 namespace YANA\Events;
 
 const POST_TYPE = 'yana-event';
+const TYPE_ID = 'yana-event-type';
 
 add_action( 'init', 'YANA\Events\init' );
 //add_action( 'pre_get_posts', 'YANA\Events\pre_get_posts' );
@@ -39,6 +40,56 @@ function init() {
     'menu_position' => null,
     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' )
   ) );
+
+  $tax_labels = array(
+      'name' => 'Event Type',
+      'singular_name' => 'Event Type',
+      'search_items' => 'Search Event Types',
+      'popular_items' => 'Popular Event Types',
+      'all_items' => 'All Event Types',
+      'parent_item' => null,
+      'parent_item_colon' => null,
+      'edit_item' => 'Edit Event Type',
+      'update_item' => 'Update Event Type',
+      'add_new_item' => 'Add New Event Type',
+      'new_item_name' => 'New Event Type Name',
+      'separate_items_with_commas' => 'Separate event types with commas',
+      'add_or_remove_items' => 'Add or remove event types',
+      'choose_from_most_used' =>'Choose from the most used event types',
+      'menu_name' => 'Event Types',
+    );
+
+    register_taxonomy( TYPE_ID, POST_TYPE, array(
+      'hierarchical' => true,
+      'labels' => $tax_labels,
+      'show_ui' => true,
+      'update_count_callback' => '_update_post_term_count',
+      'query_var' => true,
+      'show_admin_column' => true,
+      'show_tag_cloud' => false,
+      'rewrite' => false,
+    )
+  );
+}
+
+function group_by_type($posts) {
+  $prioritized = array('featured' => array(), 'standard' => array(), 'third-party' => array());
+
+  foreach($posts as $post) {
+    $terms = wp_get_object_terms($post->ID, TYPE_ID, array('fields' => 'slugs'));
+    if ( count($terms) < 1 || is_wp_error($terms) ) {
+      $prioritized['standard'][] = $post;
+    } else {
+      foreach( $terms as $term ) {
+        if (isset($prioritized[$term])) {
+          $prioritized[$term][] = $post;
+        } else {
+          $prioritized['standard'][] = $post;
+        }
+      }
+    }
+  }
+  return $prioritized;
 }
 
 function home_url() {

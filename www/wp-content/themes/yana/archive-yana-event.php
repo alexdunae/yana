@@ -6,27 +6,34 @@
       <?php get_template_part( 'archives-content-header' ); ?>
 
       <?php
-        $prioritized = array(array(), array(), array());
-
-        foreach($wp_query->posts as $post) {
-          //$meta = YANA\Events\meta($post->ID);
-          $meta['priority'] = 1;
-          $prioritized[intval($meta['priority'])][] = $post;
-        }
-
+        $prioritized = YANA\Events\group_by_type($wp_query->posts);
 
         foreach ( $prioritized as $level => $posts ) {
+          printf("<div class='event-toc event-toc-%s'>", $level);
 
-          printf("<div class='event-toc event-toc-%d'>", $level);
+          $term = get_term_by( 'slug', $level, YANA\Events\TYPE_ID, OBJECT );
+
+          if ( $term && !empty($term->description) ) {
+            printf("<div class='toc-intro'>%s</div>", apply_filters('the_content', $term->description));
+          }
+
+          $post_ids = array();
 
           foreach( $posts as $post ):
-              setup_postdata($post);
+            setup_postdata($post);
+
+            // avoid duplicates within a single level
+            if (in_array($post->ID, $post_ids)) {
+              continue;
+            }
+            $post_ids[] = $post->ID;
+
           ?>
             <div id="post-<?php the_ID(); ?>" <?php post_class( "entry priority-$level" ); ?>>
-              <?php if($level == 0): ?>
+              <?php if($level == 'featured'): ?>
                 <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <?php echo YANA\linked_thumbnail($post->ID, 'event-wide-thumbnail'); ?>
-              <?php elseif($level == 1): ?>
+              <?php elseif($level == 'standard'): ?>
                 <?php echo YANA\linked_thumbnail($post->ID, 'post-thumbnail'); ?>
                 <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               <?php else: ?>
@@ -35,7 +42,7 @@
 
               <?php echo apply_filters('the_content', $post->post_excerpt); ?>
 
-              <?php if($level == 0): ?>
+              <?php if($level == 'featured'): ?>
                 <p><a class="btn" href="<?php the_permalink(); ?>">More details</a></p>
               <?php endif; ?>
             </div>
