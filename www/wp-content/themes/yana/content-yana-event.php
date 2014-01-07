@@ -1,16 +1,17 @@
 <?php
-  $meta = YANA\Events\meta($post->ID);
+  $priority = get_field('event_priority', $post->ID)
 ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class( "priority-${meta['priority']}"); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class( "priority-${priority}"); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-
-    <?php
-    	if ( $info = get_field('event_information', $post->ID) ) {
-	      printf("<section class='event-info'>%s</section>", apply_filters('the_content', $info));
-	    }
-     ?>
 	</header>
+
+  <?php
+    if ( $info = get_field('event_information', $post->ID) ) {
+      printf("<aside class='event-info'><h2 class='title'>Event Details</h4><div class='inner'>%s</div></aside>", apply_filters('the_content', $info));
+    }
+   ?>
+
 
 	<div class="entry-content">
 		<?php the_content(); ?>

@@ -362,8 +362,12 @@ blockquote + p { margin-top: 2.8em; }
 .news-toc-home .entry-title { margin: 0 0 0.33333em; font: normal 2.25em/1.33333 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 .news-toc-home p { margin: 0.75em 0; font-size: 1em; line-height: 1.5; }
 
-.event-info p { font: normal 1.25em/1.2 "Neue Helvetica W01", sans-serif; font-weight: 500; }
+.event-info { float: right; width: 13.875em; margin: 0 0 1.875em 1.875em; border: 1px solid #e4e4e4; background: #f6f6f6 none; }
+.event-info .title { margin: 0; padding: 0.85714em 1.28571em; font: normal 0.875em/1.14286 "Neue Helvetica W01", sans-serif; font-weight: 600; text-transform: uppercase; color: #fff; background: #51bdb5 none; }
+.event-info .inner { padding: 0 1.125em 0.75em; }
+.event-info p { margin: 0.66667em 0; font: normal 1.125em/1.33333 "Neue Helvetica W01", sans-serif; font-weight: 500; }
 
+@media all and (max-width: 23.75em) { .event-info { clear: both; float: none; margin: 1.875em 0; } }
 .event-toc .entry { margin: 0 0 2.25em; }
 .event-toc .image { display: block; margin: 0 0 1.5em; }
 .event-toc .image img { display: block; width: 100%; height: auto; }
