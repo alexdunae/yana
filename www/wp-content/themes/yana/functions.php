@@ -12,6 +12,12 @@ const FACEBOOK_URL = 'https://www.facebook.com/pages/YANA-Comox-Valley/984607661
 add_action( 'after_setup_theme', 'YANA\setup' );
 add_action( 'widgets_init', 'YANA\widgets_init' );
 add_action( 'wp_enqueue_scripts', 'YANA\scripts' );
+add_filter( 'image_size_names_choose', 'YANA\insertable_image_sizes' );
+add_filter( 'img_caption_shortcode', 'YANA\img_caption_shortcode', 10, 3 );
+add_filter( 'embed_oembed_html', 'YANA\format_oembed', 10, 3 );
+
+
+
 
 if ( ! isset( $content_width ) ) {
 	$content_width = 618;
@@ -24,6 +30,7 @@ function setup() {
   add_image_size('event-wide-thumbnail', 624, 0);
   add_image_size('post-masthead-image', 0, 432);
   add_image_size('post-masthead-vignette', 0, 432);
+  update_option('image_default_link_type','none');
 
   set_post_thumbnail_size((288 * 2), 0, 0);
 
@@ -33,6 +40,35 @@ function setup() {
 	) );
 }
 
+function insertable_image_sizes($sizes) {
+   unset( $sizes['thumbnail']);
+   unset( $sizes['full'] );
+   return $sizes;
+}
+
+function format_oembed( $html, $url, $args ) {
+  return "<div class='embed'><div class='inner'>$html</div></div>";
+}
+
+
+
+  // no fixed width
+function img_caption_shortcode( $a, $attr, $content ) {
+  extract(shortcode_atts(array(
+    'id'  => '',
+    'align' => 'alignnone',
+    'width' => '',
+    'caption' => ''
+  ), $attr));
+
+  if ( 1 > (int) $width || empty($caption) )
+    return $content;
+
+  if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
+
+  return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '">'
+  . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
+}
 
 /**
  * Register widgetized area and update sidebar with default widgets.
