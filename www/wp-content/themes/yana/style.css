@@ -219,14 +219,14 @@ blockquote + p { margin-top: 2.8em; }
 .primary-nav li:nth-child(4n+4) a { color: #f0693d; }
 .primary-nav li:nth-child(4n+4) a:hover, .primary-nav li:nth-child(4n+4) a:focus { color: #d03f10; }
 .high-contrast .primary-nav li:nth-child(4n+4) a { color: #b9380e !important; }
-.primary-nav .sub-menu { display: block; z-index: 20; height: 0; opacity: 0; position: absolute; width: 12em; top: 3em; left: 50%; margin-left: -6em; padding: 0.75em 0; border: 1px solid #E4E4E4; border-radius: 12px; background: #fff; }
+.primary-nav .sub-menu { display: none; z-index: 20; height: 0; position: absolute; width: 12em; top: 3em; left: 50%; margin-left: -6em; padding: 0.75em 0; border: 1px solid #E4E4E4; border-radius: 12px; background: #fff; }
 .primary-nav .sub-menu li { display: block; margin: 0; padding: 0; }
 .primary-nav .sub-menu a { display: block; margin: 0; padding: 0.8em 1.6em; font: normal 0.9375em/1.33333 "Neue Helvetica W01", sans-serif; font-weight: 500; text-transform: lowercase; }
 .primary-nav .sub-menu li a, .primary-nav .sub-menu li:nth-child(1n+1) a { color: #B1B1B1; }
 .primary-nav .sub-menu li a:hover, .primary-nav .sub-menu li a:focus, .primary-nav .sub-menu li:nth-child(1n+1) a:hover, .primary-nav .sub-menu li:nth-child(1n+1) a:focus { background: #e4e4e4; }
 .primary-nav .sub-menu:before { content: ' '; position: absolute; width: 0; height: 0; left: 5.25em; top: -1.5em; border: 0.75em solid; border-color: transparent transparent #E4E4E4; }
 .primary-nav .sub-menu:after { content: ' '; position: absolute; width: 0; height: 0; left: 5.3125em; top: -1.3125em; border: 0.6875em solid; border-color: transparent transparent #fff; }
-.primary-nav li:hover .sub-menu, .primary-nav li:focus .sub-menu { display: block; height: auto; opacity: 1; }
+.primary-nav li:hover .sub-menu, .primary-nav li:focus .sub-menu { display: block; height: auto; }
 
 .secondary-nav { display: block; position: absolute; z-index: 1; width: 100%; height: 3em; top: 0; left: 0; text-align: right; }
 .secondary-nav .secondary-content { position: relative; max-width: 618px; margin: 0 auto; padding-left: 444px; }
