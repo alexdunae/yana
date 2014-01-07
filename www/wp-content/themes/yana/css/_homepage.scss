@@ -88,6 +88,10 @@
     @include sans-condensed(em(32px), (48/32));
 
   }
+
+  @include breakpoint(mobile) {
+    font-size: 12px;
+  }
 }
 
 .news-toc-home {
