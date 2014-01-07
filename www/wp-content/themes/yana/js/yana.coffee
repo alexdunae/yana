@@ -33,6 +33,16 @@ YANA =
       @trackEvent('accessibility', 'toggle-contrast')
       $(window).trigger('resize')
 
+  initMobileNav: ->
+    $('.site-header .logo').on 'click', (e) =>
+      e.preventDefault()
+      @htmlElement.toggleClass('show-nav')
+
+    @htmlElement.on 'keypress', (e) =>
+      if e.which == 49
+        @htmlElement.toggleClass('show-nav')
+
+
   trackPageView: (href) ->
     try
       _gaq.push(['_trackPageview', href]);
@@ -47,6 +57,7 @@ $(document).on 'ready', (e) ->
   YANA.initDebug()
   YANA.initHighContrast()
   YANA.initHomeCircles()
+  YANA.initMobileNav()
 
 window.YANA = YANA
 

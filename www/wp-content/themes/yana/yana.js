@@ -10164,6 +10164,18 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
         return $(window).trigger('resize');
       });
     },
+    initMobileNav: function() {
+      var _this = this;
+      $('.site-header .logo').on('click', function(e) {
+        e.preventDefault();
+        return _this.htmlElement.toggleClass('show-nav');
+      });
+      return this.htmlElement.on('keypress', function(e) {
+        if (e.which === 49) {
+          return _this.htmlElement.toggleClass('show-nav');
+        }
+      });
+    },
     trackPageView: function(href) {
       var e;
       try {
@@ -10185,7 +10197,8 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
   $(document).on('ready', function(e) {
     YANA.initDebug();
     YANA.initHighContrast();
-    return YANA.initHomeCircles();
+    YANA.initHomeCircles();
+    return YANA.initMobileNav();
   });
 
   window.YANA = YANA;
