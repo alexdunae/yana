@@ -16,7 +16,6 @@
     // need either an image or vignette
     if ( $image_id || $vignette_id ) {
       $style = '';
-      $mask_style = '';
       $vignette = '';
 
       if ( $image_id ) {
@@ -32,15 +31,7 @@
         $vignette = sprintf("<div class='vignette'><div class='content'>%s</div></div>", wp_get_attachment_image($vignette_id, 'post-masthead-vignette', false, array('alt' => '', 'aria-hidden' => 'true')));
       }
 
-      if ($mask_color = get_field('masthead_mask', $post_for_masthead->ID)) {
-          $mask_style .= sprintf("background-color: %s", esc_attr($mask_color));
-        }
-
-
       echo "<section class='masthead' style=\"$style\">$vignette";
-      echo "<span class='mask' style=\"$mask_style\"></span>";
-      echo '<span class="bar bar-top"></span>';
-      echo '<span class="bar bar-bottom"></span>';
 
       $headline = apply_filters( 'the_title', get_field('masthead_headline', $post_for_masthead->ID) );
       $text = apply_filters( 'the_content', get_field('masthead_text', $post_for_masthead->ID) );
