@@ -5,7 +5,7 @@ namespace YANA\Events;
 const POST_TYPE = 'yana-event';
 
 add_action( 'init', 'YANA\Events\init' );
-add_action( 'pre_get_posts', 'YANA\Events\pre_get_posts' );
+//add_action( 'pre_get_posts', 'YANA\Events\pre_get_posts' );
 add_action( 'admin_bar_menu', 'YANA\Events\modify_admin_bar', 999 );
 
 function init() {
@@ -54,7 +54,7 @@ function title() {
 function pre_get_posts(&$wp_query) {
   global $wpdb;
   // show only upcoming events, sorted with soonest first.
-  //if ( !is_admin() && is_post_type_archive( POST_TYPE ) && $wp_query->is_main_query() ) {
+  if ( !is_admin() && is_post_type_archive( POST_TYPE ) && $wp_query->is_main_query() ) {
 
 
     $meta_query = new \WP_Meta_Query( array(
@@ -75,9 +75,9 @@ function pre_get_posts(&$wp_query) {
                                         )
                                     )
   );
-$wp_query->set( 'meta_key', 'event_expiration');
+  //$wp_query->set( 'meta_key', 'event_expiration');
     $wp_query->set( 'meta_query', $meta_query);
-  //}
+  }
 }
 
 

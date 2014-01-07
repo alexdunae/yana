@@ -1,9 +1,4 @@
-<?php get_header();
-
-var_dump($wp_query);
-die;
-
-?>
+<?php get_header(); ?>
 
 <article class="site-body has-sidebar" role="main" id="main">
    <div class="content">
