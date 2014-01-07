@@ -52,6 +52,7 @@ To upgrade the local version of WordPress to a tagged release, run:
     - Any events tagged in other (or no) categories will be assumed to be `standard`
     - Event type descriptions will be printed above the event TOC
     - Only events tagged `featured` or `standard` will be included in the sidebar nav
+    - `third-party` events aren't linked from the TOC or listed in the sidebar nav
 
 TODO: 50% width image
 TODO: events 3rd party intro text, no 3rd party links

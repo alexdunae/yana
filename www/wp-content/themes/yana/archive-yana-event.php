@@ -33,10 +33,10 @@
               <?php if($level == 'featured'): ?>
                 <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <?php echo YANA\linked_thumbnail($post->ID, 'event-wide-thumbnail'); ?>
-              <?php elseif($level == 'standard'): ?>
-                <?php echo YANA\linked_thumbnail($post->ID, 'post-thumbnail'); ?>
-                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+              <?php elseif($level == 'third-party'): ?>
+                <h2 class="entry-title"><?php the_title(); ?></h2>
               <?php else: ?>
+                <?php echo YANA\linked_thumbnail($post->ID, 'post-thumbnail'); ?>
                 <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               <?php endif; ?>
 
