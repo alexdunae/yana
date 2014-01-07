@@ -228,6 +228,7 @@ $logo-gutter: 30px;
 
   .links {
     width: 100%;
+    max-width: em(472px);
     position: relative;
     text-align: justify;
     &:after{
@@ -253,13 +254,13 @@ $logo-gutter: 30px;
   }
 
   .badge {
-    padding: 0 0 0 em(24px);
+    padding: 0;
     a { margin: 0; color: #fff; }
   }
 
   a {
     display: block;
-    padding: 0 em(18px,11px);
+    padding: 0 em(6px,11px);
     font-size: em(11px);
     line-height: (24/11);
     text-transform: uppercase;
