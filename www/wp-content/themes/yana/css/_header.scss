@@ -1,6 +1,7 @@
 $logo-width: 138px;
 $logo-height: 84px;
 $logo-gutter: 30px;
+$vignette-height: 480px;
 
 .site-header {
   .content {
@@ -254,9 +255,9 @@ $logo-gutter: 30px;
 
 .masthead {
   position: relative;
-  height: em(430px);
-  padding-top: em(24px);
-  padding-bottom: em(24px);
+  height: em(432px - 12px - 12px);
+  padding-top: em(12px);
+  padding-bottom: em(12px);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -275,19 +276,19 @@ $logo-gutter: 30px;
     position: absolute;
     z-index: 2;
     width: 100%;
-    height: em(430px + 24px + 24px);
+    height: $vignette-height;
     left: 0;
-    top: 0;
+    bottom: 0;
 
     .content {
-      height: em(430px + 24px + 24px);
+      height: $vignette-height;
     }
 
     img {
       float: right;
       display: block;
       width: auto;
-      height: em(430px + 24px + 24px);
+      height: $vignette-height;
     }
   }
 

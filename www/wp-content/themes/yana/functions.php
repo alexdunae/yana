@@ -29,7 +29,7 @@ function setup() {
   add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );   // TODO
   add_image_size('event-wide-thumbnail', 624, 0);
   add_image_size('post-masthead-image', 0, 432);
-  add_image_size('post-masthead-vignette', 0, 432);
+  add_image_size('post-masthead-vignette', 0, 480);
   update_option('image_default_link_type','none');
 
   set_post_thumbnail_size((288 * 2), 0, 0);
