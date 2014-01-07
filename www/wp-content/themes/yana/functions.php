@@ -37,6 +37,9 @@ function setup() {
 	register_nav_menus( array(
 		'primary' => 'Primary Menu',
 		'secondary' => 'Secondary Menu',
+    'primary-footer' => 'Primary Footer Menu',
+    'secondary-footer' => 'Secondary Footer Menu',
+    'tertiary-footer' => 'Tertiary Footer Menu'
 	) );
 }
 

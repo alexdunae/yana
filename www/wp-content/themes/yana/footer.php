@@ -15,14 +15,15 @@
                 <button type="submit">Submit</button>
               </div>
             </section>
+            <p><a href="#" class="toggle-contrast">Toggle high colour contrast mode</a></p>
           </section>
           <section class="footer-nav">
-            <p><a href="#" class="toggle-contrast">Toggle high colour contrast mode</a></p>
-            Footer nav
+            <?php wp_nav_menu( array( 'theme_location' => 'primary-footer', 'container_class' => 'nav primary' ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'secondary-footer', 'container_class' => 'nav secondary' ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'tertiary-footer', 'container_class' => 'nav tertiary' ) ); ?>
           </section>
         </div>
       </footer>
-
 
     </div>
     <?php do_action( 'yana_credits' ); ?>

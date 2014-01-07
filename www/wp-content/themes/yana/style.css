@@ -52,9 +52,9 @@ img { vertical-align: middle; }
 @media all and (max-width: 940px) { .site-header .content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { max-width: none; padding-left: 30px; padding-right: 30px; } }
 @media all and (max-width: 760px) { .site-header .content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { padding-left: 30px; padding-right: 30px; } }
 
-.enews .controls, .site-body .content, .sidebar-enews .controls, .home-circles .content, .event-toc-1, .site-footer .content { *zoom: 1; }
-.enews .controls:before, .site-body .content:before, .sidebar-enews .controls:before, .home-circles .content:before, .event-toc-1:before, .site-footer .content:before, .enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after, .site-footer .content:after { display: table; content: ""; }
-.enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after, .site-footer .content:after { clear: both; }
+.enews .controls, .site-body .content, .sidebar-enews .controls, .home-circles .content, .event-toc-1, .site-footer .content, .site-footer .footer-nav { *zoom: 1; }
+.enews .controls:before, .site-body .content:before, .sidebar-enews .controls:before, .home-circles .content:before, .event-toc-1:before, .site-footer .content:before, .site-footer .footer-nav:before, .enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after, .site-footer .content:after, .site-footer .footer-nav:after { display: table; content: ""; }
+.enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after, .site-footer .content:after, .site-footer .footer-nav:after { clear: both; }
 
 .primary-nav ul:after, .primary-nav li, .secondary-nav .links:after { display: inline-block; }
 .lt-ie8 .primary-nav ul:after, .primary-nav .lt-ie8 ul:after, .lt-ie8 .primary-nav li, .primary-nav .lt-ie8 li, .lt-ie8 .secondary-nav .links:after, .secondary-nav .lt-ie8 .links:after { zoom: 1; display: inline; }
@@ -391,11 +391,22 @@ blockquote + p { margin-top: 2.8em; }
 .site-footer .footer-about p, .site-footer .footer-about label { margin: 0 0 1.125em; font: normal 1em/1.875 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 .site-footer .footer-about a { font: 700 1em/100% "ITC American Typewriter W01", monospace; }
 .site-footer .footer-enews .controls { max-width: 306px; }
-.site-footer .footer-nav { float: left; width: 48.46626%; }
+.site-footer .footer-nav { float: left; width: 48.46626%; margin-top: 3.75em; }
+.site-footer .footer-nav .nav { float: left; width: 29.11392%; }
+.site-footer .footer-nav .secondary { margin: 0 6.32911%; }
+.site-footer .footer-nav ul, .site-footer .footer-nav li { margin: 0; padding: 0; list-style: none; }
+.site-footer .footer-nav li { margin: 0.375em 0 0.75em; font: normal 1em/1.5 "Neue Helvetica W01", sans-serif; font-weight: 600; }
+.site-footer .footer-nav li a { color: #2494A2; }
+.site-footer .footer-nav .sub-menu { margin: 0.75em 0; font-size: 1em; }
+.site-footer .footer-nav .sub-menu li { font: normal 0.75em/1.33333 "Neue Helvetica W01", sans-serif; font-weight: 400; }
+.site-footer .footer-nav .sub-menu a { color: #7CBFC7; }
+.site-footer .footer-nav .primary li { margin-bottom: 0.66667em; font-size: 1.125em; line-height: 1.33333; }
+.site-footer .footer-nav .primary .sub-menu { margin: 0.66667em 0; font-size: 1em; }
+.site-footer .footer-nav .primary .sub-menu li { margin: 0.46154em 0; font-size: 0.72222em; line-height: 1.23077; }
 
 @media all and (max-width: 760px) { .site-footer { font-size: 13px; }
   .site-footer .footer-about { float: none; width: auto; }
-  .site-footer .footer-nav { display: none; } }
+  .site-footer .footer-nav { clear: both; float: none; width: auto; font-size: 15px; } }
 .high-contrast body { color: #3d515a; }
 .high-contrast h1, .high-contrast h1 a, .high-contrast h2, .high-contrast h2 a, .high-contrast h3, .high-contrast h3 a, .high-contrast h4, .high-contrast h4 a, .high-contrast h5, .high-contrast h5 a, .high-contrast h6, .high-contrast h6 a { color: #31807b; }
 .high-contrast a { color: #31807b; }
