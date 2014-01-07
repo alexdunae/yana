@@ -84,7 +84,7 @@ $base-font-size: 16px;
     @media all and (max-width: 900px) { @content; }
   }
   @else if $point == mobile {
-    @media all and (max-width: 600px) { @content; }
+    @media all and (max-width: 760px) { @content; }
   }
   @else if $point == mobile-portrait {
     @media all and (max-width: 400px) { @content; }

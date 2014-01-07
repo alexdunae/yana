@@ -15,7 +15,7 @@ add_action( 'wp_enqueue_scripts', 'YANA\scripts' );
 add_filter( 'image_size_names_choose', 'YANA\insertable_image_sizes' );
 add_filter( 'img_caption_shortcode', 'YANA\img_caption_shortcode', 10, 3 );
 add_filter( 'embed_oembed_html', 'YANA\format_oembed', 10, 3 );
-
+add_filter( 'body_class', 'YANA\body_class' );
 
 
 
@@ -38,6 +38,16 @@ function setup() {
 		'primary' => 'Primary Menu',
 		'secondary' => 'Secondary Menu',
 	) );
+}
+
+
+function body_class($classes) {
+  if ( is_front_page() ) {
+    $classes[] = 'front-page';
+  } else {
+    $classes[] = 'inner-page';
+  }
+  return $classes;
 }
 
 function insertable_image_sizes($sizes) {

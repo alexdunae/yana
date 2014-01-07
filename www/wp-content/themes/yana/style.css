@@ -50,7 +50,7 @@ img { vertical-align: middle; }
 
 .site-header .content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { max-width: 978px; margin: 0 auto; padding: 0 84px; }
 @media all and (max-width: 900px) { .site-header .content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { max-width: none; padding-left: 30px; padding-right: 30px; } }
-@media all and (max-width: 600px) { .site-header .content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { padding-left: 30px; padding-right: 30px; } }
+@media all and (max-width: 760px) { .site-header .content, .masthead .content, .site-body .content, .home-circles .content, .home-intro .content, .site-footer .content { padding-left: 30px; padding-right: 30px; } }
 
 .enews .controls, .site-body .content, .sidebar-enews .controls, .home-circles .content, .event-toc-1, .site-footer .content { *zoom: 1; }
 .enews .controls:before, .site-body .content:before, .sidebar-enews .controls:before, .home-circles .content:before, .event-toc-1:before, .site-footer .content:before, .enews .controls:after, .site-body .content:after, .sidebar-enews .controls:after, .home-circles .content:after, .event-toc-1:after, .site-footer .content:after { display: table; content: ""; }
@@ -195,7 +195,7 @@ blockquote + p { margin-top: 2.8em; }
 @media all and (max-width: 900px) { .site-header { font-size: 13px; }
   .site-header .logo { width: 252px; margin-left: -306px; }
   .site-header .content, .site-header .secondary-content { max-width: none; padding-left: 336px; } }
-@media all and (max-width: 600px) { .site-header .content, .site-header .secondary-content { max-width: none; padding-left: 390px; } }
+@media all and (max-width: 760px) { .site-header .content, .site-header .secondary-content { max-width: none; padding-left: 390px; } }
 .site-header .logo { display: block; float: left; position: relative; z-index: 2; height: 84px; }
 .site-header .logo a { display: block; width: 138px; height: 84px; background: transparent url("img/header-logo.svg") 50% 0 no-repeat; background-size: 138px 84px; }
 .no-svg .site-header .logo a { background-image: url("img/header-logo.png"); }
@@ -253,12 +253,12 @@ blockquote + p { margin-top: 2.8em; }
 .masthead .text-wrap { display: table; position: relative; z-index: 6; max-width: 31.5em; height: 23.875em; }
 .masthead .text { display: table-cell; vertical-align: middle; }
 
-.site-body .content { padding-top: 2.25em; padding-bottom: 2.25em; }
-.site-body.has-sidebar .content { max-width: 618px; padding-left: 444px; }
-.site-body.has-sidebar .page-sidebar { float: left; width: 306px; margin-left: -360px; }
-@media all and (max-width: 900px) { .site-body.has-sidebar .page-sidebar { width: 252px; margin-left: -306px; }
-  .site-body.has-sidebar .content { max-width: none; padding-left: 336px; } }
-@media all and (max-width: 600px) { .site-body.has-sidebar .content { max-width: none; padding-left: 390px; } }
+.site-body .content { max-width: 618px; padding-top: 2.25em; padding-bottom: 2.25em; padding-left: 444px; }
+.site-body .page-sidebar { float: left; width: 306px; margin-left: -360px; }
+@media all and (max-width: 900px) { .site-body .page-sidebar { width: 252px; margin-left: -306px; }
+  .site-body .content { max-width: none; padding-left: 336px; } }
+@media all and (max-width: 760px) { .site-body .page-sidebar { display: none; }
+  .site-body .content { max-width: none; padding-left: 30px; } }
 
 .sidebar-nav { margin: 0 0 2.25em; }
 .sidebar-nav ul, .sidebar-nav li { margin: 0; padding: 0; font-size: 1em; list-style: none; }
