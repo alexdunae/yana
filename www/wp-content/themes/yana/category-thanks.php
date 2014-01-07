@@ -2,7 +2,7 @@
   $cat = get_category_by_slug('thanks');
   get_header(); ?>
 
-<article class="site-body has-sidebar" role="main" id="main">
+<article class="site-body" role="main" id="main">
    <div class="content">
    		<?php get_sidebar(); ?>
 
