@@ -276,6 +276,7 @@ blockquote + p { margin-top: 2.8em; }
 
 @media all and (max-width: 760px) { .masthead { height: auto; }
   .masthead .content { height: auto; font-size: 12px; }
+  .masthead .text-wrap { max-width: 25.5em; height: auto; min-height: 19.5em; }
   .masthead .masthead-title { font-size: 3em; }
   .home .masthead .masthead-title { font-size: 3.75em; }
   .masthead .vignette { display: none; } }

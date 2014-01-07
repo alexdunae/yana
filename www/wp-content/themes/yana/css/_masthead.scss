@@ -79,6 +79,12 @@ $vignette-height: 480px;
       font-size: 12px;
     }
 
+    .text-wrap {
+      max-width: em(408px);
+      height: auto;
+      min-height: em(312px);
+    }
+
     .masthead-title {
       font-size: em(48px);
     }
