@@ -28,18 +28,23 @@
 			//$ancestors is an array of post IDs starting with the current post going up the root
 			//'Pop' the root ancestor out or returns the current ID if the post has no ancestors.
 			$root_id = (!empty($ancestors) ? array_pop($ancestors) : $post_id);
+			$root = get_post($root_id);
 
-			// TODO: check for children first?
-			echo '<nav class="sidebar-nav"><ul>';
-			wp_list_pages( array(
+			$links = wp_list_pages( array(
 				'child_of' => $root_id,
 				'depth' => 1, // TODO: what happens if we're on a tertiary page
 				'sort_column'  => 'menu_order, post_title',
-				'title_li' => false
-
+				'title_li' => false,
+				'echo' => false
 			) );
 
-			echo '</ul></nav>';
+			// if there are children then print them along with the parent
+			if ( $links && !empty($links) ) {
+				echo '<nav class="sidebar-nav"><ul>';
+				printf("<li><a href='%s'>%s</a></li>", get_permalink($root), apply_filters('the_title', $root->post_title));
+				echo $links;
+				echo '</ul></nav>';
+			}
 		}
 	?>
 
