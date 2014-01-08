@@ -74,19 +74,10 @@
     text-align: center;
   }
 
-  .title, p { color: $bluegrey; }
-
-  .title {
-    margin: em(18px,20px) 0;
-    @include sans-bold-condensed(em(20px), (48/20));
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-
   p {
     margin: em(18px,32px) 0;
     @include sans-condensed(em(32px), (48/32));
-
+    color: $bluegrey;
   }
 
   @include breakpoint(mobile) {

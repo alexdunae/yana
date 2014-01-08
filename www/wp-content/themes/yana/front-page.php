@@ -35,7 +35,6 @@
 
 <section class="home-intro out-of-body">
   <div class="content">
-    <h2 class="title">What is YANA?</h2>
     <p>YANA is a Comox Valley charity offering help to local families who need to travel to access medical treatment for their children.</p>
   </div>
 </section>

@@ -351,9 +351,7 @@ blockquote + p { margin-top: 2.8em; }
 @media all and (max-width: 760px) { .home-circles { display: none; } }
 
 .home-intro .content { max-width: 50.625em; padding-top: 1.5em; padding-bottom: 1.5em; text-align: center; }
-.home-intro .title, .home-intro p { color: #bbcad2; }
-.home-intro .title { margin: 0.9em 0; font: normal 1.25em/2.4 "Neue Helvetica W01", sans-serif; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-.home-intro p { margin: 0.5625em 0; font: normal 2em/1.5 "Neue Helvetica W01", sans-serif; font-weight: 500; }
+.home-intro p { margin: 0.5625em 0; font: normal 2em/1.5 "Neue Helvetica W01", sans-serif; font-weight: 500; color: #bbcad2; }
 @media all and (max-width: 760px) { .home-intro { font-size: 12px; } }
 
 .news-toc-home .entry { margin: 0 0 3em; }
