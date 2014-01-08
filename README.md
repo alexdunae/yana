@@ -23,7 +23,7 @@ Everything relating to the site in progress is in the `www/wp-content/themes/yan
 
 ## WordPress and version control
 
-WordPress is a git submodule.  We don't deploy any of the core WP files, just the theme (TODO: and plugins?).
+WordPress is a git submodule.  We don't deploy any of the core WP files, just the theme.
 
 To upgrade the local version of WordPress to whatever is the latest, run:
 
