@@ -10,7 +10,7 @@
 
 		if (count($thankyous) > 0) {
 			$count = 0;
-			echo '<section class="sidebar-thank-yous"><div class="frame"><div class="inner"><div class="title-wrap"><h4 class="title">YANA Thank Yous</h4></div><ul>';
+			echo '<section class="sidebar-thank-yous"><div class="frame"><div class="inner"><div class="title-wrap"><h4 class="title"><span class="logo">YANA</span> <span class="text">Thank Yous</span></h4></div><ul>';
 
 			foreach( $thankyous as $thanks ) {
 				$count++;

@@ -68,8 +68,6 @@ $logo-gutter: 30px;
     }
   }
 
-
-
   .logo {
     display: block;
     float: left;
@@ -171,14 +169,14 @@ $logo-gutter: 30px;
       padding: em(12px,15px) em(24px,15px);
       @include sans-condensed(em(15px), (20/15));
       text-transform: lowercase;
-
+      text-align: left;
     }
 
     li a, li:nth-child(1n+1) a {
       color: #B1B1B1;
 
       &:hover, &:focus {
-        background: #e4e4e4;
+        background: #f6f6f6;
       }
     }
   }
@@ -260,12 +258,12 @@ $logo-gutter: 30px;
 
   a {
     display: block;
-    padding: 0 em(6px,11px);
-    font-size: em(11px);
-    line-height: (24/11);
+    padding: 0 em(6px,12px);
+    font-size: em(12px);
+    line-height: (24/12);
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: $bluegrey;
+    color: $lightgrey;
 
     &:hover, &:focus {
       color: $darkteal;

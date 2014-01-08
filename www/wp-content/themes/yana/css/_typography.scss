@@ -34,12 +34,12 @@ body {
 }
 
 a {
-  color: $darkteal;
+  color: $lightteal;
   text-decoration: none;
   transition: 100ms color ease-out;
 
   &:hover, &:focus {
-    color: $lightteal;
+    color: darken($lightteal, 15%);
   }
 }
 

@@ -12,12 +12,12 @@
 
 .alignleft {
   float: left;
-  margin: 0 percentage(30/618) em(30px) 0;
+  margin: em(6px) percentage(30/618) em(18px) 0;
 }
 
 .alignright {
   float: right;
-  margin: 0 0 em(30px) percentage(30/618);
+  margin: em(6px) 0 em(18px) percentage(30/618);
 }
 
 .aligncenter, .alignnone, .alignleft, .alignright {
@@ -30,8 +30,8 @@
   }
 }
 
-.wp-caption-text {
-  margin: em(12px,12px);
+.wp-caption-text, .content .wp-caption .wp-caption-text {
+  margin: em(12px,12px) em(6px,12px);
   font-size: em(12px);
   line-height: (18/12);
 }

@@ -47,10 +47,6 @@
     },
     initMobileNav: function() {
       var _this = this;
-      $('.site-header .logo').on('click', function(e) {
-        e.preventDefault();
-        return _this.htmlElement.toggleClass('show-nav');
-      });
       return this.htmlElement.on('keypress', function(e) {
         if (e.which === 49) {
           return _this.htmlElement.toggleClass('show-nav');
