@@ -75,9 +75,9 @@
 
 	<aside class="sidebar-image-ad">
 		<div class="image">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/sidebar-share-todo.jpg" width="258" height="213" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/share-ad.jpg" width="258" height="213" alt="">
 		</div>
-		<div class="mask"></div>
+		<!-- TODO <div class="mask"></div> -->
 		<a class="link" href="#todo">
 			<span class="text">Share your story with us</span>
 		</a>
