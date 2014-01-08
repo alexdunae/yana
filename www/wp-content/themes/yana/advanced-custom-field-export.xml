@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/3.8" created="2014-01-07 23:15" -->
+<!-- generator="WordPress/3.8" created="2014-01-08 00:23" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>YANA</title>
 	<link>http://yana.dialect.ca</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Tue, 07 Jan 2014 23:15:28 +0000</pubDate>
+	<pubDate>Wed, 08 Jan 2014 00:23:30 +0000</pubDate>
 	<language></language>
 	<wp:wxr_version>1.1</wp:wxr_version>
 	<wp:base_site_url>http://yana.dialect.ca</wp:base_site_url>
@@ -100,6 +100,10 @@
 		<wp:post_type>acf</wp:post_type>
 		<wp:post_password></wp:post_password>
 		<wp:postmeta>
+			<wp:meta_key>field_52cc99a584305</wp:meta_key>
+			<wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52cc99a584305";s:5:"label";s:12:"Hide the H1?";s:4:"name";s:16:"masthead_hide_h1";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
 			<wp:meta_key>rule</wp:meta_key>
 			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"yana-event";s:8:"order_no";i:0;s:8:"group_no";i:2;}]]></wp:meta_value>
 		</wp:postmeta>
@@ -113,7 +117,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_52c72f6e81a23</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52c72f6e81a23";s:5:"label";s:13:"Masthead Text";s:4:"name";s:13:"masthead_text";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:10:"formatting";s:4:"none";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52c72f6e81a23";s:5:"label";s:13:"Masthead Text";s:4:"name";s:13:"masthead_text";s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:10:"formatting";s:4:"none";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -129,19 +133,15 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_52c72f5481a22</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52c72f5481a22";s:5:"label";s:17:"Masthead Headline";s:4:"name";s:17:"masthead_headline";s:4:"type";s:4:"text";s:12:"instructions";s:17:"Two to four words";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52c72f5481a22";s:5:"label";s:17:"Masthead Headline";s:4:"name";s:17:"masthead_headline";s:4:"type";s:4:"text";s:12:"instructions";s:17:"Two to four words";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_52c72cbcd28fd</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52c72cbcd28fd";s:5:"label";s:17:"Masthead Vignette";s:4:"name";s:17:"masthead_vignette";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:2:"id";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52c72cbcd28fd";s:5:"label";s:17:"Masthead Vignette";s:4:"name";s:17:"masthead_vignette";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:2:"id";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_52c72ca0d28fc</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52c72ca0d28fc";s:5:"label";s:14:"Masthead Image";s:4:"name";s:14:"masthead_image";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:2:"id";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52c72c92d28fb</wp:meta_key>
-			<wp:meta_value><![CDATA[a:9:{s:3:"key";s:19:"field_52c72c92d28fb";s:5:"label";s:13:"Masthead Mask";s:4:"name";s:13:"masthead_mask";s:4:"type";s:12:"color_picker";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52c72ca0d28fc";s:5:"label";s:14:"Masthead Image";s:4:"name";s:14:"masthead_image";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:2:"id";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>

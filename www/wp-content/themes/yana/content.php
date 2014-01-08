@@ -1,6 +1,8 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php if (!get_field('masthead_hide_h1', $post_for_masthead->ID)): ?>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<?php endif; ?>
 		<?php
 			if ( get_post_type() == 'post' ) {
 				printf("<p class='dt'>Posted on <time datetime='%s'>%s</time></p>",
