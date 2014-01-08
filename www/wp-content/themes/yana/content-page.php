@@ -1,5 +1,5 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if (!get_field('masthead_hide_h1', $post_for_masthead->ID)): ?>
+	<?php if (!get_field('masthead_hide_h1', $post->ID)): ?>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header>
