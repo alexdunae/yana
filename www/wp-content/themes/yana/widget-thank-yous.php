@@ -5,7 +5,7 @@
 	if ( $cat ) {
 		$thankyous = get_posts( array(
 		                       'category' => $cat->term_id,
-		                       'numberposts' => 8 ) );
+		                       'numberposts' => 5 ) );
 
 
 		if (count($thankyous) > 0) {

@@ -346,7 +346,7 @@ blockquote + p { margin-top: 2.8em; }
 .sidebar-image-ad .link { display: table; z-index: 3; text-transform: uppercase; text-align: center; color: #fff; }
 .sidebar-image-ad .link .text { display: table-cell; padding: 0 1.875em; font: normal 1.5em/1.25 "Neue Helvetica W01", sans-serif; font-weight: 600; vertical-align: middle; }
 
-.home-circles { position: relative; z-index: 6; margin-top: -7.5em; }
+.home-circles { position: relative; z-index: 6; margin-top: -7.5em; clear: both; }
 .home-circles .content { padding-left: 0; padding-right: 0; padding-top: 0.375em; padding-bottom: 0.375em; }
 .home-circles .entry { float: left; display: table; width: 25%; height: 248px; margin: 0; vertical-align: middle; text-align: center; background: transparent url("img/circle-teal.svg") 50% 50% no-repeat; background-size: contain; }
 .home-circles .entry, .home-circles .entry a { color: #fff; }
@@ -379,8 +379,9 @@ blockquote + p { margin-top: 2.8em; }
 .post.category-thanks p { margin: 1em 0; font: normal 1.125em/1.77778 "Neue Helvetica W01", sans-serif; font-weight: 600; color: #b1b1b1; }
 .post.category-thanks:hover, .post.category-thanks:focus { background: #FAFAFA; }
 
-.news-toc { border-top: 1px solid #F0F0F0; }
-.news-toc .post { margin: 0; padding: 1.875em 3.375em; border: 1px solid #F0F0F0; border-width: 0 0 1px; }
+.news-toc { margin: 0 0 1.875em; border-top: 1px solid #F0F0F0; }
+.news-toc .post { margin: 0; padding-top: 1.875em; padding-bottom: 1.875em; border: 1px solid #F0F0F0; border-width: 0 0 1px; }
+.news-toc .more-posts { margin: 1.875em 0; }
 
 .event-info { float: right; width: 13.875em; margin: 0 0 1.875em 1.875em; border: 1px solid #e4e4e4; background: #f6f6f6 none; }
 .event-info .title { margin: 0; padding: 0.85714em 1.28571em; font: normal 0.875em/1.14286 "Neue Helvetica W01", sans-serif; font-weight: 600; text-transform: uppercase; color: #fff; background: #51bdb5 none; }

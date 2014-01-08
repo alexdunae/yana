@@ -2,6 +2,8 @@
   position: relative;
   z-index: 6;
   margin-top: em(-120px);
+  clear: both;
+
   .content {
     @extend %inner-content-frame;
     padding-left: 0;

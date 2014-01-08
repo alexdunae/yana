@@ -15,7 +15,7 @@
                 <button type="submit">Submit</button>
               </div>
             </section>
-            <p><a href="#" class="toggle-contrast">Toggle high colour contrast mode</a></p>
+            <?php // TODO: <p><a href="#" class="toggle-contrast">Toggle high colour contrast mode</a></p> ?>
           </section>
           <section class="footer-nav">
             <?php wp_nav_menu( array( 'theme_location' => 'primary-footer', 'container_class' => 'nav primary' ) ); ?>
