@@ -82,6 +82,26 @@ function img_caption_shortcode( $a, $attr, $content ) {
   . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
 
+function pagination() {
+  global $wp_query;
+
+  $big = 9999999;
+
+  $links = paginate_links( array(
+      'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+      'current' => max( 1, get_query_var('paged') ),
+      'total' => $wp_query->max_num_pages,
+      'prev_text' => 'Previous',
+      'next_text' => 'Next page'
+  ) );
+
+  if ($links && !empty($links)) {
+    return printf("<div class='pagination'>%s</div>", $links);
+  } else {
+    return false;
+  }
+}
+
 /**
  * Register widgetized area and update sidebar with default widgets.
  */

@@ -4,23 +4,18 @@
    <div class="content">
    		<?php get_sidebar(); ?>
       <?php get_template_part( 'archives-content-header' ); ?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
-        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <?php
-            if ( get_post_type() == 'post' ) {
-              printf("<p class='dt'>Posted on <time datetime='%s'>%s</time></p>",
-                      get_post_time('c', true),
-                      get_the_date()
-                    );
-
-              printf("<p class='categories'>%s</p>", get_the_category_list(','));
-            }
-          ?>
-          <?php the_excerpt(); ?>
-        </div>
-			<?php endwhile; ?>
+      <div class="news-toc">
+			<?php
+        while ( have_posts() ) : the_post();
+          if ( in_category( 'thanks' ) ) {
+            get_template_part( 'content', 'thanks' );
+          } else {
+            get_template_part( 'content', 'news' );
+          }
+        endwhile;
+      ?>
+      <?php YANA\pagination(); ?>
+      </div>
 	</div>
 </article>
 

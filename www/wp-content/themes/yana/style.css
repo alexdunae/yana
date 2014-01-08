@@ -130,9 +130,9 @@ blockquote + p { margin-top: 2.8em; }
 
 .lede p { margin: 1.09091em 0; font-size: 1.375em; line-height: 1.63636; }
 
-.btn { display: inline-block; box-sizing: border-box; -webkit-appearance: none; margin: 1.125em 0; padding: 0.375em 1.125em; border: 0; border-radius: 0.375em; font: normal 1em/2.25 "Neue Helvetica W01", sans-serif; font-weight: 600; color: #fff; background-color: #2494a2; cursor: pointer; transition: 100ms background ease-out; }
-.btn:hover, .btn:focus { color: #fff; background-color: #51bdb5; }
-.btn:active { color: #fff; background-color: #76cbc5; }
+.more-link, .btn { display: inline-block; box-sizing: border-box; -webkit-appearance: none; margin: 1.125em 0; padding: 0.375em 1.125em; font-size: 16px; border: 0; border-radius: 0.375em; font: normal 1em/2.25 "Neue Helvetica W01", sans-serif; font-weight: 600; color: #fff; background-color: #2494a2; cursor: pointer; transition: 100ms background ease-out; }
+.more-link:hover, .more-link:focus, .btn:hover, .btn:focus { color: #fff; background-color: #51bdb5; }
+.more-link:active, .btn:active { color: #fff; background-color: #76cbc5; }
 
 @media all and (max-width: 800px) { .site-header { font-size: 14px; }
   .site-body { font-size: 14px; }
@@ -188,6 +188,12 @@ blockquote + p { margin-top: 2.8em; }
 .high-contrast .instagram-badge { background-color: #517fa4 !important; }
 
 .post-toc .category-thanks p { padding: 0.85714em 0; font-size: 0.875em; line-height: 1.42857; color: #7CBFC7; }
+
+.pagination { margin: 1.875em 0; }
+.pagination .page-numbers { display: inline-block; min-width: 1.33333em; height: 1.33333em; margin-right: 0.4em; padding: 0.46667em; border: 1px solid #E4E4E4; border-radius: 0.4em; font: normal 0.9375em/1.33333 "Neue Helvetica W01", sans-serif; font-weight: 500; text-align: center; color: #b1b1b1; transition: 100ms background ease-out; }
+.pagination a:hover, .pagination a:focus, .pagination .current { background-color: #F0F0F0; }
+.pagination .prev, .pagination .next { color: #fff; background-color: #51BDB5; }
+.pagination .prev:hover, .pagination .prev:focus, .pagination .next:hover, .pagination .next:focus { background-color: #3c9f97; }
 
 .site-header .content { position: relative; max-width: 618px; padding-top: 0; padding-bottom: 0; padding-left: 444px; }
 .site-header .content { height: 84px; padding-top: 1.5em; padding-bottom: 2.25em; }
@@ -360,10 +366,21 @@ blockquote + p { margin-top: 2.8em; }
 @media all and (max-width: 760px) { .home-intro { font-size: 12px; } }
 
 .news-toc-home .entry { margin: 0 0 3em; }
+.news-toc-home .dt { display: none; }
 .news-toc-home .image { display: block; margin: 0 0 1.5em; }
 .news-toc-home img { display: block; width: 100%; height: auto; }
 .news-toc-home .entry-title { margin: 0 0 0.33333em; font: normal 2.25em/1.33333 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 .news-toc-home p { margin: 0.75em 0; font-size: 1em; line-height: 1.5; }
+
+.dt { margin: 1.5em 0; font: normal 0.75em/2 "Neue Helvetica W01", sans-serif; font-weight: 400; font-style: italic; }
+
+.post.category-thanks { margin: 1.875em 0; padding: 1.875em 3.375em; border: 1px solid #F0F0F0; border-width: 1px 0; transition: 150ms background ease-out; }
+.post.category-thanks .icon { display: block; float: left; margin: 1.125em 1.125em 0 0; }
+.post.category-thanks p { margin: 1em 0; font: normal 1.125em/1.77778 "Neue Helvetica W01", sans-serif; font-weight: 600; color: #b1b1b1; }
+.post.category-thanks:hover, .post.category-thanks:focus { background: #FAFAFA; }
+
+.news-toc { border-top: 1px solid #F0F0F0; }
+.news-toc .post { margin: 0; padding: 1.875em 3.375em; border: 1px solid #F0F0F0; border-width: 0 0 1px; }
 
 .event-info { float: right; width: 13.875em; margin: 0 0 1.875em 1.875em; border: 1px solid #e4e4e4; background: #f6f6f6 none; }
 .event-info .title { margin: 0; padding: 0.85714em 1.28571em; font: normal 0.875em/1.14286 "Neue Helvetica W01", sans-serif; font-weight: 600; text-transform: uppercase; color: #fff; background: #51bdb5 none; }

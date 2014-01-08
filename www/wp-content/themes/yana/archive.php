@@ -38,19 +38,19 @@
         ?>
       </header>
 
-
-      <div class="post-toc">
-  			<?php while ( have_posts() ) : the_post(); ?>
-          <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <?php the_excerpt(); ?>
-          </div>
-  			<?php endwhile; ?>
+      <div class="news-toc">
+      <?php
+        while ( have_posts() ) : the_post();
+          if ( in_category( 'thanks' ) ) {
+            get_template_part( 'content', 'thanks' );
+          } else {
+            get_template_part( 'content', 'news' );
+          }
+        endwhile;
+      ?>
       </div>
 
-      <?php previous_posts_link(); ?>
-      <?php next_posts_link(); ?>
-
+      <?php YANA\pagination(); ?>
 	</div>
 </article>
 

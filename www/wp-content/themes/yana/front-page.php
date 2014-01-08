@@ -51,13 +51,8 @@
           $posts = get_posts( array( 'numberposts' => 5, 'category' => ('-' . $cat->term_id) ) );
           foreach( $posts as $post ):
             setup_postdata($post);
-        ?>
-          <div id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
-            <?php echo YANA\linked_thumbnail($post->ID, 'large'); ?>
-            <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <?php the_content(); ?>
-          </div>
-  			<?php
+            $more = 0;
+            get_template_part( 'content', 'news' );
           endforeach;
           wp_reset_postdata();
 
