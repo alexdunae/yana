@@ -1,4 +1,4 @@
-$logo-width: 138px;
+$logo-width: 306px;
 $logo-height: 84px;
 $logo-gutter: 30px;
 
@@ -80,13 +80,13 @@ $logo-gutter: 30px;
       width: $logo-width;
       height: $logo-height;
       @extend %image-replacement;
-      background: transparent url("img/header-logo.svg") 50% 0 no-repeat;
+      background: transparent url("img/header-logo.png") 50% 0 no-repeat;
       background-size: $logo-width $logo-height;
 
-      .no-svg & {
+      //.no-svg & {
         // TODO: this looks terrible
-        background-image: url("img/header-logo.png");
-      }
+      //  background-image: url("img/header-logo.png");
+      //}
     }
   }
 }
