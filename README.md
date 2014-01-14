@@ -64,3 +64,11 @@ Make sure everything is looking tight.  Check a few links.  Then, from terminal 
 ## Generating the icon font
 
 The font is generated via [Icomoon.io](http://icomoon.io/app/).  Upload `stylesheets/fonts/icomoon.dev.svg` to that web app to edit the font.
+
+## TODO
+
+Add parent page to the top of sub menu drop downs
+Move header logo down
+Newsletter sign up note from cumberland.ca -- newsletter coming soon
+Phone number in footer
+Link thank you homepage title
