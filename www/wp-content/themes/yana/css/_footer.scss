@@ -49,6 +49,11 @@
     .controls {
       max-width: $sidebar-width;
     }
+
+    .note {
+      margin: em(12px,11px) 0;
+      @include sans-roman(11px, (16/11));
+    }
   }
 
   .footer-nav {

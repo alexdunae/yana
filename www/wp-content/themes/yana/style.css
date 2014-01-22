@@ -417,6 +417,7 @@ blockquote + p { margin-top: 2.8em; }
 .site-footer .footer-about p, .site-footer .footer-about label { margin: 0 0 1.125em; font: normal 1em/1.875 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 .site-footer .footer-about a { font: 700 1em/100% "ITC American Typewriter W01", monospace; }
 .site-footer .footer-enews .controls { max-width: 306px; }
+.site-footer .footer-enews .note { margin: 1.09091em 0; font: normal 11px/1.45455 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 .site-footer .footer-nav { float: left; width: 48.46626%; margin-top: 3.75em; }
 .site-footer .footer-nav .nav { float: left; width: 29.11392%; }
 .site-footer .footer-nav .secondary { margin: 0 6.32911%; }
