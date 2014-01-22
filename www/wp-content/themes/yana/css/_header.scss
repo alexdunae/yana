@@ -287,10 +287,10 @@ $logo-gutter: 30px;
   .site-header {
     .logo {
       float: none;
-      width: (138px / 1.5);
-      height: (84px / 1.5);
+      width: ($logo-width / 1.5);
+      height: ($logo-height / 1.5);
       a {
-        background-size: (138px / 1.5) (84px / 1.5);
+        background-size: ($logo-width / 1.5) ($logo-height / 1.5);
         background-position: 0 0;
       }
     }

@@ -254,8 +254,8 @@ blockquote + p { margin-top: 2.8em; }
 .secondary-nav li:last-child a { padding-right: 0; }
 .secondary-nav .current a { color: #2494a2; }
 
-@media all and (max-width: 760px) { .site-header .logo { float: none; width: 92px; height: 56px; }
-  .site-header .logo a { background-size: 92px 56px; background-position: 0 0; }
+@media all and (max-width: 760px) { .site-header .logo { float: none; width: 204px; height: 56px; }
+  .site-header .logo a { background-size: 204px 56px; background-position: 0 0; }
   .site-nav { position: fixed; overflow: scroll; top: 0; background: #eaeaea; width: 216px; padding: 12px; height: 100%; z-index: 99999; right: -240px; transition: 200ms right ease-out; }
   .primary-nav { margin-top: 0; }
   .primary-nav ul { text-align: left; }
