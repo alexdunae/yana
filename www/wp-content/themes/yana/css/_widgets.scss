@@ -103,6 +103,11 @@
       background-color: darken(#8BC540, 5%);
     }
   }
+
+  .note {
+    margin: em(12px,11px) 0;
+    @include sans-roman(11px, (16/11));
+  }
 }
 
 .icon-badge, .secondary-nav .icon-badge {

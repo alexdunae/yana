@@ -9,11 +9,14 @@
             <p><a href="<?php echo YANA\FACEBOOK_URL; ?>">Connect with us on Facebook</a></p>
 
             <section class="footer-enews enews">
-              <label for="footer-enews-email">Subcribe for updates:</label>
-              <div class="controls">
-                <input type="email" name="email" id="footer-enews-email" placeholder="Your email address">
-                <button type="submit">Submit</button>
-              </div>
+              <form method="POST" action="http://dialogue.dialect.ca/t/y/s/qtjhrt/">
+                <label for="footer-enews-email">Subcribe for updates:</label>
+                <div class="controls">
+                  <input type="email" name="cm-qtjhrt-qtjhrt" id="footer-enews-email" placeholder="Your email address" required>
+                  <button type="submit">Submit</button>
+                </div>
+                <p class="note">We're still setting up newsletter program; we hope to begin sharing regular updates by email soon.</p>
+              </form>
             </section>
             <?php // TODO: <p><a href="#" class="toggle-contrast">Toggle high colour contrast mode</a></p> ?>
           </section>

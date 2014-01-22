@@ -46,6 +46,29 @@ initSidebarQuotes = ->
     if out.length > 0
       out.text(YANA.Quotes[Math.floor(Math.random() * YANA.Quotes.length)])
 
+initSubscribe = ->
+  return unless YANA.XHR_URL
+  $('.enews form').on 'submit', (e) ->
+    e.preventDefault()
+    f = $(this)
+    btn = f.find('button')
+    msg = f.find('.note')
+    email = f.find('input').val()
+
+    if email == ""
+      msg.text('Please enter your email address')
+      return
+
+    btn.attr('disabled', 'disabled')
+    msg.text('Sending...')
+
+    $.post YANA.XHR_URL, {action: 'yana_subscribe', email: email}, (d, s, xhr) ->
+      msg.text(d.data.message)
+      if d.success
+        YANA.trackEvent('subscribe', 'success', email)
+      btn.attr('disabled', null)
+
+
 YANA.trackPageView = (href) ->
   try
     _gaq.push(['_trackPageview', href]);
@@ -62,6 +85,7 @@ $(document).on 'ready', (e) ->
   initHighContrast()
   initHomeCircles()
   initMobileNav()
+  initSubscribe()
 
 
 

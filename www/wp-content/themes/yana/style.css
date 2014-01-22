@@ -164,6 +164,7 @@ blockquote + p { margin-top: 2.8em; }
 .enews input::-moz-placeholder { text-transform: lowercase; color: #b1b1b1; }
 .enews button { width: 29.41176%; height: 3.42857em; padding: 0.85714em; border: 0; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 600; color: #fff; background-color: #8BC540; box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); cursor: pointer; transition: background 200ms ease-out; }
 .enews button:hover, .enews button:focus { background-color: #7eb537; }
+.enews .note { margin: 1.09091em 0; font: normal 11px/1.45455 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 
 .icon-badge, .icon-badge .icon, .secondary-nav .icon-badge, .secondary-nav .icon-badge .icon { display: inline-block; width: 3.375em; height: 3em; padding: 0; font-size: 1em; line-height: 3; letter-spacing: 0; text-transform: none; text-align: center; vertical-align: middle; }
 

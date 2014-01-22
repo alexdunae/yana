@@ -10118,7 +10118,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
 
 })( window );
 ;(function() {
-  var htmlElement, initDebug, initHighContrast, initHomeCircles, initMobileNav, initSidebarQuotes;
+  var htmlElement, initDebug, initHighContrast, initHomeCircles, initMobileNav, initSidebarQuotes, initSubscribe;
 
   if (window.YANA == null) {
     window.YANA = {};
@@ -10190,6 +10190,36 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     }
   };
 
+  initSubscribe = function() {
+    if (!YANA.XHR_URL) {
+      return;
+    }
+    return $('.enews form').on('submit', function(e) {
+      var btn, email, f, msg;
+      e.preventDefault();
+      f = $(this);
+      btn = f.find('button');
+      msg = f.find('.note');
+      email = f.find('input').val();
+      if (email === "") {
+        msg.text('Please enter your email address');
+        return;
+      }
+      btn.attr('disabled', 'disabled');
+      msg.text('Sending...');
+      return $.post(YANA.XHR_URL, {
+        action: 'yana_subscribe',
+        email: email
+      }, function(d, s, xhr) {
+        msg.text(d.data.message);
+        if (d.success) {
+          YANA.trackEvent('subscribe', 'success', email);
+        }
+        return btn.attr('disabled', null);
+      });
+    });
+  };
+
   YANA.trackPageView = function(href) {
     var e;
     try {
@@ -10213,7 +10243,8 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     initSidebarQuotes();
     initHighContrast();
     initHomeCircles();
-    return initMobileNav();
+    initMobileNav();
+    return initSubscribe();
   });
 
 }).call(this);

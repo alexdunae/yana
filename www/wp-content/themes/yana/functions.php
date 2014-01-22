@@ -4,6 +4,7 @@ namespace YANA;
 
 require_once( dirname(__FILE__) . '/lib/yana.template.php' );
 require_once( dirname(__FILE__) . '/lib/yana.events.php' );
+require_once( dirname(__FILE__) . '/lib/yana.subscribe.php' );
 
 
 
@@ -16,7 +17,7 @@ add_filter( 'image_size_names_choose', 'YANA\insertable_image_sizes' );
 add_filter( 'img_caption_shortcode', 'YANA\img_caption_shortcode', 10, 3 );
 add_filter( 'embed_oembed_html', 'YANA\format_oembed', 10, 3 );
 add_filter( 'body_class', 'YANA\body_class' );
-add_action( 'wp_footer', 'YANA\echo_quote_json' );
+add_action( 'wp_footer', 'YANA\wp_footer' );
 
 
 if ( ! isset( $content_width ) ) {
@@ -102,14 +103,15 @@ function pagination() {
   }
 }
 
-function echo_quote_json() {
+function wp_footer() {
+  printf("<script> if (window.YANA == null) { window.YANA = {}; }; window.YANA.XHR_URL = '%s';", admin_url( 'admin-ajax.php') );
   $path = dirname(__FILE__) . '/sidebar-quotes.json';
   if ( is_readable($path) ) {
     $quotes = file_get_contents($path);
-    printf("<script> if (window.YANA == null) { window.YANA = {}; }; window.YANA.Quotes = %s </script>", $quotes );
-  } else {
-    echo "<!-- error reading quote file -->";
+    printf(" window.YANA.Quotes = %s; ", $quotes );
+
   }
+  echo '</script>';
 
 }
 
