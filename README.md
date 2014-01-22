@@ -71,4 +71,3 @@ Add parent page to the top of sub menu drop downs
 Move header logo down
 Newsletter sign up note from cumberland.ca -- newsletter coming soon
 Phone number in footer
-Link thank you homepage title

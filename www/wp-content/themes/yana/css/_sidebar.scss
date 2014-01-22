@@ -140,7 +140,7 @@
     font-size: 1em;
     line-height: em(24px);
     text-align: center;
-    color: #fff;
+    &, & a { color: #fff; }
   }
 
   .logo {
