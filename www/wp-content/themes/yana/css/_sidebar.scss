@@ -222,20 +222,13 @@
   position: relative;
   margin: 0 em(24px) em(36px);
 
-  &, & .mask, & .link, & .image { height: 212px; }
+  &, & .link, & .image { height: 212px; }
 
-  .mask, .link {
+  .link {
     position: absolute;
     width: 100%;
     left: 0;
     top: 0;
-  }
-
-  .mask {
-    z-index: 2;
-    background: rgba($yellow, 0.5);
-
-    .no-rgba & { background: transparent url("images/FEB62D-50.png") repeat; }
   }
 
   .image {
