@@ -69,7 +69,7 @@
 
 	<aside class="sidebar-community-quote">
 		<blockquote>
-			<p>“Y.A.N.A. gave my parents an apartment to live in near the hospital. Mom and Dad told me that Y.A.N.A. was able to help us because we lived in the Comox Valley, where people cared alot.”</p>
+			<p>“<span class="text">Y.A.N.A. gave my parents an apartment to live in near the hospital. Mom and Dad told me that Y.A.N.A. was able to help us because we lived in the Comox Valley, where people cared alot.</span>”</p>
 		</blockquote>
 	</aside>
 

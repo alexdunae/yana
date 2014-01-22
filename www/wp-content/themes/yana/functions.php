@@ -16,7 +16,7 @@ add_filter( 'image_size_names_choose', 'YANA\insertable_image_sizes' );
 add_filter( 'img_caption_shortcode', 'YANA\img_caption_shortcode', 10, 3 );
 add_filter( 'embed_oembed_html', 'YANA\format_oembed', 10, 3 );
 add_filter( 'body_class', 'YANA\body_class' );
-
+add_action( 'wp_footer', 'YANA\echo_quote_json' );
 
 
 if ( ! isset( $content_width ) ) {
@@ -101,6 +101,18 @@ function pagination() {
     return false;
   }
 }
+
+function echo_quote_json() {
+  $path = dirname(__FILE__) . '/sidebar-quotes.json';
+  if ( is_readable($path) ) {
+    $quotes = file_get_contents($path);
+    printf("<script> if (window.YANA == null) { window.YANA = {}; }; window.YANA.Quotes = %s </script>", $quotes );
+  } else {
+    echo "<!-- error reading quote file -->";
+  }
+
+}
+
 
 /**
  * Register widgetized area and update sidebar with default widgets.
