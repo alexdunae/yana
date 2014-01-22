@@ -307,6 +307,9 @@ blockquote + p { margin-top: 2.8em; }
 .sidebar-community-quote blockquote { color: rgba(36, 148, 162, 0.5); }
 .sidebar-community-quote blockquote p { font: 500 1em/1.875 "ITC American Typewriter W01", monospace; }
 
+.sidebar-ad { position: relative; margin: 0 0 2.25em; }
+.sidebar-ad .frame, .sidebar-ad img { display: block; }
+
 .sidebar-facebook-ad { position: relative; margin: 0 0 2.25em; }
 .sidebar-facebook-ad .frame { font: normal 1em/1.41176 "Neue Helvetica W01", sans-serif; font-weight: 600; padding: 0.25em; text-align: center; color: #fff; background: #325B99 none; transition: background 100ms ease-out; }
 .sidebar-facebook-ad .frame:hover, .sidebar-facebook-ad .frame:focus { background-color: #2c5086; }

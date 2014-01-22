@@ -37,6 +37,13 @@
   }
 }
 
+.sidebar-ad {
+  position: relative;
+  margin: 0 0 em(36px);
+
+  .frame, img { display: block; }
+}
+
 .sidebar-facebook-ad {
   position: relative;
   margin: 0 0 em(36px);
