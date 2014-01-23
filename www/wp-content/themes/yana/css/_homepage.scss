@@ -115,5 +115,8 @@
     font-size: em(16px);
     line-height: (24/16);
   }
+}
 
+@include breakpoint(mobile) {
+  .home .site-body .content { padding-top: 0; }
 }

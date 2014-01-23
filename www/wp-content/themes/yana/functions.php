@@ -55,6 +55,7 @@ function body_class($classes) {
 
 function insertable_image_sizes($sizes) {
    unset( $sizes['thumbnail']);
+   unset( $sizes['medium'] );
    unset( $sizes['full'] );
    return $sizes;
 }

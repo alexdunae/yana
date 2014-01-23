@@ -25,6 +25,8 @@
             <?php wp_nav_menu( array( 'theme_location' => 'secondary-footer', 'container_class' => 'nav secondary' ) ); ?>
             <?php wp_nav_menu( array( 'theme_location' => 'tertiary-footer', 'container_class' => 'nav tertiary' ) ); ?>
           </section>
+          <a href="#page" class="back-to-top">Back to the top</a>
+
         </div>
       </footer>
 

@@ -67,4 +67,26 @@ The font is generated via [Icomoon.io](http://icomoon.io/app/).  Upload `stylesh
 
 ## TODO
 
+All uploaded images must be >618px wide.
+
 Phone number in footer
+Favicon
+Social icons
+Caching
+Title tags
+Proper header logo (space on left, also mobile size)
+Update footer logo
+Mobile nav toggle
+WP editor style
+Mobile nav toggle (remove debugging)
+Mystery pixels on the right
+Proper map embeds (http://yana.dialect.ca/get-support/vancouver/)
+Maybe... hover states on home circles
+Thank you banner tight alignment
+
+Get quotes for sidebar (and possibly body)
+Lock down ledes and titles
+Share your story content
+Get support emergency info callout?
+Photo loading
+

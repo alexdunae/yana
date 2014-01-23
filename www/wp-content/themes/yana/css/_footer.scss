@@ -5,6 +5,8 @@
   border-bottom: em(84px) solid #14535C;
   background: #1B6F7A;
 
+  .back-to-top { display: none; }
+
   .content {
     @extend %inner-content-frame;
     @extend %clearfix;
@@ -113,7 +115,14 @@
 
 @include breakpoint(mobile) {
   .site-footer {
-    font-size: 13px;
+    //font-size: 13px;
+    .enews .note { max-width: 306px; }
+
+    .back-to-top {
+      display: block;
+      margin: em(30px,16px) 0 em(12px,16px);
+      @include sans-bold(em(16px),(24/16));
+    }
 
     .footer-about {
       float: none;
@@ -121,10 +130,7 @@
     }
 
     .footer-nav {
-      clear: both;
-      float: none;
-      width: auto;
-      font-size: 15px;
+      display: none;
     }
   }
 }

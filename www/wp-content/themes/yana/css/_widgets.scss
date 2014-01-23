@@ -30,6 +30,15 @@
   }
 }
 
+
+@media all and (max-width: 618px) {
+  .alignleft, .alignright {
+    float: none;
+    width: 100%;
+    margin: em(30px) 0;
+  }
+}
+
 .wp-caption-text, .content .wp-caption .wp-caption-text {
   margin: em(12px,12px) em(6px,12px);
   font-size: em(12px);

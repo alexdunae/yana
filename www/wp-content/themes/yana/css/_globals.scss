@@ -81,7 +81,7 @@ $base-font-size: 16px;
 
 @mixin breakpoint($point) {
   @if $point == tablet {
-    @media all and (max-width: 940px) { @content; }
+    @media all and (max-width: 980px) { @content; }
   }
   @else if $point == mobile {
     @media all and (max-width: 760px) { @content; }

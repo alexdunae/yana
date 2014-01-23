@@ -167,8 +167,8 @@ blockquote + p {
 // set the font-size for the containers first, then manually
 // set the styles
 @media all and (max-width: 800px) {
-  .site-header {  font-size: 14px; }
-  .site-body {    font-size: 14px; }
+  //.site-header {  font-size: 14px; }
+  //.site-body {    font-size: 14px; }
 
   h4 {
     font-size: em(14px, 14px);
@@ -176,8 +176,8 @@ blockquote + p {
 }
 
 @media all and (max-width: 600px) {
-  .site-header {  font-size: 13px; }
-  .site-body {    font-size: 13px; }
+  //.site-header {  font-size: 13px; }
+  //.site-body {    font-size: 13px; }
 
   h1 {
     font-size: em(36px, 13px);

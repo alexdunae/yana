@@ -102,7 +102,7 @@ $logo-gutter: 30px;
 }
 
 .primary-nav {
-  $nav-colors: $lightteal, $yellow, $green, $orange;
+  $nav-colors: $lightteal, $yellow, $orange, $green;
   position: relative;
   z-index: 20;
   margin-top: em(48px);
@@ -278,6 +278,11 @@ $logo-gutter: 30px;
   }
 }
 
+@include breakpoint(tablet) {
+  .primary-nav .sub-menu {
+    font-size: 16px;
+  }
+}
 
 @include breakpoint(mobile) {
 
@@ -372,4 +377,16 @@ $logo-gutter: 30px;
       right: 0;
     }
   }
+}
+
+.page {
+  position: relative;
+  left: 0;
+  transition: left 250ms ease-out;
+}
+
+.show-nav .page {
+
+  left: -240px;
+
 }
