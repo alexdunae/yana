@@ -279,13 +279,7 @@ blockquote + p { margin-top: 2.8em; }
 .masthead .text { display: table-cell; vertical-align: middle; }
 
 @media all and (max-width: 980px) { .masthead .text-wrap { width: 60%; } }
-@media all and (max-width: 760px) { .masthead { height: auto; }
-  .masthead .content { height: auto; }
-  .masthead .text-wrap { width: auto; max-width: 25.5em; height: auto; min-height: 9em; }
-  .masthead .masthead-title { font-size: 3em; }
-  .masthead p { display: none; }
-  .home .masthead .masthead-title { font-size: 3.75em; }
-  .masthead .vignette { display: none; } }
+@media all and (max-width: 760px) { .masthead { display: none; } }
 .site-body .content { max-width: 618px; padding-top: 2.25em; padding-bottom: 2.25em; padding-left: 444px; }
 .site-body .page-sidebar { float: left; width: 306px; margin-left: -360px; }
 @media all and (max-width: 980px) { .site-body .page-sidebar { width: 252px; margin-left: -306px; }

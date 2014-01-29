@@ -84,31 +84,6 @@ $vignette-height: 480px;
 
 @include breakpoint(mobile) {
   .masthead {
-    height: auto;
-    .content {
-      height: auto;
-      //font-size: 12px;
-    }
-
-    .text-wrap {
-      width: auto;
-      max-width: em(408px);
-      height: auto;
-      min-height: em(144px);
-    }
-
-    .masthead-title {
-      font-size: em(48px);
-    }
-
-    p { display: none; }
-
-    .home & .masthead-title {
-      font-size: em(60px);
-    }
-
-    .vignette {
-      display: none;
-    }
+    display: none;
   }
 }
