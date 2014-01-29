@@ -188,6 +188,7 @@ blockquote + p { margin-top: 2.8em; }
 .site-header .content { height: 84px; padding-top: 1.5em; padding-bottom: 2.25em; }
 .site-header .secondary-content { max-width: 618px; margin: 0 auto; padding-left: 444px; padding-right: 84px; }
 .site-header .logo { float: left; width: 306px; margin-left: -360px; }
+.site-header .nav-toggle { display: none; }
 @media all and (max-width: 980px) { .site-header { font-size: 13px; }
   .site-header .logo { width: 252px; margin-left: -306px; }
   .site-header .content { max-width: none; padding-left: 336px; }

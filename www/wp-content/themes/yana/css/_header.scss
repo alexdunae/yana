@@ -31,6 +31,10 @@ $logo-gutter: 30px;
     margin-left: ($sidebar-width + $sidebar-gutter) * -1;
   }
 
+  .nav-toggle {
+    display: none;
+  }
+
 
   @include breakpoint(tablet) {
     font-size: 13px; // TODO: ugly!
