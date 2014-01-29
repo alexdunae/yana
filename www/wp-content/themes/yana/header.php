@@ -20,7 +20,9 @@
       <header class='site-header' role='banner'>
         <div class='content'>
           <div class='logo'><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">YANA Comox Valley</a></div>
+          <a class="icon icon-nav nav-toggle" href="#"></a>
           <!-- TODO: nested roles allowed? -->
+
           <nav class='site-nav' role='navigation'>
             <div class="primary-nav">
             	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -37,5 +39,6 @@
           </nav>
         </div>
       </header>
+
       <?php get_template_part( 'header', 'masthead' ); ?>
 

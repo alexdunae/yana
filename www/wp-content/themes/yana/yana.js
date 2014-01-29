@@ -9921,6 +9921,11 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
 
   initMobileNav = function() {
     var _this = this;
+    console.log('init', $('.nav-toggle').length);
+    $('.nav-toggle').on('click', function(e) {
+      e.preventDefault();
+      return htmlElement.toggleClass('show-nav');
+    });
     return htmlElement.on('keypress', function(e) {
       if (e.which === 49) {
         return htmlElement.toggleClass('show-nav');

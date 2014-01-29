@@ -35,9 +35,10 @@ initHighContrast = ->
     $(window).trigger('resize')
 
 initMobileNav = ->
-  #$('.logo').on 'click', (e) =>
-  #  e.preventDefault()
-  #  htmlElement.toggleClass('show-nav')
+  console.log('init', $('.nav-toggle').length)
+  $('.nav-toggle').on 'click', (e) =>
+    e.preventDefault()
+    htmlElement.toggleClass('show-nav')
 
   htmlElement.on 'keypress', (e) =>
     if e.which == 49
