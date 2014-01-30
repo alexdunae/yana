@@ -1,0 +1,47 @@
+body#tinymce.wp-editor {
+  max-width: 618px;
+  font: 16px/32px sans-serif;
+
+  h1 {
+    margin: 4px 0 32px;
+    font-size: 60px;
+    line-height: (72/60);
+  }
+
+  h2, h3, h4, p, ul, ol {
+    margin: 0 0 24px;
+  }
+
+  h2 {
+    font: bold 24px/1 sans-serif;
+  }
+
+  h3 {
+    font: bold 20px/1.2 sans-serif;
+  }
+
+  h4 {
+    font: bold 14px/1.7 sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  p {
+    font: normal 15px/1.6 sans-serif;
+
+    small {
+      font-size: 12px;
+      line-height: (18/12);
+    }
+  }
+
+  li {
+    margin: 0;
+    font-size: 14px;
+    line-height: (24/14);
+
+    // do not shrink the type for each level of nesting
+    ul, ol { margin: 6px; }
+    li { font-size: 1em; }
+  }
+}

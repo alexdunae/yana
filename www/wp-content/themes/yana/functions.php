@@ -18,6 +18,7 @@ add_filter( 'img_caption_shortcode', 'YANA\img_caption_shortcode', 10, 3 );
 add_filter( 'embed_oembed_html', 'YANA\format_oembed', 10, 3 );
 add_filter( 'body_class', 'YANA\body_class' );
 add_action( 'wp_footer', 'YANA\wp_footer' );
+add_action( 'init', 'YANA\add_editor_style' );
 
 
 if ( ! isset( $content_width ) ) {
@@ -43,6 +44,9 @@ function setup() {
 	) );
 }
 
+function add_editor_style() {
+    \add_editor_style( 'editor-style.css' );
+}
 
 function body_class($classes) {
   if ( is_front_page() ) {

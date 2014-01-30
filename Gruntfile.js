@@ -7,6 +7,9 @@ module.exports = function(grunt) {
         files: {
           'www/wp-content/themes/yana/style.css': [
             'www/wp-content/themes/yana/css/site.scss'
+          ],
+          'www/wp-content/themes/yana/editor-style.css': [
+            'www/wp-content/themes/yana/css/editor-style.scss'
           ]
         },
         options: {
@@ -66,6 +69,7 @@ module.exports = function(grunt) {
     },
     clean: {
       dist: [
+        'www/wp-content/themes/yana/editor-style.css',
         'www/wp-content/themes/yana/style.css',
         'www/wp-content/themes/yana/style.min.css',
         'www/wp-content/themes/yana/js/yana.js',
