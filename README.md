@@ -77,7 +77,6 @@ Title tags
 Proper header logo (space on left, also mobile size)
 Proper map embeds (http://yana.dialect.ca/get-support/vancouver/)
 Maybe... hover states on home circles
-Thank you banner tight alignment
 
 Get quotes for sidebar (and possibly body)
 Lock down ledes and titles

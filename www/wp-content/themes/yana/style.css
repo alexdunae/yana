@@ -314,7 +314,7 @@ blockquote + p { margin-top: 2.8em; }
 .sidebar-enews .controls input { width: 65.89147%; padding: 0.85714em; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 .sidebar-enews .controls button { width: 34.10853%; padding: 0.85714em; font: normal 14px/1.71429 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 
-.sidebar-thank-yous .title-wrap { position: relative; margin-top: 24px; margin-left: -24px; margin-right: -24px; background: transparent url("img/sidebar-thank-you-banner.svg") 50% 0 no-repeat; background-size: contain; z-index: 3; }
+.sidebar-thank-yous .title-wrap { position: relative; margin-top: 24px; margin-left: -22px; margin-right: -22px; background: transparent url("img/sidebar-thank-you-banner.svg") 50% 0 no-repeat; background-size: contain; z-index: 3; }
 .sidebar-thank-yous .title-wrap .no-svg { background-image: url("img/sidebar-thank-you-banner.png"); }
 .sidebar-thank-yous .title { height: 1.5em; margin: 0; padding: 1.3125em 1.125em 2.4375em; font-size: 1em; line-height: 1.5em; text-align: center; }
 .sidebar-thank-yous .title, .sidebar-thank-yous .title a { color: #fff; }
@@ -328,7 +328,7 @@ blockquote + p { margin-top: 2.8em; }
 .sidebar-thank-yous li a { display: block; padding: 2.57143em 1.71429em; font-size: 0.875em; line-height: 1.42857; color: #7CBFC7; transition: all 100ms ease-out; }
 .sidebar-thank-yous li a:hover, .sidebar-thank-yous li a:focus { color: #2494A2; background-color: #FAFAFA; }
 .sidebar-thank-yous .entry-1 { border-top: 0; }
-@media all and (max-width: 980px) { .sidebar-thank-yous .title-wrap { font-size: 13px; } }
+@media all and (max-width: 980px) { .sidebar-thank-yous .title-wrap { font-size: 13px; margin-left: -18px; margin-right: -18px; } }
 
 .sidebar-image-ad { position: relative; margin: 0 1.5em 2.25em; }
 .sidebar-image-ad, .sidebar-image-ad .link, .sidebar-image-ad .image { height: 212px; }

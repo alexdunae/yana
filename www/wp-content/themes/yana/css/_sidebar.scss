@@ -130,8 +130,8 @@
   .title-wrap {
     position: relative;
     margin-top: 24px;
-    margin-left: -24px;
-    margin-right: -24px;
+    margin-left: -22px;
+    margin-right: -22px;
     background: transparent url("img/sidebar-thank-you-banner.svg") 50% 0 no-repeat;
     background-size: contain;
     z-index: 3;
@@ -212,9 +212,10 @@
   @include breakpoint(tablet) {
     .title-wrap {
       font-size: 13px;
+      margin-left: -18px;
+      margin-right: -18px;
     }
   }
-
 }
 
 
