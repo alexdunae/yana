@@ -1,0 +1,29 @@
+///////////////////////////
+// Stories
+///////////////////////////
+.story-toc {
+  .entry {
+    margin: 0 0 em(24px);
+  }
+
+  .entry-title {
+    margin: 0 0 em(12px,24px);
+    @include sans-roman(em(24px), 1);
+  }
+
+  p {
+    margin: em(12px,14px) 0 em(24px,14px);
+    font-size: em(14px);
+    line-height: (20/14);
+  }
+  .image {
+    display: block;
+    margin: 0 0 em(24px);
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

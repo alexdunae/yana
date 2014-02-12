@@ -456,6 +456,12 @@ html[xmlns] .slides { display: block; }
 .event-toc-third-party .entry-title { margin: 0 0 0.5em; font: normal 1.5em/1 "Neue Helvetica W01", sans-serif; font-weight: 400; }
 .event-toc-third-party p { margin: 0.85714em 0 1.71429em; font-size: 0.875em; line-height: 1.42857; }
 
+.story-toc .entry { margin: 0 0 1.5em; }
+.story-toc .entry-title { margin: 0 0 0.5em; font: normal 1.5em/1 "Neue Helvetica W01", sans-serif; font-weight: 400; }
+.story-toc p { margin: 0.85714em 0 1.71429em; font-size: 0.875em; line-height: 1.42857; }
+.story-toc .image { display: block; margin: 0 0 1.5em; }
+.story-toc .image img { display: block; width: 100%; height: auto; }
+
 .site-footer { border-bottom: 5.25em solid #14535c; background: #1B6F7A; }
 .site-footer, .site-footer a { color: #7CBFC7; }
 .site-footer .back-to-top { display: none; }
