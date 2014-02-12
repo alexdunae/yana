@@ -16,7 +16,13 @@
 
 			foreach( $thankyous as $thanks ) {
 				$count++;
-				printf("<li class='entry-%d'><a href='%s'>%s</a></li>", $count, $link, esc_html($thanks->post_excerpt));
+				setup_postdata($thanks);
+
+				// extract text from the post content
+				$content = get_the_content();
+				$content = strip_tags($content);
+
+				printf("<li class='entry-%d'><a href='%s'>%s</a></li>", $count, $link, $content);
 			}
 
 			echo '</ul></div></div></section>';
