@@ -37,6 +37,7 @@ module.exports = function(grunt) {
         files: {
           "www/wp-content/themes/yana/yana.js": [
             'www/wp-content/themes/yana/js/vendor/!(modernizr).js',
+            'www/wp-content/themes/yana/js/vendor/jquery-plugins/*.js',
             'www/wp-content/themes/yana/js/yana.js'
           ]
         }
@@ -62,7 +63,8 @@ module.exports = function(grunt) {
       js: {
         files: [
           'www/wp-content/themes/yana/js/*.coffee',
-          'www/wp-content/themes/yana/js/vendor/*'
+          'www/wp-content/themes/yana/js/vendor/*',
+          'www/wp-content/themes/yana/js/vendor/jquery-plugins/*'
         ],
         tasks: ['coffee', 'concat', 'uglify']
       }

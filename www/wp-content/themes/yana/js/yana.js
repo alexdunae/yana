@@ -1,5 +1,5 @@
 (function() {
-  var htmlElement, initDebug, initHighContrast, initHomeCircles, initMobileNav, initSidebarQuotes, initSubscribe;
+  var htmlElement, initDebug, initGalleries, initHighContrast, initHomeCircles, initMobileNav, initSidebarQuotes, initSubscribe;
 
   if (window.YANA == null) {
     window.YANA = {};
@@ -66,6 +66,30 @@
     });
   };
 
+  initGalleries = function() {
+    return $('.gallery-wrapper .gallery').each(function(idx, el) {
+      var gallery;
+      gallery = $(el).closest('.gallery-wrapper');
+      gallery.flexslider({
+        animation: 'slide',
+        selector: '.gallery > .gallery-item',
+        animationLoop: true,
+        controlNav: false,
+        directionNav: false,
+        slideshow: false,
+        after: function(slider) {
+          return YANA.trackEvent('inline-gallery', 'show', slider.currentSlide);
+        }
+      });
+      return $('nav a, img', gallery).on('click', function(evt) {
+        var dir;
+        evt.preventDefault();
+        dir = $(this).hasClass('prev') ? 'previous' : 'next';
+        return gallery.flexslider(dir);
+      });
+    });
+  };
+
   initSidebarQuotes = function() {
     var out;
     if (YANA.Quotes && YANA.Quotes.length > 0) {
@@ -115,7 +139,7 @@
     }
   };
 
-  YANA.trackPageView = function(category, action, opt_label, opt_value, opt_noninteraction) {
+  YANA.trackEvent = function(category, action, opt_label, opt_value, opt_noninteraction) {
     var e;
     try {
       return _gaq.push(['_trackEvent', category, action, opt_label, opt_value, opt_noninteraction]);
@@ -130,7 +154,8 @@
     initHighContrast();
     initHomeCircles();
     initMobileNav();
-    return initSubscribe();
+    initSubscribe();
+    return initGalleries();
   });
 
 }).call(this);

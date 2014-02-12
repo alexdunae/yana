@@ -44,6 +44,26 @@ initMobileNav = ->
     if e.which == 49
       htmlElement.toggleClass('show-nav')
 
+initGalleries = ->
+  $('.gallery-wrapper .gallery').each (idx, el) ->
+    gallery = $(el).closest('.gallery-wrapper')
+
+    gallery.flexslider({
+      animation: 'slide'
+      selector: '.gallery > .gallery-item'
+      animationLoop: true
+      controlNav: false
+      directionNav: false
+      slideshow: false
+      after: (slider) ->
+        YANA.trackEvent('inline-gallery', 'show', slider.currentSlide)
+    })
+
+
+    $('nav a, img', gallery).on 'click', (evt) ->
+      evt.preventDefault()
+      dir = if $(this).hasClass('prev') then 'previous' else 'next'
+      gallery.flexslider(dir)
 
 initSidebarQuotes = ->
   if YANA.Quotes and YANA.Quotes.length > 0
@@ -79,7 +99,7 @@ YANA.trackPageView = (href) ->
     _gaq.push(['_trackPageview', href]);
   catch e
 
-YANA.trackPageView = (category, action, opt_label, opt_value, opt_noninteraction) ->
+YANA.trackEvent = (category, action, opt_label, opt_value, opt_noninteraction) ->
   try
     _gaq.push(['_trackEvent', category, action, opt_label, opt_value, opt_noninteraction]);
   catch e
@@ -91,6 +111,7 @@ $(document).on 'ready', (e) ->
   initHomeCircles()
   initMobileNav()
   initSubscribe()
+  initGalleries()
 
 
 

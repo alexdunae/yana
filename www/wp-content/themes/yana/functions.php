@@ -19,6 +19,30 @@ add_filter( 'embed_oembed_html', 'YANA\format_oembed', 10, 3 );
 add_filter( 'body_class', 'YANA\body_class' );
 add_action( 'wp_footer', 'YANA\wp_footer' );
 add_action( 'init', 'YANA\add_editor_style' );
+//add_filter( 'post_gallery', 'YANA\post_gallery', 10, 2 );
+
+add_filter( 'use_default_gallery_style', function () { return false; });
+
+remove_shortcode('gallery', 'gallery_shortcode'); // removes the original shortcode
+add_shortcode('gallery', 'YANA\gallery_shortcode'); // add your own shortcode
+
+function gallery_shortcode($attr) {
+  if ( !isset($attr) || !is_array($attr)) {
+    $attr = array();
+  }
+
+  $attr['link'] = 'none';
+  $attr['columns'] = 99999;
+  $attr['itemtag'] = 'div';
+  $attr['icontag'] = 'div';
+  $attr['captiontag'] = 'p';
+  $attr['size'] = 'large';
+
+  $output = \gallery_shortcode($attr);
+
+
+  return sprintf("<section class='gallery-wrapper'><nav><a href='#' class='prev'>Previous</a><a href='#' class='next'>Next</a></nav>%s</section>", $output);
+}
 
 
 if ( ! isset( $content_width ) ) {
