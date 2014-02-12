@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
 
 <article class="site-body" role="main" id="main">
