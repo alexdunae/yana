@@ -6,7 +6,13 @@
       <?php get_sidebar(); ?>
 
       <?php while ( have_posts() ) : the_post(); ?>
-        <?php get_template_part( 'content', get_post_type() ); ?>
+      <?php
+        if ( in_category( 'thanks' ) ) {
+            get_template_part( 'content', 'thanks' );
+          } else {
+            get_template_part( 'content', 'news' );
+          }
+      ?>
       <?php endwhile; ?>
   </div>
 </article>
