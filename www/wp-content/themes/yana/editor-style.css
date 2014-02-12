@@ -9,3 +9,5 @@ body#tinymce.wp-editor p small { font-size: 12px; line-height: 1.5; }
 body#tinymce.wp-editor li { margin: 0; font-size: 14px; line-height: 1.71429; }
 body#tinymce.wp-editor li ul, body#tinymce.wp-editor li ol { margin: 6px; }
 body#tinymce.wp-editor li li { font-size: 1em; }
+body#tinymce.wp-editor .alignleft { width: 300px; height: auto; margin: 0 30px 30px 0; }
+body#tinymce.wp-editor .alignright { width: 300px; height: auto; margin: 0 0 30px 30px; }

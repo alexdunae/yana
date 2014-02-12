@@ -44,4 +44,16 @@ body#tinymce.wp-editor {
     ul, ol { margin: 6px; }
     li { font-size: 1em; }
   }
+
+  .alignleft {
+    width: 300px;
+    height: auto;
+    margin: 0 30px 30px 0;
+  }
+
+  .alignright {
+    width: 300px;
+    height: auto;
+    margin: 0 0 30px 30px;
+  }
 }
