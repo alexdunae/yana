@@ -12,7 +12,7 @@ For long posts, you may want to only show a snippet on the front page.  If so, i
 
 Thank Yous are added to the `Posts` section; they just need to be assigned to the `thanks` category.
 
-Enter the text in the main body and, optionally, add a single full-width image.  The text (without the image) will be displayed on the homepage sidebar.  Images are available when people click through.
+Enter the text in the main body and, optionally, add a single full-width image.  The text (without the image) will be displayed on the homepage sidebar.  Images are available when people click through.  The image should always be full width, and should be at the end of the thank you note, or at least after the first paragraph if the note is long.
 
 ### Stories
 
