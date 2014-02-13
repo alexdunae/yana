@@ -74,13 +74,10 @@ Favicon
 Social icons
 Caching
 Title tags
-Proper header logo (space on left, also mobile size)
 Proper map embeds (http://yana.dialect.ca/get-support/vancouver/)
 Maybe... hover states on home circles
 
-Get quotes for sidebar (and possibly body)
 Lock down ledes and titles
-Share your story content
 Get support emergency info callout?
 Photo loading
 
