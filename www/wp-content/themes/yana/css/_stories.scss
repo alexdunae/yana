@@ -2,20 +2,29 @@
 // Stories
 ///////////////////////////
 .story-toc {
+  @extend %clearfix;
+
   .entry {
-    margin: 0 0 em(24px);
+    float: left;
+    width: percentage(288/624);
+  }
+
+  .entry:nth-child(odd) {
+    margin-right: percentage(48/624);
   }
 
   .entry-title {
-    margin: 0 0 em(12px,24px);
-    @include sans-roman(em(24px), 1);
+    margin: 0 0 em(24px,28px);
+    @include sans-roman(em(28px), (36/28));
   }
 
   p {
-    margin: em(12px,14px) 0 em(24px,14px);
+    margin: em(18px,14px) 0 em(24px,14px);
     font-size: em(14px);
     line-height: (20/14);
   }
+
+
   .image {
     display: block;
     margin: 0 0 em(24px);

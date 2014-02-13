@@ -54,6 +54,7 @@ function setup() {
 	add_theme_support( 'post-thumbnails' );
   add_post_type_support( 'page', 'excerpt' );
   add_image_size('event-wide-thumbnail', 624, 0);
+  add_image_size('wide-thumbnail-cropped', 624, 414, true);
   add_image_size('post-masthead-image', 0, 432);
   add_image_size('post-masthead-vignette', 0, 480);
   update_option('image_default_link_type','none');
