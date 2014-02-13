@@ -20,7 +20,7 @@ get_header(); ?>
           ?>
           <div id="post-<?php the_ID(); ?>"  <?php post_class( "entry story" ); ?>>
                 <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <?php echo YANA\linked_thumbnail($post->ID, 'wide-thumbnail-cropped'); ?>
+                <?php echo YANA\linked_thumbnail($post->ID, 'toc-thumbnail'); ?>
                 <?php echo apply_filters('the_content', $post->post_excerpt); ?>
             </div>
 
