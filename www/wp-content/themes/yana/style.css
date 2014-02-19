@@ -139,6 +139,9 @@ blockquote + p { margin-top: 2.8em; }
 
 .aligncenter img, .alignnone img, .alignleft img, .alignright img { display: block; width: 100%; max-width: 100%; height: auto; margin: 0 auto; }
 
+.boxsizing .site-body img.aligncenter, .boxsizing .site-body img.alignnone, .boxsizing .site-body img.alignleft, .boxsizing .site-body img.alignright { box-sizing: border-box; padding: 4px; border: 1px solid #f0f0f0; }
+.boxsizing .site-body .aligncenter img, .boxsizing .site-body .alignnone img, .boxsizing .site-body .alignleft img, .boxsizing .site-body .alignright img { box-sizing: border-box; padding: 4px; border: 1px solid #f0f0f0; }
+
 @media all and (max-width: 618px) { .alignleft, .alignright { float: none; width: 100%; margin: 1.875em 0; } }
 .wp-caption-text, .content .wp-caption .wp-caption-text { margin: 1em 0.5em; font-size: 0.75em; line-height: 1.5; }
 
@@ -249,7 +252,8 @@ html[xmlns] .slides { display: block; }
   .site-header .content, .site-header .secondary-content { max-width: none; height: auto; padding-left: 30px; }
   .site-header .content { padding: 16px 30px; } }
 .site-header .logo { display: block; float: left; position: relative; z-index: 2; height: 84px; }
-.site-header .logo a { display: block; width: 306px; height: 84px; background: transparent url("img/header-logo.png") 50% 0 no-repeat; background-size: 306px 84px; }
+.site-header .logo a { display: block; width: 306px; height: 84px; background: transparent url("img/header-logo.svg") 50% 0 no-repeat; background-size: 306px 84px; }
+.no-svg .site-header .logo a { background-image: url("img/header-logo.png"); }
 
 .site-nav ul, .site-nav li { margin: 0; padding: 0; font-size: 1em; line-height: 1.5; list-style: none; }
 

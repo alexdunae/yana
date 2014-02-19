@@ -30,6 +30,22 @@
   }
 }
 
+.boxsizing .site-body {
+  img.aligncenter, img.alignnone, img.alignleft, img.alignright {
+    box-sizing: border-box;
+    padding: 4px;
+    border: 1px solid $hairline;
+  }
+
+  .aligncenter, .alignnone, .alignleft, .alignright {
+    img {
+      box-sizing: border-box;
+      padding: 4px;
+      border: 1px solid $hairline;
+    }
+  }
+}
+
 
 @media all and (max-width: 618px) {
   .alignleft, .alignright {

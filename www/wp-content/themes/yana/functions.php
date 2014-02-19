@@ -19,6 +19,7 @@ add_filter( 'embed_oembed_html', 'YANA\format_oembed', 10, 3 );
 add_filter( 'body_class', 'YANA\body_class' );
 add_action( 'wp_footer', 'YANA\wp_footer' );
 add_action( 'init', 'YANA\add_editor_style' );
+add_action( 'pre_get_posts', 'YANA\pre_get_posts' );
 //add_filter( 'post_gallery', 'YANA\post_gallery', 10, 2 );
 
 add_filter( 'use_default_gallery_style', function () { return false; });
@@ -143,6 +144,16 @@ function wp_footer() {
   }
   echo '</script>';
 
+}
+
+function pre_get_posts(&$wp_query) {
+  if ( is_admin() || ! $wp_query->is_main_query() ) {
+    return;
+  }
+
+  if ( is_category('thanks') ) {
+    $wp_query->set( 'posts_per_page', 30 );
+  }
 }
 
 
