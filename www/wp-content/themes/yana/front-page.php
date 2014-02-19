@@ -18,15 +18,15 @@
 
     <div class="entry entry-2">
       <div class="inner">
-        <h2 class="title"><a href="<?php echo get_permalink( get_page_by_path('volunteer') ); ?>">Volunteer with us</a></h2>
-        <p>Interested in offering your time to YANA? We’d be happy to have your help.</p>
+        <h2 class="title"><a href="<?php echo get_permalink( get_page_by_path('volunteer') ); ?>">Volunteer with YANA</a></h2>
+        <p>Interested in offering your time to YANA? We’d love to have you.</p>
       </div>
     </div>
 
     <div class="entry entry-3">
       <div class="inner">
         <h2 class="title"><a href="<?php echo get_permalink( get_page_by_path('donate') ); ?>">Donate to YANA</a></h2>
-        <p>We couldn’t help without your help. Learn about the many ways to give.</p>
+        <p>We can’t do it without you. Learn about the many ways to give.</p>
       </div>
     </div>
   </div>
