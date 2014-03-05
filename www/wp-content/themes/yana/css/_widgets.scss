@@ -66,26 +66,49 @@
 ///////////////////////////
 
 .gallery-wrapper {
+  position: relative;
+  .nav {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    width: em(48px);
+    height: em(48px);
+    border-radius: 1em;
+    text-align: center;
+    line-height: em(48px);
+    background: #bac9d2;
+    background: rgba(#bac9d2, 0.15);
+    transition: background 100ms ease-out;
 
+    &:hover, &:focus { background: rgba(#bac9d2, 0.5); }
+  }
+
+  .prev { left: 0; }
+  .next { right: 0; }
+
+  .icon { color: #fff; }
 }
 
 
 .flex-viewport {
-  height: em(400px);
+  z-index: 1;
 }
 
 .gallery {
   clear: both;
   width: 100%;
-  height: em(400px);
+  //height: em(400px);
   margin: em(30px) 0;
+
+  br { display: none; }
 
   img {
     display: block;
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: em(350px);
+    max-height: em(340px);
     margin: 0 auto;
   }
 }

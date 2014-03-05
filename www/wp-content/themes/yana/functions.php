@@ -42,7 +42,7 @@ function gallery_shortcode($attr) {
   $output = \gallery_shortcode($attr);
 
 
-  return sprintf("<section class='gallery-wrapper'><nav><a href='#' class='prev'>Previous</a><a href='#' class='next'>Next</a></nav>%s</section>", $output);
+  return sprintf("<section class='gallery-wrapper'><nav><a href='#' class='prev nav'><span class='icon icon-arrow-left'></span></a><a href='#' class='next nav'><span class='icon icon-arrow-right'></span></a></nav>%s</section>", $output);
 }
 
 

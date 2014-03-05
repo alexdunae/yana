@@ -140,6 +140,50 @@ blockquote + p { margin-top: 2.8em; }
 
 @media all and (max-width: 800px) { h4 { font-size: 1em; } }
 @media all and (max-width: 600px) { h1 { font-size: 2.76923em; } }
+/*!
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets
+*********************************/
+.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus { outline: none; }
+
+.slides, .flex-control-nav, .flex-direction-nav { margin: 0; padding: 0; list-style: none; }
+
+/* FlexSlider Necessary Styles
+*********************************/
+.gallery-wrapper { margin: 0; padding: 0; }
+
+.gallery-wrapper .gallery > .gallery-item { display: none; -webkit-backface-visibility: hidden; }
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flex-pauseplay span { text-transform: capitalize; }
+
+/* Clearfix for the .slides element */
+.gallery:after { content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+
+html[xmlns] .slides { display: block; }
+
+* html .gallery { height: 1%; }
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you include js that eliminates this class on page load */
+.no-js .gallery > .gallery-item:first-child { display: block; }
+
+/* FlexSlider Default Theme
+*********************************/
+.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
+
+.loading .flex-viewport { max-height: 300px; }
+
+.gallery-wrapper .gallery { zoom: 1; }
+
 .aligncenter, .alignnone { width: 100%; }
 
 .alignleft, .alignright { width: 50%; }
@@ -156,10 +200,18 @@ blockquote + p { margin-top: 2.8em; }
 @media all and (max-width: 618px) { .alignleft, .alignright { float: none; width: 100%; margin: 1.875em 0; } }
 .wp-caption-text, .content .wp-caption .wp-caption-text { margin: 1em 0.5em; font-size: 0.75em; line-height: 1.5; }
 
-.flex-viewport { height: 25em; }
+.gallery-wrapper { position: relative; }
+.gallery-wrapper .nav { display: block; position: absolute; z-index: 2; top: 40%; width: 3em; height: 3em; border-radius: 1em; text-align: center; line-height: 3em; background: #bac9d2; background: rgba(186, 201, 210, 0.15); transition: background 100ms ease-out; }
+.gallery-wrapper .nav:hover, .gallery-wrapper .nav:focus { background: rgba(186, 201, 210, 0.5); }
+.gallery-wrapper .prev { left: 0; }
+.gallery-wrapper .next { right: 0; }
+.gallery-wrapper .icon { color: #fff; }
 
-.gallery { clear: both; width: 100%; height: 25em; margin: 1.875em 0; }
-.gallery img { display: block; width: auto; height: auto; max-width: 100%; max-height: 21.875em; margin: 0 auto; }
+.flex-viewport { z-index: 1; }
+
+.gallery { clear: both; width: 100%; margin: 1.875em 0; }
+.gallery br { display: none; }
+.gallery img { display: block; width: auto; height: auto; max-width: 100%; max-height: 21.25em; margin: 0 auto; }
 
 .embed { margin: 1.875em 0; }
 .embed .inner { width: 100%; position: relative; height: 0; padding-bottom: 56.25%; }
@@ -204,50 +256,6 @@ blockquote + p { margin-top: 2.8em; }
 .pagination a:hover, .pagination a:focus, .pagination .current { background-color: #F0F0F0; }
 .pagination .prev, .pagination .next { color: #fff; background-color: #51BDB5; }
 .pagination .prev:hover, .pagination .prev:focus, .pagination .next:hover, .pagination .next:focus { background-color: #3c9f97; }
-
-/*!
- * jQuery FlexSlider v2.2.0
- * http://www.woothemes.com/flexslider/
- *
- * Copyright 2012 WooThemes
- * Free to use under the GPLv2 license.
- * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * Contributing author: Tyler Smith (@mbmufffin)
- */
-/* Browser Resets
-*********************************/
-.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus { outline: none; }
-
-.slides, .flex-control-nav, .flex-direction-nav { margin: 0; padding: 0; list-style: none; }
-
-/* FlexSlider Necessary Styles
-*********************************/
-.gallery-wrapper { margin: 0; padding: 0; }
-
-.gallery-wrapper .gallery > .gallery-item { display: none; -webkit-backface-visibility: hidden; }
-
-/* Hide the slides before the JS is loaded. Avoids image jumping */
-.flex-pauseplay span { text-transform: capitalize; }
-
-/* Clearfix for the .slides element */
-.gallery:after { content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
-
-html[xmlns] .slides { display: block; }
-
-* html .gallery { height: 1%; }
-
-/* No JavaScript Fallback */
-/* If you are not using another script, such as Modernizr, make sure you include js that eliminates this class on page load */
-.no-js .gallery > .gallery-item:first-child { display: block; }
-
-/* FlexSlider Default Theme
-*********************************/
-.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
-
-.loading .flex-viewport { max-height: 300px; }
-
-.gallery-wrapper .gallery { zoom: 1; }
 
 .site-header .content { position: relative; max-width: 618px; padding-top: 0; padding-bottom: 0; padding-left: 444px; }
 .site-header .content { height: 84px; padding-top: 1.5em; padding-bottom: 2.25em; }
