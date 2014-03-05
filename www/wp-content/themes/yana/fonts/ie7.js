@@ -13,13 +13,14 @@
 		el.innerHTML = '<span style="font-family: \'icomoon\'">' + entity + '</span>' + html;
 	}
 	var icons = {
-		'icon-nav': '&#xe600;',
-		'icon-instagram': '&#xe007;',
-		'icon-close': '&#xe005;',
+		'icon-phone': '&#x79;',
 		'icon-youtube': '&#xe000;',
 		'icon-vimeo': '&#xe001;',
 		'icon-facebook': '&#xe002;',
 		'icon-twitter': '&#xe003;',
+		'icon-close': '&#xe005;',
+		'icon-instagram': '&#xe007;',
+		'icon-nav': '&#xe600;',
 		'0': 0
 		},
 		els = document.getElementsByTagName('*'),
