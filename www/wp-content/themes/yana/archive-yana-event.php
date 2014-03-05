@@ -9,6 +9,9 @@
         $prioritized = YANA\Events\group_by_type($wp_query->posts);
 
         foreach ( $prioritized as $level => $posts ) {
+          if ( $level == 'third-party' ) {
+            continue;
+          }
           printf("<div class='event-toc event-toc-%s'>", $level);
 
           $term = get_term_by( 'slug', $level, YANA\Events\TYPE_ID, OBJECT );
@@ -27,32 +30,14 @@
               continue;
             }
             $post_ids[] = $post->ID;
-
-          ?>
-            <div id="post-<?php the_ID(); ?>" <?php post_class( "entry priority-$level" ); ?>>
-              <?php if($level == 'featured'): ?>
-                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <?php echo YANA\linked_thumbnail($post->ID, 'large'); ?>
-              <?php elseif($level == 'third-party'): ?>
-                <h2 class="entry-title"><?php the_title(); ?></h2>
-              <?php else: ?>
-                <?php echo YANA\linked_thumbnail($post->ID, 'toc-thumbnail'); ?>
-                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-              <?php endif; ?>
-
-              <?php echo apply_filters('the_content', $post->post_excerpt); ?>
-
-              <?php if($level == 'featured'): ?>
-                <p><a class="btn" href="<?php the_permalink(); ?>">More details</a></p>
-              <?php endif; ?>
-            </div>
-
-          <?php
+            get_template_part( 'toc', 'yana-event' );
 
           endforeach;
           wp_reset_postdata();
+
           echo '</div>';
         }
+        printf("<p><a class='btn' href='%s'>Third Party Events</a></p>", get_term_link('third-party', YANA\Events\TYPE_ID));
       ?>
   </div>
 </article>
