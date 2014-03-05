@@ -127,6 +127,9 @@ blockquote + p { margin-top: 2.8em; }
 .more-link:hover, .more-link:focus, .btn:hover, .btn:focus { color: #fff; background-color: #51bdb5; }
 .more-link:active, .btn:active { color: #fff; background-color: #76cbc5; }
 
+.callout { border-radius: 1em; margin: 0 0 1.5em; padding: 0.75em 3em; color: #fff; background: #51BDB5; }
+.callout p { margin: 0.66667em 0; font: normal 1.125em/1.55556 "Neue Helvetica W01", sans-serif; font-weight: 600; }
+
 @media all and (max-width: 800px) { h4 { font-size: 1em; } }
 @media all and (max-width: 600px) { h1 { font-size: 2.76923em; } }
 .aligncenter, .alignnone { width: 100%; }
