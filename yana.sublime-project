@@ -17,7 +17,7 @@
       "path": "www/wp-content/themes/yana",
       "name": "theme",
       "folder_exclude_patterns": ["lib"],
-      "file_exclude_patterns": ["*.svg", "*.woff"]
+      "file_exclude_patterns": ["*.svg", "*.woff", "style.css", "yana.js"]
     }
   ]
 }
