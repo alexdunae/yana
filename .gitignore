@@ -4,3 +4,6 @@
 *.sublime-workspace
 node_modules
 www/wp-content/uploads/*
+www/wp-content/themes/yana/js/yana.js
+www/wp-content/themes/yana/*.js
+www/wp-content/themes/yana/*.css

@@ -5,16 +5,12 @@
 First time:
 
     cd ~/Sites/yana
-    brew update
-    brew install node
-
-    npm install -g grunt-cli
-    npm install
+    bundle install
 
 In terminal:
 
     cd ~/Sites/yana
-    grunt watch
+    bundle exec guard
 
 Preview the site at [localhost/yana/www](http://localhost/yana/www/).
 

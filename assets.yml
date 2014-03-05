@@ -1,0 +1,13 @@
+gzip_assets: off
+javascript_compressor: uglifier
+compressor_options:
+  copyright: true
+  beautify: false
+
+javascripts:
+  www/wp-content/themes/yana/yana:
+    - www/wp-content/themes/yana/js/vendor/console.js
+    - www/wp-content/themes/yana/js/vendor/cookies.js
+    - www/wp-content/themes/yana/js/vendor/jquery.js
+    - www/wp-content/themes/yana/js/vendor/jquery-plugins/*.js
+    - www/wp-content/themes/yana/js/yana.js
