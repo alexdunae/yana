@@ -1,5 +1,5 @@
 <?php
-    if (get_post_type() == YANA\Events\POST_TYPE) {
+    if (get_post_type() == YANA\Events\POST_TYPE || is_tax( YANA\Events\TYPE_ID ) ) {
       $archive = YANA\get_archive_page_object();
       echo '<nav class="sidebar-nav"><ul>';
       printf("<li><a href='%s'>%s</a></li>", get_permalink($archive), apply_filters('the_title', $archive->post_title));

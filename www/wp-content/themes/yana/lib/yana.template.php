@@ -13,7 +13,10 @@ function linked_thumbnail($post_id, $size = 'post-thumbnail') {
 
 function get_archive_page_object() {
   $archive_page = null;
-  if ( $post_type = get_post_type_object( get_query_var( 'post_type' ) ) ) {
+  if ( is_tax( \YANA\Events\TYPE_ID ) ) {
+    $post_type = get_post_type_object( \YANA\Events\POST_TYPE );
+    $archive_page = get_page_by_path( $post_type->rewrite['slug'] );
+  } elseif ( $post_type = get_post_type_object( get_query_var( 'post_type' ) ) ) {
     if ( isset( $post_type->rewrite['slug'] ) ) {
       $archive_page = get_page_by_path( $post_type->rewrite['slug'] );
     }
