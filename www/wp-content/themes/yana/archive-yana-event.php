@@ -32,11 +32,11 @@
             <div id="post-<?php the_ID(); ?>" <?php post_class( "entry priority-$level" ); ?>>
               <?php if($level == 'featured'): ?>
                 <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <?php echo YANA\linked_thumbnail($post->ID, 'toc-thumbnail'); ?>
+                <?php echo YANA\linked_thumbnail($post->ID, 'large'); ?>
               <?php elseif($level == 'third-party'): ?>
                 <h2 class="entry-title"><?php the_title(); ?></h2>
               <?php else: ?>
-                <?php echo YANA\linked_thumbnail($post->ID, 'post-thumbnail'); ?>
+                <?php echo YANA\linked_thumbnail($post->ID, 'toc-thumbnail'); ?>
                 <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               <?php endif; ?>
 
