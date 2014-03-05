@@ -15,11 +15,9 @@
     },
     {
       "path": "www/wp-content/themes/yana",
-      "name": "theme"
-    },
-    {
-      "path": "www/wp-content/plugins",
-      "name": "plugins"
+      "name": "theme",
+      "folder_exclude_patterns": ["lib"],
+      "file_exclude_patterns": ["*.svg", "*.woff"]
     }
   ]
 }
