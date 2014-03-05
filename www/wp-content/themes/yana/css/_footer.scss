@@ -23,7 +23,7 @@
     .logo {
       width: 100%;
       height: em(84px);
-      margin: em(6px) 0 em(18px);
+      margin: em(6px) 0 em(9px);
       min-height: 84px;
 
 
@@ -62,7 +62,21 @@
     @extend %clearfix;
     float: left;
     width: percentage(474/978);
-    margin-top: em(60px);
+    margin-top: em(42px);
+
+    .tel {
+      margin: 0 0 em(18px);
+
+      &, & a { color: #7CBFC7; }
+
+      .icon {
+        padding-right: em(12px,24px);
+        font-size: em(24px);
+      }
+      .label {
+        @include sans-bold(em(30px), (42/30));
+      }
+    }
 
     .nav {
       float: left;
@@ -108,6 +122,16 @@
           font-size: em(13px,18px);
           line-height: (16/13);
         }
+      }
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  .site-footer {
+    .footer-nav {
+      .tel {
+        font-size: 75%;
       }
     }
   }
