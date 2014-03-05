@@ -21,6 +21,8 @@
 		'icon-close': '&#xe005;',
 		'icon-instagram': '&#xe007;',
 		'icon-nav': '&#xe600;',
+		'icon-arrow-right': '&#xe601;',
+		'icon-arrow-left': '&#xe602;',
 		'0': 0
 		},
 		els = document.getElementsByTagName('*'),
