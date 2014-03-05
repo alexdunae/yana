@@ -27,6 +27,30 @@ add_filter( 'use_default_gallery_style', function () { return false; });
 remove_shortcode('gallery', 'gallery_shortcode'); // removes the original shortcode
 add_shortcode('gallery', 'YANA\gallery_shortcode'); // add your own shortcode
 
+function show_testimonials_sidebar() {
+  global $post;
+  if ( \is_page() ) {
+
+    // don't show in 'get support section'
+    $support_page = \get_page_by_path( 'get-support' );
+
+    if ( !$support_page ) {
+      return true;
+    }
+
+    if ( $post->ID == $support_page->ID ) {
+      return false;
+    }
+
+    $roots = \get_ancestors( $post->ID, 'page' );
+    if ( in_array( $support_page->ID, $roots ) ) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 function gallery_shortcode($attr) {
   if ( !isset($attr) || !is_array($attr)) {
     $attr = array();

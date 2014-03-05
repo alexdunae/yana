@@ -173,7 +173,8 @@ blockquote + p {
   border-radius: 1em;
   margin: 0 0 em(24px);
   padding: em(12px) em(48px);
-  color: #fff;
+  &, & a { color: #fff; }
+  a { text-decoration: underline; }
   background: #51BDB5;
 
   p {
