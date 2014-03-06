@@ -279,11 +279,12 @@
 
 .pagination {
   margin: em(30px) 0;
-  .page-numbers {
+  a, .page-numbers {
     display: inline-block;
     min-width: em(20px,15px);
     height: em(20px,15px);
     margin-right: em(6px,15px);
+    margin-bottom: em(12px,15px);
     padding: em(7px,15px);
     border: 1px solid #E4E4E4;
     border-radius: em(6px,15px);

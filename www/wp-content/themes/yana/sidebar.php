@@ -20,6 +20,6 @@
 		</aside>
 		<?php endif; ?>
 
-		<?php get_template_part( 'sidebar', 'story-ad' ); ?>
+		<?php // get_template_part( 'sidebar', 'story-ad' ); ?>
 	<?php endif; ?>
 </div>

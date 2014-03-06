@@ -74,7 +74,7 @@
         font-size: em(24px);
       }
       .label {
-        @include sans-bold(em(30px), (42/30));
+        @include sans-bold(em(24px), (42/24));
       }
     }
 

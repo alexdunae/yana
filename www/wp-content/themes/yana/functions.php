@@ -143,7 +143,10 @@ function pagination() {
 
   $big = 9999999;
 
-  $links = paginate_links( array(
+  $links = wp_get_archives( array('type' => 'monthly', 'echo' => false, 'format' => 'custom'));
+  //var_dump($months);
+
+  $alinks = paginate_links( array(
       'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
       'current' => max( 1, get_query_var('paged') ),
       'total' => $wp_query->max_num_pages,
