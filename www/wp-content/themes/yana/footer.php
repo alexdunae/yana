@@ -18,6 +18,8 @@
                 <p class="note">We're still setting up newsletter program; we hope to begin sharing regular updates by email soon.</p>
               </form>
             </section>
+            <p class="credits">Most photography courtesy of <a href="http://www.mckinnonphotography.com/">McKinnon Photography</a><br><a href="http://dialect.ca/">Website by Dialect</a></p>
+
             <?php // TODO: <p><a href="#" class="toggle-contrast">Toggle high colour contrast mode</a></p> ?>
           </section>
           <section class="footer-nav">
@@ -30,9 +32,7 @@
 
         </div>
       </footer>
-
     </div>
-    <?php do_action( 'yana_credits' ); ?>
     <?php wp_footer(); ?>
   </body>
 </html>

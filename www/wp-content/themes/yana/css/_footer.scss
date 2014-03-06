@@ -45,6 +45,15 @@
     a {
       @include mono-bold(1em, 100%);
     }
+
+    .credits {
+      margin: em(30px,11px) 0;
+      @include sans-roman(em(11px), (16/11));
+
+      a {
+        @include sans-roman(1em, 100%);
+      }
+    }
   }
 
   .footer-enews {
