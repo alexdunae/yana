@@ -4,6 +4,7 @@
    <div class="content">
    		<?php get_sidebar(); ?>
       <?php get_template_part( 'archives-content-header' ); ?>
+
       <div class="news-toc">
 			<?php
         while ( have_posts() ) : the_post();
@@ -14,7 +15,7 @@
           }
         endwhile;
       ?>
-      <?php YANA\pagination(); ?>
+      <?php YANA\news_pagination(); ?>
       </div>
 	</div>
 </article>

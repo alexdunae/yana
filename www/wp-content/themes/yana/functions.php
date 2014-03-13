@@ -11,7 +11,6 @@ require_once( dirname(__FILE__) . '/lib/yana.subscribe.php' );
 const FACEBOOK_URL = 'https://www.facebook.com/pages/YANA-Comox-Valley/9846076614';
 
 add_action( 'after_setup_theme', 'YANA\setup' );
-add_action( 'widgets_init', 'YANA\widgets_init' );
 add_action( 'wp_enqueue_scripts', 'YANA\scripts' );
 add_filter( 'image_size_names_choose', 'YANA\insertable_image_sizes' );
 add_filter( 'img_caption_shortcode', 'YANA\img_caption_shortcode', 10, 3 );
@@ -19,13 +18,28 @@ add_filter( 'embed_oembed_html', 'YANA\format_oembed', 10, 3 );
 add_filter( 'body_class', 'YANA\body_class' );
 add_action( 'wp_footer', 'YANA\wp_footer' );
 add_action( 'init', 'YANA\add_editor_style' );
+add_action( 'init', 'YANA\rewrites' );
 add_action( 'pre_get_posts', 'YANA\pre_get_posts' );
+//add_filter( 'category_rewrite_rules', 'YANA\filter_category_rewrite_rules' );
 //add_filter( 'post_gallery', 'YANA\post_gallery', 10, 2 );
 
 add_filter( 'use_default_gallery_style', function () { return false; });
 
 remove_shortcode('gallery', 'gallery_shortcode'); // removes the original shortcode
 add_shortcode('gallery', 'YANA\gallery_shortcode'); // add your own shortcode
+
+function rewrites() {
+  global $wp_rewrite;
+  $wp_rewrite->add_permastruct(
+    'monthly-categories',
+    $wp_rewrite->get_category_permastruct() . '/monthly/%year%-%monthnum%/',
+    array(
+      'ep_mask' => EP_CATEGORIES | EP_YEAR | EP_MONTH,
+      'paged' => false,
+      'feed' => false
+    ) );
+}
+
 
 function show_testimonials_sidebar() {
   global $post;
@@ -138,10 +152,41 @@ function img_caption_shortcode( $a, $attr, $content ) {
   . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
 
-function pagination() {
-  global $wp_query;
 
-  $big = 9999999;
+
+function news_pagination( $category_id = null ) {
+  global $wp_query, $wpdb;
+
+  $category_name = get_query_var( 'category_name' );
+  $link_base = '';
+  if ( $category_name && !empty( $category_name) ) {
+    $category_id = get_category_by_slug( $category_name )->term_id;
+    // Get the URL of this category
+    $link_base = get_category_link( $category_id );
+    var_dump($category_id);
+  }
+
+
+  $where = '';
+
+  if ( $category_id ) {
+    $post_ids = get_objects_in_term( $category_id, 'category' );
+    $where = sprintf( " AND ID IN () ", implode($post_ids, ','));
+  }
+
+
+
+  $sql = "SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM $wpdb->posts WHERE post_type = 'post' AND post_status = 'publish' $where GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date";
+//var_dump($sql);
+  $results = $wpdb->get_results($sql);
+//var_dump($results);
+
+  $links = [];
+  //foreach ( $date in $results ) {
+//    $links[] = sprintf("<a href='%s'>AA</a>", get_month_link($date->year, $date->month))
+//  }
+
+
 
   $links = wp_get_archives( array('type' => 'monthly', 'echo' => false, 'format' => 'custom'));
   //var_dump($months);
@@ -181,21 +226,6 @@ function pre_get_posts(&$wp_query) {
   if ( is_category('thanks') ) {
     $wp_query->set( 'posts_per_page', 30 );
   }
-}
-
-
-/**
- * Register widgetized area and update sidebar with default widgets.
- */
-function widgets_init() {
-	register_sidebar( array(
-		'name'          => 'Sidebar',
-		'id'            => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
 }
 
 function scripts() {
