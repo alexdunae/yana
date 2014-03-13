@@ -157,6 +157,8 @@ function img_caption_shortcode( $a, $attr, $content ) {
 function news_pagination( $category_id = null ) {
   global $wp_query, $wpdb;
 
+  return '';
+
   $category_name = get_query_var( 'category_name' );
   $link_base = '';
   if ( $category_name && !empty( $category_name) ) {

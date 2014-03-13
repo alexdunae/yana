@@ -5,7 +5,6 @@
    <div class="content">
    		<?php get_sidebar(); ?>
       <header>
-        <pre><?php var_dump($wp_query); ?>
         <h1><?php
 						if ( is_category() ) :
 							single_cat_title();
