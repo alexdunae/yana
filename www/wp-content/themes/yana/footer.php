@@ -10,7 +10,7 @@
 
             <section class="footer-enews enews">
               <form method="POST" action="http://dialogue.dialect.ca/t/y/s/qtjhrt/">
-                <label for="footer-enews-email">Subcribe for updates:</label>
+                <label for="footer-enews-email">Subscribe for updates:</label>
                 <div class="controls">
                   <input type="email" name="cm-qtjhrt-qtjhrt" id="footer-enews-email" placeholder="Your email address" required>
                   <button type="submit">Submit</button>
