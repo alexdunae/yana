@@ -183,7 +183,7 @@ function news_pagination( $category_id = null ) {
   $results = $wpdb->get_results($sql);
 //var_dump($results);
 
-  $links = [];
+  //$links = [];
   //foreach ( $date in $results ) {
 //    $links[] = sprintf("<a href='%s'>AA</a>", get_month_link($date->year, $date->month))
 //  }
