@@ -18,27 +18,14 @@ add_filter( 'embed_oembed_html', 'YANA\format_oembed', 10, 3 );
 add_filter( 'body_class', 'YANA\body_class' );
 add_action( 'wp_footer', 'YANA\wp_footer' );
 add_action( 'init', 'YANA\add_editor_style' );
-add_action( 'init', 'YANA\rewrites' );
 add_action( 'pre_get_posts', 'YANA\pre_get_posts' );
-//add_filter( 'category_rewrite_rules', 'YANA\filter_category_rewrite_rules' );
-//add_filter( 'post_gallery', 'YANA\post_gallery', 10, 2 );
-
+add_action( 'generate_rewrite_rules', 'YANA\extend_date_archives_add_rewrite_rules' );
+add_action( 'init', 'YANA\extend_date_archives_flush_rewrite_rules' );
 add_filter( 'use_default_gallery_style', function () { return false; });
 
 remove_shortcode('gallery', 'gallery_shortcode'); // removes the original shortcode
 add_shortcode('gallery', 'YANA\gallery_shortcode'); // add your own shortcode
 
-function rewrites() {
-  global $wp_rewrite;
-  $wp_rewrite->add_permastruct(
-    'monthly-categories',
-    $wp_rewrite->get_category_permastruct() . '/monthly/%year%-%monthnum%/',
-    array(
-      'ep_mask' => EP_CATEGORIES | EP_YEAR | EP_MONTH,
-      'paged' => false,
-      'feed' => false
-    ) );
-}
 
 
 function show_testimonials_sidebar() {
@@ -153,56 +140,57 @@ function img_caption_shortcode( $a, $attr, $content ) {
 }
 
 
+/*
+  Generate monthly pagination links for the news section.
 
+  WordPress doesn't have an easy way to generate monthly post links scoped
+  by category.  This function checks for a category scope and then manually
+  creates the links.
+
+  See also the date-based rewrite filters.
+ */
 function news_pagination( $category_id = null ) {
   global $wp_query, $wpdb;
 
-  return '';
-
-  $category_name = get_query_var( 'category_name' );
+  $links = array();
   $link_base = '';
-  if ( $category_name && !empty( $category_name) ) {
-    $category_id = get_category_by_slug( $category_name )->term_id;
-    // Get the URL of this category
-    $link_base = get_category_link( $category_id );
-    var_dump($category_id);
-  }
-
-
   $where = '';
 
-  if ( $category_id ) {
+  $category_id = null;
+  $category_name = get_query_var( 'category_name' );
+
+
+  if ( $category_name && !empty( $category_name) ) {
+    $category_id = get_category_by_slug( $category_name )->term_id;
+    $link_base = get_category_link( $category_id );
+
     $post_ids = get_objects_in_term( $category_id, 'category' );
-    $where = sprintf( " AND ID IN () ", implode($post_ids, ','));
+    if ( count($post_ids) > 0 ) {
+      $where = sprintf( " AND ID IN (%s) ", implode($post_ids, ','));
+    }
+  }
+
+  $sql = "SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts
+        FROM $wpdb->posts WHERE post_type = 'post' AND post_status = 'publish' $where
+        GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC";
+
+  $results = $wpdb->get_results($sql);
+
+  foreach ( $results as $result ) {
+    $date = mktime(0, 0, 0, $result->month, 1, $result->year);
+    if ( $category_id ) {
+      $link = sprintf("%s%s", $link_base, date('Y/m/', $date) );
+    } else {
+      $link = get_month_link($result->year, $result->month);
+    }
+
+
+    $links[] = sprintf("<a href='%s'>%s</a>", $link, date('F, Y', $date) );
   }
 
 
-
-  $sql = "SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM $wpdb->posts WHERE post_type = 'post' AND post_status = 'publish' $where GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date";
-//var_dump($sql);
-  $results = $wpdb->get_results($sql);
-//var_dump($results);
-
-  //$links = [];
-  //foreach ( $date in $results ) {
-//    $links[] = sprintf("<a href='%s'>AA</a>", get_month_link($date->year, $date->month))
-//  }
-
-
-
-  $links = wp_get_archives( array('type' => 'monthly', 'echo' => false, 'format' => 'custom'));
-  //var_dump($months);
-
-  $alinks = paginate_links( array(
-      'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-      'current' => max( 1, get_query_var('paged') ),
-      'total' => $wp_query->max_num_pages,
-      'prev_text' => 'Previous',
-      'next_text' => 'Next page'
-  ) );
-
-  if ($links && !empty($links)) {
-    return printf("<div class='pagination'>%s</div>", $links);
+  if ($links && count($links) > 0) {
+    return printf("<div class='pagination'>%s</div>", implode(' ', $links) );
   } else {
     return false;
   }
@@ -225,10 +213,34 @@ function pre_get_posts(&$wp_query) {
     return;
   }
 
-  if ( is_category('thanks') ) {
+  if ( is_home() ) {
     $wp_query->set( 'posts_per_page', 30 );
+  } elseif ( $wp_query->is_archive() ) {
+    $wp_query->set( 'posts_per_page', 9999 );
   }
 }
+
+// http://snipplr.com/view.php?codeview&id=17432
+function extend_date_archives_flush_rewrite_rules(){
+  global $wp_rewrite;
+  $wp_rewrite->flush_rules();
+}
+
+function extend_date_archives_add_rewrite_rules($wp_rewrite){
+  $rules = array();
+  $structures = array(
+    $wp_rewrite->get_category_permastruct() . $wp_rewrite->get_date_permastruct(),
+    $wp_rewrite->get_category_permastruct() . $wp_rewrite->get_month_permastruct(),
+    $wp_rewrite->get_category_permastruct() . $wp_rewrite->get_year_permastruct(),
+  );
+  foreach( $structures as $s ){
+    $rules += $wp_rewrite->generate_rewrite_rules($s);
+  }
+  $wp_rewrite->rules = $rules + $wp_rewrite->rules;
+}
+
+
+
 
 function scripts() {
 	wp_enqueue_style( 'yana-style', get_stylesheet_uri() );

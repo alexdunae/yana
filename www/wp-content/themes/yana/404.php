@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <article class="site-body" role="main" id="main">
    <div class="content">
    		<?php get_sidebar(); ?>
