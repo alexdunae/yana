@@ -13,22 +13,16 @@
 							single_tag_title();
 
 						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'yana' ), '<span class="vcard">' . get_the_author() . '</span>' );
+              printf( '%s', get_the_author() );
 
             endif;
 
 						if ( is_day() ) :
-							printf( __( '<br>%s', 'yana' ), '<span>' . get_the_date() . '</span>' );
-
+              printf( '<br><span>%s</span>', get_the_date() );
 						elseif ( is_month() ) :
-							printf( __( '<br>%s', 'yana' ), '<span>' . get_the_date( _x( 'F, Y', 'monthly archives date format', 'yana' ) ) . '</span>' );
-
+							printf( '<br><span>%s</span>', get_the_date( 'F, Y') );
 						elseif ( is_year() ) :
-							printf( __( '<br>%s', 'yana' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'yana' ) ) . '</span>' );
-
-						else :
-							_e( 'Archives', 'yana' );
-
+							printf( '<br><span>%s</span>', get_the_date( 'Y') );
 						endif;
 					?>
         </h1>
