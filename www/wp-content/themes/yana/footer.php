@@ -15,7 +15,7 @@
                   <input type="email" name="cm-qtjhrt-qtjhrt" id="footer-enews-email" placeholder="Your email address" required>
                   <button type="submit">Submit</button>
                 </div>
-                <p class="note">We're still setting up newsletter program; we hope to begin sharing regular updates by email soon.</p>
+                <p class="note"></p>
               </form>
             </section>
             <p class="credits">Most photography courtesy of <a href="http://www.mckinnonphotography.com/">McKinnon Photography</a><br><a href="http://dialect.ca/">Website by Dialect</a></p>
