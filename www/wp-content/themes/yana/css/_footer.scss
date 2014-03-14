@@ -80,10 +80,10 @@
 
       .icon {
         padding-right: em(12px,24px);
-        font-size: em(24px);
+        font-size: em(20px);
       }
       .label {
-        @include sans-bold(em(24px), (42/24));
+        @include sans-bold(em(20px), (42/24));
       }
     }
 
