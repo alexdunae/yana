@@ -22,7 +22,7 @@
 				$content = get_the_content();
 				$content = strip_tags($content);
 
-				printf("<li class='entry-%d'><a href='%s'>%s</a></li>", $count, $link, $content);
+				printf("<li class='entry-%d'><a href='%s#post-%d'>%s</a></li>", $count, $link, $thanks->ID, $content);
 			}
 
 			echo '</ul></div></div></section>';
