@@ -1,13 +1,1 @@
-body#tinymce.wp-editor { max-width: 618px; font: 16px/32px sans-serif; }
-body#tinymce.wp-editor h1 { margin: 4px 0 32px; font-size: 60px; line-height: 1.2; }
-body#tinymce.wp-editor h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor p, body#tinymce.wp-editor ul, body#tinymce.wp-editor ol { margin: 0 0 24px; }
-body#tinymce.wp-editor h2 { font: bold 24px/1 sans-serif; }
-body#tinymce.wp-editor h3 { font: bold 20px/1.2 sans-serif; }
-body#tinymce.wp-editor h4 { font: bold 14px/1.7 sans-serif; text-transform: uppercase; letter-spacing: 2px; }
-body#tinymce.wp-editor p { font: normal 15px/1.6 sans-serif; }
-body#tinymce.wp-editor p small { font-size: 12px; line-height: 1.5; }
-body#tinymce.wp-editor li { margin: 0; font-size: 14px; line-height: 1.71429; }
-body#tinymce.wp-editor li ul, body#tinymce.wp-editor li ol { margin: 6px; }
-body#tinymce.wp-editor li li { font-size: 1em; }
-body#tinymce.wp-editor .alignleft { width: 300px; height: auto; margin: 0 30px 30px 0; }
-body#tinymce.wp-editor .alignright { width: 300px; height: auto; margin: 0 0 30px 30px; }
+body#tinymce.wp-editor{max-width:618px;font:16px/32px sans-serif}body#tinymce.wp-editor h1{margin:4px 0 32px;font-size:60px;line-height:1.2}body#tinymce.wp-editor h2,body#tinymce.wp-editor h3,body#tinymce.wp-editor h4,body#tinymce.wp-editor p,body#tinymce.wp-editor ul,body#tinymce.wp-editor ol{margin:0 0 24px}body#tinymce.wp-editor h2{font:bold 24px/1 sans-serif}body#tinymce.wp-editor h3{font:bold 20px/1.2 sans-serif}body#tinymce.wp-editor h4{font:bold 14px/1.7 sans-serif;text-transform:uppercase;letter-spacing:2px}body#tinymce.wp-editor p{font:normal 15px/1.6 sans-serif}body#tinymce.wp-editor p small{font-size:12px;line-height:1.5}body#tinymce.wp-editor li{margin:0;font-size:14px;line-height:1.71429}body#tinymce.wp-editor li ul,body#tinymce.wp-editor li ol{margin:6px}body#tinymce.wp-editor li li{font-size:1em}body#tinymce.wp-editor .alignleft{width:300px;height:auto;margin:0 30px 30px 0}body#tinymce.wp-editor .alignright{width:300px;height:auto;margin:0 0 30px 30px}
