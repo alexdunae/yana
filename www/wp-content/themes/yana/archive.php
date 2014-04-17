@@ -20,7 +20,7 @@
 						if ( is_day() ) :
               printf( '<br><span>%s</span>', get_the_date() );
 						elseif ( is_month() ) :
-							printf( '<br><span>%s</span>', get_the_date( 'F, Y') );
+							printf( '<br><span>%s</span>', get_the_date( 'F Y') );
 						elseif ( is_year() ) :
 							printf( '<br><span>%s</span>', get_the_date( 'Y') );
 						endif;
