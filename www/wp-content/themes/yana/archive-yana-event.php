@@ -37,7 +37,7 @@
 
           echo '</div>';
         }
-        printf("<p><a class='btn' href='%s'>Third Party Events</a></p>", get_term_link('third-party', YANA\Events\TYPE_ID));
+        printf("<p><a class='btn' href='%s'>Community Led Events</a></p>", get_term_link('third-party', YANA\Events\TYPE_ID));
       ?>
   </div>
 </article>

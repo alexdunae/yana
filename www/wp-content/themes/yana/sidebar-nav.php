@@ -9,6 +9,7 @@
         printf("<li><a href='%s'>%s</a></li>", get_permalink($event), apply_filters('the_title', $event->post_title));
       }
 
+      printf("<li><a href='%s'>%s</a></li>", get_term_link('third-party', YANA\Events\TYPE_ID), 'Community Led Events');
 
       echo '</ul></nav>';
     } elseif ( is_home() || is_archive() || get_post_type() == 'post' ) {
