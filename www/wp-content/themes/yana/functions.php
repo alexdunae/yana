@@ -185,7 +185,7 @@ function news_pagination( $category_id = null ) {
     }
 
 
-    $links[] = sprintf("<a href='%s'>%s</a>", $link, date('F, Y', $date) );
+    $links[] = sprintf("<a href='%s'>%s</a>", $link, date('F Y', $date) );
   }
 
 
