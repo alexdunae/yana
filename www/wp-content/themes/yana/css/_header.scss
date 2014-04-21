@@ -229,7 +229,7 @@ $logo-gutter: 30px;
 
   .links {
     width: 100%;
-    max-width: em(472px);
+    max-width: em(496px);
     position: relative;
     text-align: justify;
     &:after{
@@ -261,7 +261,7 @@ $logo-gutter: 30px;
 
   a {
     display: block;
-    padding: 0 em(6px,12px);
+    padding: 0 em(7px,12px);
     font-size: em(12px);
     line-height: (24/12);
     text-transform: uppercase;
@@ -274,7 +274,7 @@ $logo-gutter: 30px;
   }
 
   li:first-child a { padding-left: 0; }
-  li:last-child a { padding-right: 0; }
+  //li:last-child a { padding-right: 0; }
 
   .current a {
     color: $darkteal;
