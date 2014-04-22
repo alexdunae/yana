@@ -5,8 +5,7 @@ namespace YANA;
 require_once( dirname(__FILE__) . '/lib/yana.template.php' );
 require_once( dirname(__FILE__) . '/lib/yana.events.php' );
 require_once( dirname(__FILE__) . '/lib/yana.subscribe.php' );
-
-
+require_once( dirname(__FILE__) . '/lib/yana.sidebar-ad-widget.php' );
 
 const FACEBOOK_URL = 'https://www.facebook.com/pages/YANA-Comox-Valley/9846076614';
 
@@ -22,6 +21,7 @@ add_action( 'pre_get_posts', 'YANA\pre_get_posts' );
 add_action( 'generate_rewrite_rules', 'YANA\extend_date_archives_add_rewrite_rules' );
 add_action( 'init', 'YANA\extend_date_archives_flush_rewrite_rules' );
 add_filter( 'use_default_gallery_style', function () { return false; });
+add_action( 'widgets_init', 'YANA\widgets_init' );
 
 remove_shortcode('gallery', 'gallery_shortcode'); // removes the original shortcode
 add_shortcode('gallery', 'YANA\gallery_shortcode'); // add your own shortcode
@@ -239,8 +239,16 @@ function extend_date_archives_add_rewrite_rules($wp_rewrite){
   $wp_rewrite->rules = $rules + $wp_rewrite->rules;
 }
 
-
-
+function widgets_init() {
+  register_sidebar( array(
+    'name' => 'Homepage Sidebar',
+    'id' => 'front-page-widget-area',
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ) );
+}
 
 function scripts() {
 	wp_enqueue_style( 'yana-style', get_stylesheet_uri() );

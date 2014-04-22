@@ -1,7 +1,7 @@
 
 <div class="page-sidebar" role="complementary">
 	<?php if (is_front_page() ): ?>
-		<?php get_template_part( 'sidebar', 'events-ad' ); ?>
+		<?php if ( dynamic_sidebar('front-page-widget-area') ) : else : endif; ?>
 
 		<?php get_template_part( 'sidebar', 'facebook' ); ?>
 

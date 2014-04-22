@@ -29,3 +29,7 @@ The main events page on the website shows all future events in chronological ord
 ## Sidebar Quotes
 
 Sidebar quotes are drawn at random from the `sidebar-quotes.json` file (i.e. they need to be edited by the webmaster).
+
+## Sidebar Ads
+
+Front page sidebar ads are WordPress widgets.  Use only the `YANA Sidebar Ad` widget.
