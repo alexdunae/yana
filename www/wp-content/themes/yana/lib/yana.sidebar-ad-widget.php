@@ -58,6 +58,10 @@ class SidebarAdWidget extends \WP_Widget {
   }
 
   public function widget( $args, $instance ) {
+    if (empty( $image ) ) {
+      return;
+    }
+
     extract( $args );
     echo $before_widget;
 
