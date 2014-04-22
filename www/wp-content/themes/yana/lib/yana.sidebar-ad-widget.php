@@ -14,7 +14,7 @@ class SidebarAdWidget extends \WP_Widget {
       '' => 'None',
       'sidebar-auction.jpg' => 'Auction',
       'sidebar-ride.jpg' => 'Ride',
-      'sidebar-upcoming-events' => 'Upcoming Events'
+      'sidebar-upcoming-events.jpg' => 'Upcoming Events'
     );
 
     parent::__construct(
