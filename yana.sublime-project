@@ -16,7 +16,7 @@
     {
       "path": "www/wp-content/themes/yana",
       "name": "theme",
-      "folder_exclude_patterns": ["lib"],
+      "folder_exclude_patterns": ["lib/createsend-php"],
       "file_exclude_patterns": ["*.svg", "*.woff", "style.css", "yana.js"]
     }
   ]
