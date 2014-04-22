@@ -58,16 +58,16 @@ class SidebarAdWidget extends \WP_Widget {
   }
 
   public function widget( $args, $instance ) {
-    if (empty( $image ) ) {
-      return;
-    }
-
     extract( $args );
-    echo $before_widget;
 
     $url    = isset( $instance['url'] ) ? $instance['url'] : false;
     $image = isset( $instance['image'] ) ? $instance['image'] : false;
 
+    if (empty( $image ) ) {
+      return;
+    }
+
+    echo $before_widget;
     $html = sprintf( "<img src='%s/img/ads/%s' alt=''>",
                       get_template_directory_uri(),
                       esc_attr( $image )
