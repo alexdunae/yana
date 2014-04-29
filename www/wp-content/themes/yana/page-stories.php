@@ -13,7 +13,7 @@ get_header(); ?>
 
         <section class="story-toc">
           <?php
-            $stories = get_posts(array('post_parent' => $post->ID, 'post_type' => 'page', 'post_status' => 'published', 'numberposts' => -1));
+            $stories = get_posts(array('post_parent' => $post->ID, 'post_type' => 'page', 'post_status' => 'publish', 'numberposts' => -1));
 
             foreach ( $stories as $post ) {
               setup_postdata($post);
