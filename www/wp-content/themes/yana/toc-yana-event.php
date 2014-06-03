@@ -18,7 +18,11 @@
     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
   <?php endif; ?>
 
-  <?php echo apply_filters('the_content', $post->post_excerpt); ?>
+  <?php if($level == 'third-party'): ?>
+    <?php echo apply_filters('the_content', $post->post_content); ?>
+  <?php else: ?>
+    <?php echo apply_filters('the_content', $post->post_excerpt); ?>
+  <?php endif; ?>
 
   <?php if($level == 'featured'): ?>
     <p><a class="btn" href="<?php the_permalink(); ?>">More details</a></p>
