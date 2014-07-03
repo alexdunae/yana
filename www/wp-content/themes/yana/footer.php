@@ -9,7 +9,7 @@
             <p><a href="<?php echo YANA\FACEBOOK_URL; ?>">Connect with us on Facebook</a></p>
 
             <section class="footer-enews enews">
-              <form method="POST" action="http://dialogue.dialect.ca/t/y/s/qtjhrt/">
+              <form method="POST" action="https://createsend.com/t/y/s/qtjhrt/">
                 <label for="footer-enews-email">Subscribe for updates:</label>
                 <div class="controls">
                   <input type="email" name="cm-qtjhrt-qtjhrt" id="footer-enews-email" placeholder="Your email address" required>

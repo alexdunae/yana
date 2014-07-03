@@ -1,6 +1,6 @@
 <aside class="sidebar-enews enews">
 	<div class="frame">
-    <form method="POST" action="http://dialogue.dialect.ca/t/y/s/qtjhrt/">
+    <form method="POST" action="https://createsend.com/t/y/s/qtjhrt/">
   	  <label for="sidebar-enews-email" class="title">Subscribe for updates</label>
   	  <div class="controls">
   	    <input type="email" name="cm-qtjhrt-qtjhrt" id="sidebar-enews-email" placeholder="Your email address" required>
