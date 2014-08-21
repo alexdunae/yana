@@ -14,6 +14,7 @@ class SidebarAdWidget extends \WP_Widget {
       '' => 'None',
       'sidebar-auction.jpg' => 'Auction',
       'sidebar-ride.jpg' => 'Ride',
+      'sidebar-ride-video-2014.gif' => '2014 Ride Video',
       'sidebar-upcoming-events.jpg' => 'Upcoming Events'
     );
 
