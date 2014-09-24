@@ -11,7 +11,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    cssmin (1.0.3)
     execjs (2.0.2)
     ffi (1.9.3)
     formatador (0.2.4)
@@ -24,16 +23,9 @@ GEM
     guard-coffeescript (1.4.0)
       coffee-script (>= 2.2.0)
       guard (>= 1.1.0)
-    guard-jammit (1.0.1)
-      guard (>= 1.1.0)
-      jammit
     guard-sass (1.4.0)
       guard (>= 1.1.0)
       sass (>= 3.1)
-    jammit (0.6.6)
-      cssmin (>= 1.0.3)
-      jsmin (>= 1.0.1)
-    jsmin (1.0.1)
     listen (2.6.2)
       celluloid (>= 0.15.2)
       celluloid-io (>= 0.15.0)
@@ -60,5 +52,4 @@ PLATFORMS
 DEPENDENCIES
   guard
   guard-coffeescript
-  guard-jammit
   guard-sass

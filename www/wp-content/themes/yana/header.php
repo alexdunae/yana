@@ -11,6 +11,8 @@
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <script src="https://fast.fonts.net/jsapi/014930c9-fd65-4ba8-a0d8-c9968ba08138.js?v=2"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr.js"></script>
 		<?php wp_head(); ?>
 	</head>
 <body <?php body_class(); ?>>
