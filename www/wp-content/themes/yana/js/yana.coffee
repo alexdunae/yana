@@ -1,5 +1,7 @@
 window.YANA ?= {}
 
+$ = jQuery
+
 htmlElement = $('html')
 
 initDebug = ->
