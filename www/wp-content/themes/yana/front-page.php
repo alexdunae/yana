@@ -35,7 +35,7 @@
 
 <section class="home-intro out-of-body">
   <div class="content">
-    <p>YANA is a Comox Valley charity offering help to local families who need to travel to access medical treatment for their children.</p>
+    <p>YANA is a community organization offering help to Comox Valley families who need to travel to access medical treatment for their children.</p>
   </div>
 </section>
 
