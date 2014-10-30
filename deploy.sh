@@ -3,7 +3,7 @@ ROOTDIR="www"
 BASEDIR="www/wp-content/themes/yana"
 USER="yana"
 HOST="yanacomoxvalley.com"
-rsync -rvzt --delete --delete-excluded --executability \
+rsync -rvzt --delete --delete-excluded --executability --omit-dir-times \
       --exclude=.DS_Store \
       --exclude=.svn \
       --exclude=.git \
