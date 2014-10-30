@@ -2,6 +2,7 @@
 
 namespace YANA;
 
+require_once( dirname(__FILE__) . '/lib/yana.editing.php' );
 require_once( dirname(__FILE__) . '/lib/yana.template.php' );
 require_once( dirname(__FILE__) . '/lib/yana.events.php' );
 require_once( dirname(__FILE__) . '/lib/yana.subscribe.php' );
@@ -11,12 +12,11 @@ const FACEBOOK_URL = 'https://www.facebook.com/pages/YANA-Comox-Valley/984607661
 
 add_action( 'after_setup_theme', 'YANA\setup' );
 add_action( 'wp_enqueue_scripts', 'YANA\scripts' );
-add_filter( 'image_size_names_choose', 'YANA\insertable_image_sizes' );
-add_filter( 'img_caption_shortcode', 'YANA\img_caption_shortcode', 10, 3 );
+
 add_filter( 'embed_oembed_html', 'YANA\format_oembed', 10, 3 );
 add_filter( 'body_class', 'YANA\body_class' );
 add_action( 'wp_footer', 'YANA\wp_footer' );
-add_action( 'init', 'YANA\add_editor_style' );
+
 add_action( 'pre_get_posts', 'YANA\pre_get_posts' );
 add_action( 'generate_rewrite_rules', 'YANA\extend_date_archives_add_rewrite_rules' );
 add_action( 'init', 'YANA\extend_date_archives_flush_rewrite_rules' );
@@ -95,10 +95,6 @@ function setup() {
 	) );
 }
 
-function add_editor_style() {
-    \add_editor_style( 'editor-style.css' );
-}
-
 function body_class($classes) {
   if ( is_front_page() ) {
     $classes[] = 'front-page';
@@ -108,35 +104,8 @@ function body_class($classes) {
   return $classes;
 }
 
-function insertable_image_sizes($sizes) {
-   unset( $sizes['thumbnail']);
-   unset( $sizes['medium'] );
-   unset( $sizes['full'] );
-   return $sizes;
-}
-
 function format_oembed( $html, $url, $args ) {
   return "<div class='embed'><div class='inner'>$html</div></div>";
-}
-
-
-
-  // no fixed width
-function img_caption_shortcode( $a, $attr, $content ) {
-  extract(shortcode_atts(array(
-    'id'  => '',
-    'align' => 'alignnone',
-    'width' => '',
-    'caption' => ''
-  ), $attr));
-
-  if ( 1 > (int) $width || empty($caption) )
-    return $content;
-
-  if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
-
-  return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '">'
-  . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
 
 
