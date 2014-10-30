@@ -140,7 +140,7 @@ blockquote + p {
   @extend %h4;
 }
 
-.more-link, .btn {
+.more-link, .btn, .editor-btn a {
   display: inline-block;
   box-sizing: border-box;
   -webkit-appearance: none;

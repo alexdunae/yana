@@ -37,11 +37,11 @@ function style_select( $buttons ) {
 function styles_dropdown( $settings ) {
   $styles = array(
     array( 'title' => 'Regular paragraph',  'format' => 'p', 'classes' => 'p1'),
-    // array( 'title' => 'Lede',  'block' => 'p', 'classes' => 'lede'),
     array( 'title' => 'Heading 1',  'format' => 'h1' ),
     array( 'title' => 'Heading 2',  'format' => 'h2' ),
     array( 'title' => 'Heading 3',  'format' => 'h3' ),
     array( 'title' => 'Heading 4',  'format' => 'h4' ),
+    array( 'title' => 'Button',  'block' => 'div', 'classes' => 'editor-btn')
   );
 
   $settings['style_formats_merge'] = false;
