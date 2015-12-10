@@ -127,6 +127,10 @@ $logo-gutter: 30px;
     padding: 0 0 em(24px);
   }
 
+  ul.menu > li {
+    width: 23%;
+  }
+
   a {
     display: block;
     text-transform: uppercase;
