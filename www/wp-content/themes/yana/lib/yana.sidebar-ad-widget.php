@@ -12,7 +12,7 @@ class SidebarAdWidget extends \WP_Widget {
   public function __construct() {
     $this->images = array(
       '' => 'None',
-      'sidebar-auction.jpg' => 'Auction',
+      'sidebar-auction-2.jpg' => 'Auction',
       'sidebar-clutter2.jpg' => 'Kids Clutter Sale',
       'sidebar-ride.jpg' => 'Ride',
       'sidebar-ride-video-2014.gif' => '2014 Ride Video',
