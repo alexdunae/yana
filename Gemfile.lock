@@ -54,6 +54,3 @@ DEPENDENCIES
   guard
   guard-coffeescript
   guard-sass
-
-BUNDLED WITH
-   1.10.6
