@@ -36,7 +36,7 @@ function init() {
     'rewrite' => array( 'slug' => 'events' ),
     'capability_type' => 'post',
     'has_archive' => true,
-    'hierarchical' => false,
+    'hierarchical' => true,
     'menu_position' => null,
     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' )
   ) );
@@ -75,6 +75,10 @@ function init() {
 function group_by_type($posts) {
   $prioritized = array('featured' => array(), 'standard' => array(), 'third-party' => array());
 
+  usort($posts, function($a, $b) {
+    return strcmp($a->menu_order, $b->menu_order);
+  });
+
   foreach($posts as $post) {
     $terms = wp_get_object_terms($post->ID, TYPE_ID, array('fields' => 'slugs'));
     if ( count($terms) < 1 || is_wp_error($terms) ) {
@@ -111,7 +115,7 @@ function get_posts_by_types( $slugs ) {
     return array();
   }
 
-  return get_posts( array('include' => $event_ids, 'post_type' => POST_TYPE));
+  return get_posts( array('orderby' => 'menu_order', 'order' => 'ASC', 'include' => $event_ids, 'post_type' => POST_TYPE));
 }
 
 function home_url() {

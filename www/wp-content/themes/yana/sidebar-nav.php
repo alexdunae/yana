@@ -4,7 +4,12 @@
       echo '<nav class="sidebar-nav"><ul>';
       printf("<li><a href='%s'>%s</a></li>", get_permalink($archive), apply_filters('the_title', $archive->post_title));
 
-      $events = YANA\Events\get_posts_by_types( array('featured', 'standard') );
+      $events = YANA\Events\get_posts_by_types( array('featured') );
+      foreach ( $events as $event ) {
+        printf("<li><a href='%s'>%s</a></li>", get_permalink($event), apply_filters('the_title', $event->post_title));
+      }
+
+      $events = YANA\Events\get_posts_by_types( array('standard') );
       foreach ( $events as $event ) {
         printf("<li><a href='%s'>%s</a></li>", get_permalink($event), apply_filters('the_title', $event->post_title));
       }
