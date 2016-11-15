@@ -55,7 +55,7 @@ To upgrade the local version of WordPress to a tagged release, run:
 
 Make sure everything is looking tight.  Check a few links.  Then, from terminal (in a new tab maybe?):
 
-    bundle exec middleman deploy
+    ./deploy.sh
 
 ## Generating the icon font
 
